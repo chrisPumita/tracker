@@ -2,21 +2,31 @@
 
 class USUARIO
 {
+    private $id_usuario;
     private $nombre;
-    private $apterno;
+    private $apaterno;
     private $amaterno;
+    private $user_name;
+    private $correo;
+    private $password;
+    private $nivel_acceso;
+    private $path_img;
+    private $estado;
 
     /**
-     * USUARIO constructor.
-     * @param $nombre
-     * @param $apterno
-     * @param $amaterno
+     * @return mixed
      */
-    public function __construct($nombre, $apterno, $amaterno)
+    public function getIdUsuario()
     {
-        $this->nombre = $nombre;
-        $this->apterno = $apterno;
-        $this->amaterno = $amaterno;
+        return $this->id_usuario;
+    }
+
+    /**
+     * @param mixed $id_usuario
+     */
+    public function setIdUsuario($id_usuario): void
+    {
+        $this->id_usuario = $id_usuario;
     }
 
     /**
@@ -38,17 +48,17 @@ class USUARIO
     /**
      * @return mixed
      */
-    public function getApterno()
+    public function getApaterno()
     {
-        return $this->apterno;
+        return $this->apaterno;
     }
 
     /**
-     * @param mixed $apterno
+     * @param mixed $apaterno
      */
-    public function setApterno($apterno): void
+    public function setApaterno($apaterno): void
     {
-        $this->apterno = $apterno;
+        $this->apaterno = $apaterno;
     }
 
     /**
@@ -67,8 +77,101 @@ class USUARIO
         $this->amaterno = $amaterno;
     }
 
-    public function getCompleteName(){
-        $nombreCompleto = $this->getNombre()." ".$this->getApterno()." ".$this->getAmaterno();
-        return $nombreCompleto;
+    /**
+     * @return mixed
+     */
+    public function getUserName()
+    {
+        return $this->user_name;
     }
+
+    /**
+     * @param mixed $user_name
+     */
+    public function setUserName($user_name): void
+    {
+        $this->user_name = $user_name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCorreo()
+    {
+        return $this->correo;
+    }
+
+    /**
+     * @param mixed $correo
+     */
+    public function setCorreo($correo): void
+    {
+        $this->correo = $correo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNivelAcceso()
+    {
+        return $this->nivel_acceso;
+    }
+
+    /**
+     * @param mixed $nivel_acceso
+     */
+    public function setNivelAcceso($nivel_acceso): void
+    {
+        $this->nivel_acceso = $nivel_acceso;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPathImg()
+    {
+        return $this->path_img;
+    }
+
+    /**
+     * @param mixed $path_img
+     */
+    public function setPathImg($path_img): void
+    {
+        $this->path_img = $path_img;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * @param mixed $estado
+     */
+    public function setEstado($estado): void
+    {
+        $this->estado = $estado;
+    }
+
+
 }
