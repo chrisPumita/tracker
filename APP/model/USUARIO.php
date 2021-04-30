@@ -14,6 +14,34 @@ class USUARIO
     private $estado;
 
     /**
+     * USUARIO constructor.
+     * @param $id_usuario
+     * @param $nombre
+     * @param $apaterno
+     * @param $amaterno
+     * @param $user_name
+     * @param $correo
+     * @param $password
+     * @param $nivel_acceso
+     * @param $path_img
+     * @param $estado
+     */
+    public function __construct($id_usuario, $nombre, $apaterno, $amaterno, $user_name, $correo, $password, $nivel_acceso, $path_img, $estado)
+    {
+        $this->id_usuario = $id_usuario;
+        $this->nombre = $nombre;
+        $this->apaterno = $apaterno;
+        $this->amaterno = $amaterno;
+        $this->user_name = $user_name;
+        $this->correo = $correo;
+        $this->password = $password;
+        $this->nivel_acceso = $nivel_acceso;
+        $this->path_img = $path_img;
+        $this->estado = $estado;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getIdUsuario()

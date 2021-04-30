@@ -10,6 +10,24 @@ class GRUPOTRABAJO
     private $status;
 
     /**
+     * GRUPOTRABAJO constructor.
+     * @param $id_gt
+     * @param $id_empresa_fk
+     * @param $nombre_gt
+     * @param $fecha_creacion
+     * @param $status
+     */
+    public function __construct($id_gt, $id_empresa_fk, $nombre_gt, $fecha_creacion, $status)
+    {
+        $this->id_gt = $id_gt;
+        $this->id_empresa_fk = $id_empresa_fk;
+        $this->nombre_gt = $nombre_gt;
+        $this->fecha_creacion = $fecha_creacion;
+        $this->status = $status;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getIdGt()
