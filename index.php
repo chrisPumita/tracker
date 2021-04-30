@@ -39,8 +39,8 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>Proyecto de Evaluacion de proyectos</h1>
-  <p>Prueba de Git</p> 
+  <h1>Pagina para dominar al mundo</h1>
+  <p>Prueba de Git 2</p> 
 </div>
 
 <div class="container">
@@ -54,7 +54,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://i.pinimg.com/originals/68/52/b7/6852b703571976826b20f774c159d65f.jpg" class="d-block w-100" alt="...">
+              <img src="https://estaticos-cdn.elperiodico.com/clip/df14b47b-9360-424a-88a6-b12460e43ab0_alta-libre-aspect-ratio_default_0.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>
