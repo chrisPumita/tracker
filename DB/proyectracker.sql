@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-04-2021 a las 03:36:41
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.2
+-- Tiempo de generación: 05-05-2021 a las 03:30:22
+-- Versión del servidor: 10.1.37-MariaDB
+-- Versión de PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -176,7 +177,7 @@ CREATE TABLE `usuario` (
   `correo` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `nivel_acceso` tinyint(2) NOT NULL,
-  `path_img` text DEFAULT NULL,
+  `path_img` text,
   `estado` tinyint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -250,7 +251,7 @@ ALTER TABLE `subetapas`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
   ADD KEY `id_empresa_fk` (`id_empresa_fk`);
 
 --
@@ -358,7 +359,7 @@ ALTER TABLE `subetapas`
 -- Filtros para la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_empresa_fk`) REFERENCES `empresa` (`id_empresa`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_empresa_fk`) REFERENCES `empresa` (`id_empresa`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
