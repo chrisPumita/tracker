@@ -168,6 +168,7 @@ CREATE TABLE `subetapas` (
 
 CREATE TABLE `usuario` (
   `id_usuario` int(10) NOT NULL,
+  `id_empresa_fk` int(10) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apaterno` varchar(50) NOT NULL,
   `amaterno` varchar(50) NOT NULL,
@@ -250,6 +251,7 @@ ALTER TABLE `subetapas`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usuario`);
+  ADD KEY `id_empresa_fk` (`id_empresa_fk`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -351,6 +353,12 @@ ALTER TABLE `proyecto`
 --
 ALTER TABLE `subetapas`
   ADD CONSTRAINT `subetapas_ibfk_1` FOREIGN KEY (`id_etapa_fk`) REFERENCES `etapas` (`id_etapa`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_empresa_fk`) REFERENCES `empresa` (`id_empresa`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
