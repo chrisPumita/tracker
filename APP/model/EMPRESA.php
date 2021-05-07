@@ -1,6 +1,6 @@
 <?php
-
-class EMPRESA 
+include_once "I_EMPRESA.php";
+class EMPRESA implements I_EMPRESA
 {
     private $id_empresa;
     private $nombre;
@@ -9,6 +9,8 @@ class EMPRESA
     private $telefono;
     private $correo;
     private $tipo_cuenta;
+
+    //
 
     /**
      * EMPRESA constructor.
@@ -144,4 +146,24 @@ class EMPRESA
         $this->tipo_cuenta = $tipo_cuenta;
     }
 
+    /*Funciones implementadas de la interfaz*/
+    public static function consultaDatos()
+    {
+        // TODO: Implement consultaDatos() method.
+    }
+
+    public static function actualizaDatos($idEmpresa)
+    {
+        // TODO: Implement actualizaDatos() method.
+    }
+
+    public static function crearEmpresa()
+    {
+        // TODO: Implement crearEmpresa() method.
+    }
+
+    public static function editarEmpresa()
+    {
+        // TODO: Implement editarEmpresa() method.
+    }
 }

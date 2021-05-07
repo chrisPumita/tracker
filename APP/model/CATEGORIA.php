@@ -1,7 +1,7 @@
 <?php
 
-
-class CATEGORIA
+include_once "I_CATEGORIA.php";
+class CATEGORIA implements I_CATEGORIA
 {
 	private $id_categoria;
 
@@ -37,4 +37,11 @@ class CATEGORIA
         $this->nombre_categoria = $nombre_categoria;
     }
 	private $nombre_categoria;
+
+
+    /* Implementaciones de metodos de la interfaz */
+    public static function consultaCategorias()
+    {
+        // TODO: Implement consultaCategorias() method.
+    }
 }

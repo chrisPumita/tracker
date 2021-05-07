@@ -1,6 +1,7 @@
 <?php
+ include_once "CONEXION.php";
 
-class USUARIO
+class USUARIO extends CONEXION
 {
     private $id_usuario;
     private $nombre;
@@ -201,5 +202,67 @@ class USUARIO
         $this->estado = $estado;
     }
 
+    public function consultaUsuarios($filro)
+    {
+        $query = "SELECT `id_usuario`, `id_empresa_fk`, `nombre`, 
+       `apaterno`, `amaterno`, `user_name`, `correo`, `password`, 
+       `nivel_acceso`, `path_img`, `estado` FROM `usuario`";
+        $this->connect();
+        $resultado = $this->getData($query);
+        $this->close();
+        return $resultado;
+    }
+
+    public function agregaUsuario(){
+        $query = "INSERT INTO `usuario` (
+                       `id_usuario`, 
+                       `id_empresa_fk`, 
+                       `nombre`, 
+                       `apaterno`, 
+                       `amaterno`, 
+                       `user_name`, 
+                       `correo`, 
+                       `password`, 
+                       `nivel_acceso`, 
+                       `path_img`, 
+                       `estado`) VALUES
+                        (NULL, NULL, '".$this->getNombre()."', '".$this->getApaterno()."', '".$this->getAmaterno()."', 
+                         '".$this->getUserName()."', '".$this->getCorreo()."', 
+                         '".$this->getPassword()."', '".$this->getNivelAcceso()."', '".$this->getPathImg()."', '".$this->getNivelAcceso()."')";
+        $this->connect();
+        $resultado = $this->executeInstruction($query);
+        $this->close();
+        return $resultado;
+    }
+
+    public function actualizaUsuario($USUARIO){
+        $query = "UPDATE `usuario` SET 
+                     `id_empresa_fk` = '222', 
+                     `nombre` = 'Christian R', 
+                     `apaterno` = 'gbg', 
+                     `amaterno` = 'HERNANDEZR', 
+                     `user_name` = 'gggg', 
+                     `correo` = 'corggreo@gmail.com', 
+                     `nivel_acceso` = '1', 
+                     `path_img` = 'thhpggggg', 
+                     `estado` = '0' 
+                    WHERE `usuario`.`id_usuario` = 2";
+        $this->connect();
+        $resultado = $this->executeInstruction($query);
+        $this->close();
+        return $resultado;
+    }
+
+    public function eliminaUsuario($idUsuario){
+        $query = "DELETE FROM `usuario` WHERE `usuario`.`id_usuario` = ".$idUsuario;
+        $this->connect();
+        $resultado = $this->executeInstruction($query);
+        $this->close();
+        return $resultado;
+    }
+
+    public function login($username, $pw){
+        //CHRIS
+    }
 
 }
