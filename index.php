@@ -628,12 +628,186 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col">
-                        <div class="card card-body border-0 mb-0 bg-danger text-light px-md-5 py-md-4 shadow-lg aos-init" style="overflow:hidden" data-aos="zoom-out-down">
+                        <div class="card card-body border-0 mb-0 bd-white text-light px-md-5 py-md-4 shadow-lg aos-init" style="overflow:hidden" data-aos="zoom-out-down">
                             <div class="position-relative d-flex flex-column py-md-2 flex-md-row justify-content-between align-items-center">
-                                <div class="h3 text-center mb-md-0">Start building beautiful websites FASTER!</div>
-                                <a href="https://gumroad.com/blueprintsapp" class="btn btn-lg btn-light py-md-3 px-md-5 text-danger font-weight-bold">
-                                    GET MORE TEMPLATES
-                                </a>
+                            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="container">
+                <div class="row blog">
+    <h1>
+      <div class="animated fadeInLeft">DEVELOPERS</div><div class="animated fadeInRight text-dark">TEAM</div>
+    </h1>
+                    <div class="col-md-12">
+                        <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+    
+                            <ol class="carousel-indicators">
+                                <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#blogCarousel" data-slide-to="1"></li>
+                            </ol>
+    
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+    
+                                <div class="carousel-item active">
+                                    <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6" >
+            <div class="our-team">
+              <div class="pic">
+                <img src="./assets/image/cico.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Luis Fernando Hernandez Ledezma</h3>
+                <span class="post">UNAM</span>
+              </div>
+              <ul class="social"> 
+                <li>
+                  <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+              <img src="./assets/image/dev1.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Christian René Pioquinto Hernández</h3>
+                <span class="post">Project Manager</span>
+              </div>
+              <ul class="social">
+                <li>
+                  <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+              <img src="./assets/image/dev2.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">César Haziel Pineda Pacheco</h3>
+                <span class="post">UNAM Developer </span>
+              </div>
+              <ul class="social">
+                <li>
+                 <!--  --> <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+     <!--    <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+                <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Dr. Georges WANET</h3>
+                <span class="post">Docteur</span>
+              </div>
+              <ul class="social">
+                <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+                                    <!--.row-->
+                                </div>
+                                <!--.item-->
+    
+    <div class="carousel-item">
+    <div class="row">
+    <div class="col-lg-1 col-md-6 col-sm-6"> </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+              <img src="./assets/image/dev3.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Emmanuel Martinez Hernandez</h3>
+                <span class="post">UNAM Graphic Designer </span>
+              </div>
+              <ul class="social"> 
+                <li>
+                  <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-6"> </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+              <img src="./assets/image/dev4.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Andrea Garcia Chavez</h3>
+                <span class="post"> UNAM Graphic Designer </span>>
+                <span>></span>>
+              </div>
+              <ul class="social">
+                <li>
+                <!--  -->  <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+                <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Dr. Saverio TOMASELLA</h3>
+                <span class="post">Auteur et Chercheur - Brand Psychoanalysis</span>
+              </div>
+              <ul class="social">
+                <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="our-team">
+              <div class="pic">
+                <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Ray BENEDICKTUS</h3>
+                <span class="post">Experienced Marketing Consultant</span>
+              </div>
+              <ul class="social">
+                <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+                                    <!--.row-->
+                                </div>
+                                <!--.item-->
+    
+                            </div>
+                            <!--.carousel-inner-->
+                        </div>
+                        <!--.Carousel-->
+    
+                    </div>
+                </div>
+    </div>
                             </div>
                         </div>
                     </div>
@@ -738,10 +912,6 @@
 </section>
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" >
-    Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -782,6 +952,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     AOS.init({
         duration: 1200,
