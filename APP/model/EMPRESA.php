@@ -149,21 +149,43 @@ class EMPRESA implements I_EMPRESA
     /*Funciones implementadas de la interfaz*/
     public static function consultaDatos()
     {
-        // TODO: Implement consultaDatos() method.
+        $query ="SELECT `id_empresa`,`nombre`,`razon_social`,`rfc`,`telefono`,`correo` FROM `empresa`";
+        $this->connect();
+        $resultado = $this->getData($query);
+        $this->close();
+        return $resultado;
     }
 
     public static function actualizaDatos($idEmpresa)
     {
-        // TODO: Implement actualizaDatos() method.
+        $query = "UPDATE `empresa` SET `nombre`,`razon_social`,`rfc`,`telefono`,`correo` 
+        WHERE `id_empresa`=$this->getIdEmpresa()";
+        $this->connect();
+        $resultado = $this->executeInstruction($query);
+        $this->close();
+        return $resultado;
     }
 
     public static function crearEmpresa()
     {
-        // TODO: Implement crearEmpresa() method.
+        $query ="INSERT INTO `empresa` (
+            `id_empresa`,`nombre`,`razon_social`,`rfc`,`telefono`,`correo`,`tipo_cuenta`) VALUES 
+            ( NULL,`".$this->getNombre()."`,`".$this->getRazonSocial()."`,`".$this->getRFC()."`,`".$this->getTelefono()."`,`".$this-getCorreo()."`,`".$this->getTipoCuenta()."`
+            )";
+            $this->connect();
+            $resultado = $this->executeInstruction($query);
+            $this->close();
+            return $resultado;
     }
 
     public static function editarEmpresa()
     {
-        // TODO: Implement editarEmpresa() method.
+        $qeury="UPDATE `empresa` SET 
+        `nombre`=
+        `razon_social`=
+        `rfc`=
+        `telefono`=
+        `correo`=
+        `tipo_cuenta` ="
     }
 }
