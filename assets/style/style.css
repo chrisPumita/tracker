@@ -1,0 +1,31 @@
+:root{
+    --primary:#590995;
+    --second: #03c4a1;
+    --ligth : #ffffff;
+    --grey: #efefef;
+    --alert:  indianred;
+}
+
+/*@over botstrap styles*/
+.bg-primary{background-color: var(--primary) !important;}
+.bg-light{background-color: var(--ligth) !important;}
+.bg-mix{background: linear-gradient(180deg,var(--ligth)50%,var(--grey));}
+.bg-grey{background-color: var(--grey) !important;}
+
+
+.bg-overlay{
+    background: rgba(0,0,0, .7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: 0;
+}
+
+
+
+i .valores{
+    position: relative;
+    font-size: 3em !important;
+}
