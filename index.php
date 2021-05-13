@@ -634,7 +634,8 @@
     
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-    <!------ Include the above in your HEAD tag ---------->
+    <!------       Carousel for developers      -------->
+    <!------ Include the above in your HEAD tag -------->
     <div class="container">
                 <div class="row blog">
     <h1>
@@ -653,23 +654,6 @@
     
                                 <div class="carousel-item active">
                                     <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6" >
-            <div class="our-team">
-              <div class="pic">
-                <img src="./assets/image/cico.jpg">
-              </div>
-              <div class="team-content">
-                <h3 class="title">Luis Fernando Hernandez Ledezma</h3>
-                <span class="post">UNAM</span>
-              </div>
-              <ul class="social"> 
-                <li>
-                  <a href="#" class="fa fa-envelope"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-    
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="our-team">
               <div class="pic">
@@ -701,7 +685,25 @@
                 </li>
               </ul>
             </div>
+            
           </div>
+          <div class="col-lg-4 col-md-6 col-sm-6" >
+            <div class="our-team">
+              <div class="pic">
+                <img src="./assets/image/cico.jpg">
+              </div>
+              <div class="team-content">
+                <h3 class="title">Luis Fernando Hernandez Ledezma</h3>
+                <span class="post">UNAM Developer</span>
+              </div>
+              <ul class="social"> 
+                <li>
+                  <a href="#" class="fa fa-envelope"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
     
      <!--    <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="our-team">
