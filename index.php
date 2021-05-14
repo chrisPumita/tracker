@@ -8,7 +8,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Bienvenidos a ProyectTraker</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Built with Blueprints app">
@@ -18,11 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
-
     <!-- Plugins -->
 </head>
 <body>
-
 <nav class="navbar navbar-light bg-white  navbar-expand-md">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -42,7 +39,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Planes</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
@@ -51,12 +47,8 @@
         </div>
     </div>
 </nav>
-
-
 <section class="pt-5 pb-5 bg-dark position-relative" style="min-height:75vh; background-image: url(./assets/image/fondo.jpg); background-size: cover;">
     <div class="bg-overlay"></div>
-
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -147,13 +139,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-
-
-
-
-
-
     <!--
     <div class="container pt-5 pb-5 position-relative">
         <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
@@ -414,7 +399,6 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Conoce nuestros planes</h3>
-
             <div class="col-12 col-md-12 d-flex   mt-4 mt-md-0">
                 <!-- col // -->
                 <div class="col-md-4">
@@ -476,10 +460,8 @@
                     </figure>
                 </div> <!-- col // -->
             </div> <!-- row.// -->
-
-            </div>
-
         </div>
+    </div>
     </div>
 </section>
 <section class="pt-5 pb-5">
@@ -487,71 +469,69 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center">
                 <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Frequently asked questions (FAQ)</h3>
-
                 <!-- Accordion -->
                 <div class="container-fluid bg-gray" id="accordion-style-1">
                     <div class="container">
                         <section>
                             <div class="row">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="card">
-                                            <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>How to pay amazon.
-                                                    </button>
-                                                </h5>
-                                            </div>
-
-                                            <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                                <div class="card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
-                                                </div>
-                                            </div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>How to pay amazon.
+                                                </button>
+                                            </h5>
                                         </div>
-                                        <div class="card">
-                                            <div class="card-header" id="headingTwo">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>There are many more.
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                                <div class="card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="headingThree">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3"></i>How to enable two factor authentication.
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                                <div class="card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-header" id="headingFour">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                        <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"></i>How to contact us.
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseFour" class="collapse fade" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                                <div class="card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
-                                                </div>
+                                        <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>There are many more.
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3"></i>How to enable two factor authentication.
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingFour">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"></i>How to contact us.
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFour" class="collapse fade" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -572,18 +552,14 @@
                     <div class="row blog">
                         <div class="animated fadeInLeft"><h1>DEVELOPERS</h1></div>
                         <div class="animated fadeInRight text-dark">TEAM</div>
-
                         <div class="col-md-12">
                             <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-
                                 <ol class="carousel-indicators">
                                     <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#blogCarousel" data-slide-to="1"></li>
                                 </ol>
-
                                 <!-- Carousel items -->
                                 <div class="carousel-inner">
-
                                     <div class="carousel-item active">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -617,7 +593,6 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-
                                             </div>
                                             <div class="col-lg-4 col-md-6 col-sm-6" >
                                                 <div class="our-team">
@@ -635,8 +610,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-
-
                                             <!--    <div class="col-lg-3 col-md-6 col-sm-6">
                                                    <div class="our-team">
                                                      <div class="pic">
@@ -657,7 +630,6 @@
                                         <!--.row-->
                                     </div>
                                     <!--.item-->
-
                                     <div class="carousel-item">
                                         <div class="row">
                                             <div class="col-lg-1 col-md-6 col-sm-6"> </div>
@@ -712,7 +684,6 @@
                                                 </ul>
                                               </div>
                                             </div>
-
                                             <div class="col-lg-3 col-md-6 col-sm-6">
                                               <div class="our-team">
                                                 <div class="pic">
@@ -733,12 +704,10 @@
                                         <!--.row-->
                                     </div>
                                     <!--.item-->
-
                                 </div>
                                 <!--.carousel-inner-->
                             </div>
                             <!--.Carousel-->
-
                         </div>
                     </div>
                 </div>
@@ -746,7 +715,6 @@
         </div>
     </div>
 </section>
-
 <section class="pt-5 pb-5" style="">
     <div class="container">
         <div class="row">
@@ -902,7 +870,7 @@
                     <div class="col text-center  text-secondary my-1">
                         <p class="mt-2  text-white"> © Copyright 2021 • All Rights Reserved ProyectTraker |
                             <a class=" " href="#" data-toggle="modal" data-target="#exampleModalLong">Aviso de Privacidad|
-                            <a class=" " href="#">Legales</a>
+                                <a class=" " href="#">Legales</a>
                         </p>
                     </div>
                 </div>
@@ -910,9 +878,6 @@
         </div>
     </div>
 </section>
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -925,19 +890,12 @@
             </div>
             <div class="modal-body">
                 Aviso de privacidad simplificado de capacitaciones o eventos presenciales
-
                 El Instituto Veracruzano de Acceso a la Información y Protección de Datos Personales, es el responsable del tratamiento de los datos personales que nos proporcione.
-
                 Sus datos personales, serán utilizados para las siguientes finalidades: a) Registrar su inscripción a la modalidad de capacitación que haya elegido; b) generar listas de asistencias y validación de  las mismas; c) emisión de constancia de participación o asistencia de acuerdo a la modalidad de que se trate; d) establecer comunicación para dar seguimiento de los cursos o aclaración de dudas sobre sus datos, notificación de cancelación o cambio de horario, fecha o sede; y e) generar estadísticas para informes obligatorios del Instituto ante otros organismos públicos o privados.
-
                 De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son necesarias, pero que nos permiten y facilitan brindarle una mejor atención: a) envío de material de exposición o apoyo; y, b) invitaciones a futuros eventos.
-
                 En caso de que no desee que sus datos personales sean tratados para las finalidades adicionales, usted puede manifestarlo en el correo electrónico capacitaciónivai@outlook.com
-
                 Se informa que no se realizarán transferencias que requieran su consentimiento, salvo aquellas que sean necesarias para atender requerimientos de información de una autoridad competente, debidamente fundados y motivados.
-
                 Para mayor información acerca del tratamiento y de los derechos que puede hacer valer, usted puede acceder al aviso de privacidad integral de cursos o eventos a través de www.ivai.org.mx, en la sección de Avisos de Privacidad.
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -946,7 +904,6 @@
         </div>
     </div>
 </div>
-
 <!-- jQuery is required -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -961,7 +918,5 @@
         duration: 1200,
     })
 </script>
-
-
 </body>
 </html>
