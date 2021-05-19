@@ -30,47 +30,52 @@
         <div class="container">
             <div class="card"></div>
             <div class="card">
-                <h1 class="title">Login</h1>
+                <h1 class="title">Inicia Sesión</h1>
                 <form action="./APP/view/index.php">
                     <div class="input-container">
                         <input type="text" id="Username" required="required"/>
-                        <label for="Username">Username</label>
+                        <label for="Username">Nombre de usuario</label>
                         <div class="bar"></div>
                     </div>
                     <div class="input-container">
                         <input type="password" id="Password" required="required"/>
-                        <label for="Password">Password</label>
+                        <label for="Password">Contraseña</label>
                         <div class="bar"></div>
                     </div>
                     <div class="button-container">
-                        <button type="submit"><span>Go</span></button>
+                        <button type="submit"><span>Ingresar</span></button>
                     </div>
-                    <div class="footer"><a href="#">Forgot your password?</a></div>
+                    <div class="footer"><a href="#">¿Olvidaste tu contraseña?</a></div>
                 </form>
             </div>
             <div class="card alt">
                 <div class="toggle"></div>
-                <h1 class="title">Register
+                <h1 class="title">Registrate
                     <div class="close"></div>
                 </h1>
                 <form>
                     <div class="input-container">
                         <input type="text" id="Username" required="required"/>
-                        <label for="Username">Username</label>
+                        <label for="Username">Nombre de usuario</label>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" id="email" required="required"/>
+                        <label for="Username">Correo electronico</label>
                         <div class="bar"></div>
                     </div>
                     <div class="input-container">
                         <input type="password" id="Password" required="required"/>
-                        <label for="Password">Password</label>
+                        <label for="Password">Contraseña</label>
                         <div class="bar"></div>
                     </div>
                     <div class="input-container">
                         <input type="password" id="Repeat Password" required="required"/>
-                        <label for="Repeat Password">Repeat Password</label>
+                        <label for="Repeat Password">Confirmar contraseña</label>
                         <div class="bar"></div>
                     </div>
                     <div class="button-container">
-                        <button><span>Next</span></button>
+                        <button><span>Siguiente</span></button>
                     </div>
                 </form>
             </div>

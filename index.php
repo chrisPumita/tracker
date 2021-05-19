@@ -63,7 +63,7 @@
                 <div class="container pt-5 pb-5 position-relative">
                     <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
                         <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
-                            <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Eslogan bien chido</h1>
+                            <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Feel the advance</h1>
                             <div class="my-4 aos-init" data-aos="fade-up">
                                 <p class="lead text-white">¡Que tus clientes sepan como va su proyecto!</p>
                             </div>
@@ -75,7 +75,7 @@
                                     <i class="fas fa-star fa-lg text-warning m-1"></i>
                                     <i class="fas fa-star fa-lg text-warning m-1"></i>
                                 </div>
-                                <span class="text-white">(Average score: 4.9/5)</span>
+                                <span class="text-white">(Nuestra calificación: 4.9/5)</span>
                             </div>
                         </div>
                         <div class="col">
@@ -83,41 +83,24 @@
                                 <div class="col-xl-8 col-md-10">
                                     <form class="position-relative d-block aos-init aos-animate" data-aos="fade-up">
                                         <div class="form-group">
-                                            <label class="text-white" for="course-name-1">Your Name</label>
-                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Type your name">
+                                            <label class="text-white" for="course-name-1">Ingresa tu nombre</label>
+                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Ingresa tu nombre">
                                         </div>
                                         <div class="form-group">
-                                            <label class="text-white" for="course-email-1">Email Address</label>
-                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="you@yoursite.com">
+                                            <label class="text-white" for="course-email-1">Correo electronico</label>
+                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
+                                        </div>
+                                          <div class="form-group">
+                                            <label class="text-white" for="course-password-1">Contraseña</label>
+                                            <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
                                         </div>
                                         <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group mb-1">
-                                                        <label class="text-white">Skill Level:</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group rounded bg-white p-2 border">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" id="course-radio-beginner-1" name="course-radio-1" class="custom-control-input">
-                                                            <label class="custom-control-label" for="course-radio-beginner-1">Beginner</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group rounded bg-white p-2 border">
-                                                        <div class="custom-control custom-radio">
-                                                            <input type="radio" id="course-radio-advanced-1" name="course-radio-1" class="custom-control-input">
-                                                            <label class="custom-control-label" for="course-radio-advanced-1">Advanced</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <label class="text-white" for="course-password-2">Confirmar contraseña</label>
+                                            <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
                                         </div>
                                         <div class="form-group text-center">
                                             <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Regístrate</button>
-                                            <small class="text-white">You’ll recieve your first lesson via email in less than a minute.</small>
+                                            <small class="text-white">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
                                         </div>
                                     </form>
                                 </div>
@@ -138,7 +121,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> 
     <!--
     <div class="container pt-5 pb-5 position-relative">
         <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
@@ -211,8 +194,8 @@
     <div class="container  pt-5 pb-5">
         <div class="row d-flex justify-content-between">
             <div class="col-md-6">
-                <h3 class="display-4 font-weight-bold aos-init" data-aos="fade-up">Start building beautiful websites</h3>
-                <p class="lead mt-4 aos-init" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <h3 class="display-4 font-weight-bold aos-init" data-aos="fade-up">Controla los avances de tus proyectos</h3>
+                <p class="lead mt-4 aos-init" data-aos="fade-up">Organizate de una mejor manera y avanza firme en todos tus proyectos.</p>
                 <div class="row row-grid">
                     <div class="col-xs-4 col-md-4 my-1 aos-init" data-aos="fade-up">
                         <img src="./assets/image/calendar.png" alt="" class="img-fluid">
@@ -242,14 +225,14 @@
                                             </div>
                                         </div>
                                         <blockquote class="blockquote blockquote-reverse mt-4">
-                                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                                            <p class="lead font-weight-bold mt-2">"Proyect traker es lo mejor para gestionar mis proyectos, gran herramienta".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
                                                     <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
                                                 </div>
                                                 <div class="d-block">
-                                                    <p class="mb-0">User Name</p>
-                                                    <p class="small">Designer</p>
+                                                    <p class="mb-0">Ricardo</p>
+                                                    <p class="small">Pofesor que nos pasara con 10</p>
                                                 </div>
                                             </div>
                                         </blockquote>
@@ -271,14 +254,14 @@
                                             </div>
                                         </div>
                                         <blockquote class="blockquote blockquote-reverse mt-4">
-                                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                                            <p class="lead font-weight-bold mt-2">"Lo mejor de lo mejor que he probado para gestionar mis proyectos en grupo, altamente recomendable.".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
                                                     <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
                                                 </div>
                                                 <div class="d-block">
-                                                    <p class="mb-0">User Name</p>
-                                                    <p class="small">Designer</p>
+                                                    <p class="mb-0">Roberto</p>
+                                                    <p class="small">Jefe de proyectos</p>
                                                 </div>
                                             </div>
                                         </blockquote>
@@ -300,14 +283,14 @@
                                             </div>
                                         </div>
                                         <blockquote class="blockquote blockquote-reverse mt-4">
-                                            <p class="lead font-weight-bold mt-2">"Lorem ipsum dolor sit amet, consectetur adipiscing eliterat sed".</p>
+                                            <p class="lead font-weight-bold mt-2">"Quien hizo esto es un genio, merecen 10 si hipoteticamente fuese un trabajo de una materia".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
                                                     <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
                                                 </div>
                                                 <div class="d-block">
-                                                    <p class="mb-0">User Name</p>
-                                                    <p class="small">Designer</p>
+                                                    <p class="mb-0">El profe chido</p>
+                                                    <p class="small">guiño guiño</p>
                                                 </div>
                                             </div>
                                         </blockquote>
@@ -325,9 +308,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-md-8 text-center aos-init" data-aos="fade-up" data-aos-offset="300">
-                <h2 class="font-weight-bold"> Blueprints</h2>
-                <p class="text-h3">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                    <a href="http://bootstraptor.com">Duis mollis</a>.</p>
+                <h2 class="font-weight-bold">Proyect Tracker</h2>
+                <p class="text-h3">En Proyect Tracker encontraras una herramienta útil e intuitiva para gestionar la organizacion y avances en tus proyectos individuales y colaborativos. Registrate para poder empezar a trabajar tus proyectos de una manera más ordenada. Prueba proyect tracker con nuestro paquete de prueba gratuita que te ofrece todas las funciones. 
+                 <!--   <a href="http://bootstraptor.com">Consultar paquetes</a>.</p>  -->
             </div>
         </div>
     </div>
@@ -336,18 +319,18 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6   mt-4 mt-md-0">
-                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="http://via.placeholder.com/410x450/ccc/fff">
+                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="./assets/image/equipo.jpg">
             </div>
             <div class="col-12 col-md-5">
-                <h2 data-aos="fade-up" class="aos-init">Nice Heading</h2>
-                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">A collection of coded HTML and CSS elements to help your build your new website. Clean design, fully responsive and based on Bootstrap 4.</p>
+                <h2 data-aos="fade-up" class="aos-init">Trabaja en equipo</h2>
+                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">Proyect Tracker es una herramienta que te permite trabajar en proyectos junto a tu equipo de manera fácil.</p>
                 <ol class="list-unstyled mt-4">
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Very Important Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Avanza de manera ordenada</span></li>
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Enseña tus avances</span></li>
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Mejora tu coordinacion en equipo</span></li>
                 </ol>
             </div>
         </div>
@@ -357,18 +340,18 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6   mt-4 mt-md-0">
-                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="http://via.placeholder.com/410x450/ccc/fff">
+                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="./assets/image/equipo2.jpg">
             </div>
             <div class="col-12 col-md-5">
-                <h2 data-aos="fade-up" class="aos-init">Nice Heading</h2>
-                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">A collection of coded HTML and CSS elements to help your build your new website. Clean design, fully responsive and based on Bootstrap 4.</p>
+                <h2 data-aos="fade-up" class="aos-init">Muestra tus avances</h2>
+                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">Ademas de los avances que puedes mostrar para tu equipo es posible mostrar avances a tus clientes con tan solo invitarlos a tu proyecto.</p>
                 <ol class="list-unstyled mt-4">
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Very Important Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Invita a tus clientes a visualizar</span></li>
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Habilita lo que puede ver el cliente</span></li>
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Muestra los avances del proyecto</span></li>
                 </ol>
             </div>
         </div>
@@ -378,18 +361,16 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 col-md-6   mt-4 mt-md-0">
-                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="http://via.placeholder.com/410x450/ccc/fff">
+                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" src="./assets/image/equipotiempo.jpg">
             </div>
             <div class="col-12 col-md-5">
-                <h2 data-aos="fade-up" class="aos-init">Nice Heading</h2>
-                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">A collection of coded HTML and CSS elements to help your build your new website. Clean design, fully responsive and based on Bootstrap 4.</p>
+                <h2 data-aos="fade-up" class="aos-init">Organiza tus tiempos</h2>
+                <p class="text-h3 mt-3 lead aos-init" data-aos="fade-up">Con Proyect Tracker puedes organizar las entregas de avances de tu proyecto para tener un mayor control.</p>
                 <ol class="list-unstyled mt-4">
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Very Important Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Organiza tu tiempo</span></li>
                     <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
-                    <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
-                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Another Key Point</span></li>
+                        <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Fija fechas para entregar avances</span></li>
                 </ol>
             </div>
         </div>
@@ -398,43 +379,43 @@
 <section class="pt-5 pb-5">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Conoce nuestros planes</h3>
+            <h2 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Conoce nuestros planes</h2>
             <div class="col-12 col-md-12 d-flex   mt-4 mt-md-0">
                 <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
-                        <div class="img-wrap"><img src="./assets/image/fondo.jpg"> </div>
+                        <div class="img-wrap"><img src="./assets/image/estrella_bronce.png"> </div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Good product</h4>
-                            <p class="desc">Some small description goes here</p>
+                            <h4 class="title">Prueba gratis</h4>
+                            <p class="desc">Crea hasta tres proyectos y goza de todos nuestros beneficios durante ese perdiodo</p>
                             <div class="rating-wrap">
-                                <div class="label-rating">132 reviews</div>
-                                <div class="label-rating">154 orders </div>
+                                <div class="label-rating">182 vistas</div>
+                                <div class="label-rating">154 orders</div>
                             </div> <!-- rating-wrap.// -->
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                                <span class="price-new">GRATIS</span> <del class="price-old">$0.01</del>
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
                 </div> <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
-                        <div class="img-wrap"><img src="./assets/image/fondo.jpg"></div>
+                        <div class="img-wrap"><img src="./assets/image/estrella_plata.png"></div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Product name goes here</h4>
-                            <p class="desc">Some small description goes here</p>
+                            <h4 class="title">ProTracker</h4>
+                            <p class="desc">Crea hasta cincuenta proyectos con la mayoria de beneficios de Proyect Tracker incluidos</p>
                             <div class="rating-wrap">
                                 <div class="label-rating">132 reviews</div>
                                 <div class="label-rating">154 orders </div>
                             </div> <!-- rating-wrap.// -->
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                                <span class="price-new">$899</span> <del class="price-old">$1199</del>
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -442,19 +423,19 @@
                 <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
-                        <div class="img-wrap"><img src="./assets/image/fondo.jpg"></div>
+                        <div class="img-wrap"><img src="./assets/image/estrella_oro.png"></div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Product name goes here</h4>
-                            <p class="desc">Some small description goes here</p>
+                            <h4 class="title">Plan Premium</h4>
+                            <p class="desc">Crea proyectos sin limites y goza de todas las herramientas de Proyect Tracker sin limites</p>
                             <div class="rating-wrap">
-                                <div class="label-rating">132 reviews</div>
+                                <div class="label-rating">215 reviews</div>
                                 <div class="label-rating">154 orders </div>
                             </div> <!-- rating-wrap.// -->
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$1280</span> <del class="price-old">$1980</del>
+                                <span class="price-new">$1499</span> <del class="price-old">$2199</del>
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -468,7 +449,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center">
-                <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Frequently asked questions (FAQ)</h3>
+                <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Preguntas frecuentes</h3>
                 <!-- Accordion -->
                 <div class="container-fluid bg-gray" id="accordion-style-1">
                     <div class="container">
@@ -479,13 +460,13 @@
                                         <div class="card-header" id="headingOne">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>How to pay amazon.
+                                                    <i class="fa fa-amazon main"></i><i class="fa fa-angle-double-right mr-3"></i>¿A quién estamos dirigidos?
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Estamos dirigidos a líderes de proyecto, freelance y estudiantes en proceso de titulación que deban informar a un solicitante el estado actual de su proyecto.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
@@ -493,13 +474,14 @@
                                         <div class="card-header" id="headingTwo">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>There are many more.
+                                                    <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>¿Cómo funciona? 
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Cada usuario puede colocar las etapas que considere necesarias, y se les asignará una fecha aproximada de entrega en cada una de las etapas, en cada actualización se pondrá un porcentaje de avance a cada etapa que, a la vez, irá calculando el porcentaje de avance total del proyecto.
+                                                El solicitante podrá entrar a la liga del proyecto y ver de una forma muy simple el estado actual del proyecto que solicitó<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
@@ -507,16 +489,17 @@
                                         <div class="card-header" id="headingThree">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3"></i>How to enable two factor authentication.
+                                                    <i class="fa fa-expeditedssl main"></i><i class="fa fa-angle-double-right mr-3"></i>¿Quién puede ver mis proyectos? 
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Cualquier usuario que tenga el vínculo de la página. El lider del proyecto podra mandar links de invitacion para colaboradores y clientes.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--
                                     <div class="card">
                                         <div class="card-header" id="headingFour">
                                             <h5 class="mb-0">
@@ -531,6 +514,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                -->
                                 </div>
                             </div>
                         </section>
@@ -722,8 +706,8 @@
                 <div class="">
                     <div class="row text-center justify-content-center">
                         <div class="col-12 col-md-9 col-lg-7 aos-init" data-aos="fade-up">
-                            <h3 class="mb-5 display-4 font-weight-bold">Ready to start?</h3>
-                            <p class="text-h3 lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                            <h3 class="mb-5 display-4 font-weight-bold">¿Listo para empezar?</h3>
+                            <p class="text-h3 lead">Registrate para empezar a gozar de los beneficios que ofrece Proyect Tracker.</p>
                         </div>
                     </div>
                     <div class="row justify-content-center pt-4 aos-init" data-aos="fade-up">
@@ -732,39 +716,24 @@
                                 <div class="col-xl-8 col-md-10">
                                     <form>
                                         <div class="form-group">
-                                            <label class=" " for="course-name-1">Your Name</label>
-                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Type your name">
+                                            <label class=" " for="course-name-1">Nombre de usuario</label>
+                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Nombre de usuario">
                                         </div>
                                         <div class="form-group">
-                                            <label class=" " for="course-email-1">Email Address</label>
-                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="you@yoursite.com">
+                                            <label class=" " for="course-email-1">Correo electronico</label>
+                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="form-group mb-1">
-                                                    <label class=" ">Skill Level:</label>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group rounded bg-white p-2 border">
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="course-radio-beginner-1" name="course-radio-1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="course-radio-beginner-1">Beginner</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="form-group rounded bg-white p-2 border">
-                                                    <div class="custom-control custom-radio">
-                                                        <input type="radio" id="course-radio-advanced-1" name="course-radio-1" class="custom-control-input">
-                                                        <label class="custom-control-label" for="course-radio-advanced-1">Advanced</label>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="form-group">
+                                            <label class="" for="course-password-1">Contraseña</label>
+                                            <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="course-password-2">Confirmar contraseña</label>
+                                            <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
                                         </div>
                                         <div class="form-group text-center">
-                                            <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Claim your free spot</button>
-                                            <small class=" ">You’ll recieve your first lesson via email in less than a minute.</small>
+                                            <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Registrarse</button>
+                                            <small class=" ">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
                                         </div>
                                     </form>
                                 </div>
