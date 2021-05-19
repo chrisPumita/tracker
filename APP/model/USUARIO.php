@@ -53,7 +53,7 @@ class USUARIO extends CONEXION
     /**
      * @param mixed $id_usuario
      */
-    public function setIdUsuario($id_usuario): void
+    public function setIdUsuario($id_usuario) : void
     {
         $this->id_usuario = $id_usuario;
     }
