@@ -14,6 +14,10 @@ class USUARIO extends CONEXION
     private $path_img;
     private $estado;
 
+    private $nombreCompleto;
+
+
+
     /**
      * USUARIO constructor.
      * @param $id_usuario
@@ -200,6 +204,22 @@ class USUARIO extends CONEXION
     public function setEstado($estado): void
     {
         $this->estado = $estado;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNombreCompleto()
+    {
+        return $this->getNombre()." ".$this->getApaterno()." ".$this->getAmaterno();
+    }
+
+    /**
+     * @param mixed $nombreCompleto
+     */
+    public function setNombreCompleto($nombreCompleto): void
+    {
+        $this->nombreCompleto = $nombreCompleto;
     }
 
     public function consultaUsuarios($filro)
