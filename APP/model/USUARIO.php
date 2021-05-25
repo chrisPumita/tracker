@@ -57,7 +57,7 @@ class USUARIO extends CONEXION
     {
         $this->id_usuario = $id_usuario;
     }
-
+    
     /**
      * @return mixed
      */

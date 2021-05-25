@@ -1,5 +1,5 @@
 <?php
-$tittle = "Perfil name_people";
+$tittle = "Mi perfil";
 $lugar = "Plantilla";
 $nombre="";
 $user_name="";
