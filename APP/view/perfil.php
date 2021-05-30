@@ -1,11 +1,10 @@
 <?php
 $tittle = "Mi perfil";
 $lugar = "Plantilla";
-$nombre="";
-$user_name="";
+$nombre="Mike Andrew";
+$user_name="michael23";
 include_once "./include/header.php";
 ?>
-
     <body>
     <div class="wrapper">
         <?php include_once "./include/sidebar.php";?>
@@ -60,13 +59,13 @@ include_once "./include/header.php";
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                <div class="col-md-10 pl-1">
+                                                    <div class="col-md-10 pl-1">
                                                         <div class="form-group">
-                                                            <label for="exampleInputEmail1">Email address</label>
+                                                            <label for="exampleInputEmail1">Direccion Email</label>
                                                             <input type="email" class="form-control" placeholder="Email" value="fernandohlqwe@gmail.com" >
                                                         </div>
                                                     </div>
-                                                    </div>
+                                                </div>
                                                 <div class="row">
                                                     <div class="col-md-5 pr-1">
                                                         <div class="form-group">
@@ -82,22 +81,7 @@ include_once "./include/header.php";
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!--<div class="card-header">
-                                                    <h4 class="card-title">Redes Sociales</h4>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-8">
-                                                        <div class="form-group">
-                                                            <label>Facebook</label> <input type="text" class="form-control" placeholder="https://facebook.com/" value="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="form-group">
-                                                            <label>Twitter</label> <input type="text" class="form-control" placeholder="https://twitter.com/" value="" >
-                                                        </div>
-                                                    </div>
-                                                </div>      -->
-                                                <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
+                                                    <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar Perfil</button>
                                                 <div class="clearfix"></div>
                                             </form>
                                         </div>
