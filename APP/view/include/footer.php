@@ -3,7 +3,7 @@
         <nav>
             <ul class="footer-menu">
                 <li>
-                    <a href="#">
+                    <a href="./index.php">
                         Home
                     </a>
                 </li>

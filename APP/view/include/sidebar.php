@@ -14,7 +14,7 @@ Tip 2: you can also add an image using data-image tag
             <li class="nav-item ">
                 <a class="nav-link" href="./index.php">
                     <i class="nc-icon nc-grid-45"></i>
-                    <p>Dashboard</p>
+                    <p>Inicio</p>
                 </a>
             </li>
             <li>

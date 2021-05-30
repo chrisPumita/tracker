@@ -13,10 +13,7 @@ class USUARIO extends CONEXION
     private $nivel_acceso;
     private $path_img;
     private $estado;
-
     private $nombreCompleto;
-
-
 
     /**
      * USUARIO constructor.
