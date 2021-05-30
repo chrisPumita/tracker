@@ -42,27 +42,30 @@ include_once "./include/header.php";
                                                 <tr> 
                                                 </tbody>
                                             </table>
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <div class="form-group">
-                                                        <h4>Mi Empresa</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <div class="form-group">
-                                                        <button type="submit" class="btn btn-info btn-fill pull-rigth">Crear empresa</button>
-                                                        <?php
-                                                        //Agregar secuencia pra habilitar boton "Ver mi empresa" en caso de que la empresa este creada
-                                                        //En caso contrario, de no estar creada, deshabilitar el boton "Ver mi empresa"
-                                                        ?>                                                       
-                                                        <button type="submit" class="btn btn-info btn-fill pull-rigth">Ver mi empresa</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Mi Empresa</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-info btn-fill pull-rigth">Crear empresa</button>
+                                            <?php
+                                            //Agregar secuencia pra habilitar boton "Ver mi empresa" en caso de que la empresa este creada
+                                            //En caso contrario, de no estar creada, deshabilitar el boton "Ver mi empresa"
+                                            ?>                                                       
+                                        <button type="submit" class="btn btn-info btn-fill pull-rigth" disabled="...">Ver mi empresa</button>
+                                    </div>
+                                </div>
+                              </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

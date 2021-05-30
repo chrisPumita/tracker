@@ -20,63 +20,86 @@ include_once "./include/header.php";
                                 <div class="col-md-12">
                                     <div class="card strpied-tabled-with-hover">
                                         <div class="card-header ">
-                                            <h4 class="card-title">Striped Table with Hover</h4>
-                                            <p class="card-category">Here is a subtitle for this table</p>
+                                            <h4 class="card-title">Proyectos</h4>
+                                            <p class="card-category">En Desarrollo</p>
                                         </div>
                                         <div class="card-body table-full-width table-responsive">
                                             <table class="table table-hover table-striped">
                                                 <thead>
-                                                <tr><th>ID</th>
-                                                    <th>Name</th>
-                                                    <th>Salary</th>
-                                                    <th>Country</th>
-                                                    <th>City</th>
+                                                <tr><th>ID Proyecto</th>
+                                                    <th>Nombre</th>
+                                                    <th>Fecha Inicio</th>
+                                                    <th>Fecha Estimada</th>
+                                                    <th></th>
+                                                    <th></th>
                                                 </tr></thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td>1</td>
+                                                    <td>1021</td>
                                                     <td>Dakota Rice</td>
-                                                    <td>$36,738</td>
-                                                    <td>Niger</td>
-                                                    <td>Oud-Turnhout</td>
+                                                    <td>15/10/20</td>
+                                                    <td>20/12/20</td>
+                                                    <td></td>
+                                                    <td><button type="submit" class="btn btn-info btn-fill pull-right">Ver</button></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2</td>
-                                                    <td>Minerva Hooper</td>
-                                                    <td>$23,789</td>
-                                                    <td>Curaçao</td>
-                                                    <td>Sinaai-Waas</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Sage Rodriguez</td>
-                                                    <td>$56,142</td>
-                                                    <td>Netherlands</td>
-                                                    <td>Baileux</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Philip Chaney</td>
-                                                    <td>$38,735</td>
-                                                    <td>Korea, South</td>
-                                                    <td>Overland Park</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Doris Greene</td>
-                                                    <td>$63,542</td>
-                                                    <td>Malawi</td>
-                                                    <td>Feldkirchen in Kärnten</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td>Mason Porter</td>
-                                                    <td>$78,615</td>
-                                                    <td>Chile</td>
-                                                    <td>Gloucester</td>
+                                                    <td>2021</td>
+                                                    <td>Hooper Dash</td>
+                                                    <td>15/10/13</td>
+                                                    <td>15/10/14</td>
+                                                    <td></td>
+                                                    <td><button type="submit" class="btn btn-info btn-fill pull-right">Ver</button></td>
                                                 </tr>
                                                 </tbody>
                                             </table>
+                                        </div>
+                                        <div class="card-header ">
+                                            <p class="card-category">Finalizados</p>
+                                            </div>
+                                            <div class="card-body table-full-width table-responsive">
+                                                <table class="table table-hover table-striped">
+                                                    <thead>
+                                                    <tr><th>ID Proyecto</th>
+                                                        <th>Nombre</th>
+                                                        <th>Fecha Inicio</th>
+                                                        <th>Fecha de finalización</th>
+                                                        <th>Dias de desarrollo</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2098</th>
+                                                        <td>Dakota Tec</td>
+                                                        <td>15/10/18</td>
+                                                        <td>15/03/19</td>
+                                                        <td>160</td>
+                                                        <td><button type="submit" class="btn btn-info btn-fill pull-right">Ver</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3052</th>
+                                                        <td>Globant Tec</td>
+                                                        <td>13/09/20</td>
+                                                        <td>28/05/21</td>
+                                                        <td>160</td>
+                                                        <td><button type="submit" class="btn btn-info btn-fill pull-right">Ver</button></td>
+                                                    </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card strpied-tabled-with-hover">
+                                        <div class="card-header ">
+                                            <h4 class="card-title">Nuevo Proyecto</h4>
+                                        </div>
+                                        <div class="col-md-6">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a class="nav-link" href="./plantilla.php">
+                                            <button type="submit" class="btn btn-info btn-fill upull-right">Crear proyecto</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
