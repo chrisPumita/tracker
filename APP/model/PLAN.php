@@ -1,33 +1,15 @@
 <?php
-class PLAN
+
+include_once "CONEXION.php";
+
+class PLAN extends CONEXION
 {
-    private $id_plan;
-    private $max_usuarios;
-    private $costo;
-    private $descripcion;
-    private $max_proyectos;
-    private $tiempo_dias;
-
-    /**
-     * EMPRESAPLAN CONSTRUCTOR.
-     * @param $id_plan;
-     * @param $max_usuarios;
-     * @param $costo;
-     * @param $descripcion;
-     * @param $max_proyectos;
-     * @param $tiempo_dias;
-     */
-
-    public function __construct($id_plan,$max_usuarios,$costo,$descripcion,$max_proyectos,$tiempo_dias)
-    {
-        $this->id_plan = $id_plan;
-        $this->max_usuarios = $max_usuarios;
-        $this->costo = $costo;
-        $this->descripcion = $descripcion;
-        $this->max_proyectos = $max_proyectos;
-        $this->tiempo_dias = $tiempo_dias;
-    }
-
+        private $id_plan;
+        private $max_usuarios;
+        private $costo;
+        private $descripcion;
+        private $max_proyectos;
+        private $tiempo_dias;
 
     /**
      * @return mixed
@@ -125,6 +107,11 @@ class PLAN
         $this->tiempo_dias = $tiempo_dias;
     }
 
-
-}
+    function consultaPlan($id_plan){
+        $query = "SELECT * FROM plan WHERE id_plan = ". $id_plan;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
 }

@@ -1,9 +1,10 @@
 <?php
- include_once "CONEXION.php";
 
-class USUARIO extends CONEXION
+
+class USUARIO
 {
     private $id_usuario;
+    private $id_empresa_fk;
     private $nombre;
     private $apaterno;
     private $amaterno;
@@ -13,35 +14,6 @@ class USUARIO extends CONEXION
     private $nivel_acceso;
     private $path_img;
     private $estado;
-    private $nombreCompleto;
-
-    /**
-     * USUARIO constructor.
-     * @param $id_usuario
-     * @param $nombre
-     * @param $apaterno
-     * @param $amaterno
-     * @param $user_name
-     * @param $correo
-     * @param $password
-     * @param $nivel_acceso
-     * @param $path_img
-     * @param $estado
-     */
-    public function __construct($id_usuario, $nombre, $apaterno, $amaterno, $user_name, $correo, $password, $nivel_acceso, $path_img, $estado)
-    {
-        $this->id_usuario = $id_usuario;
-        $this->nombre = $nombre;
-        $this->apaterno = $apaterno;
-        $this->amaterno = $amaterno;
-        $this->user_name = $user_name;
-        $this->correo = $correo;
-        $this->password = $password;
-        $this->nivel_acceso = $nivel_acceso;
-        $this->path_img = $path_img;
-        $this->estado = $estado;
-    }
-
 
     /**
      * @return mixed
@@ -54,11 +26,27 @@ class USUARIO extends CONEXION
     /**
      * @param mixed $id_usuario
      */
-    public function setIdUsuario($id_usuario) : void
+    public function setIdUsuario($id_usuario): void
     {
         $this->id_usuario = $id_usuario;
     }
-    
+
+    /**
+     * @return mixed
+     */
+    public function getIdEmpresaFk()
+    {
+        return $this->id_empresa_fk;
+    }
+
+    /**
+     * @param mixed $id_empresa_fk
+     */
+    public function setIdEmpresaFk($id_empresa_fk): void
+    {
+        $this->id_empresa_fk = $id_empresa_fk;
+    }
+
     /**
      * @return mixed
      */
@@ -203,83 +191,5 @@ class USUARIO extends CONEXION
         $this->estado = $estado;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNombreCompleto()
-    {
-        return $this->getNombre()." ".$this->getApaterno()." ".$this->getAmaterno();
-    }
-
-    /**
-     * @param mixed $nombreCompleto
-     */
-    public function setNombreCompleto($nombreCompleto): void
-    {
-        $this->nombreCompleto = $nombreCompleto;
-    }
-
-    public function consultaUsuarios($filro)
-    {
-        $query = "SELECT `id_usuario`, `id_empresa_fk`, `nombre`, 
-       `apaterno`, `amaterno`, `user_name`, `correo`, `password`, 
-       `nivel_acceso`, `path_img`, `estado` FROM `usuario`";
-        $this->connect();
-        $resultado = $this->getData($query);
-        $this->close();
-        return $resultado;
-    }
-
-    public function agregaUsuario(){
-        $query = "INSERT INTO `usuario` (
-                       `id_usuario`, 
-                       `id_empresa_fk`, 
-                       `nombre`, 
-                       `apaterno`, 
-                       `amaterno`, 
-                       `user_name`, 
-                       `correo`, 
-                       `password`, 
-                       `nivel_acceso`, 
-                       `path_img`, 
-                       `estado`) VALUES
-                        (NULL, NULL, '".$this->getNombre()."', '".$this->getApaterno()."', '".$this->getAmaterno()."', 
-                         '".$this->getUserName()."', '".$this->getCorreo()."', 
-                         '".$this->getPassword()."', '".$this->getNivelAcceso()."', '".$this->getPathImg()."', '".$this->getNivelAcceso()."')";
-        $this->connect();
-        $resultado = $this->executeInstruction($query);
-        $this->close();
-        return $resultado;
-    }
-
-    public function actualizaUsuario($USUARIO){
-        $query = "UPDATE `usuario` SET 
-                     `id_empresa_fk` = '222', 
-                     `nombre` = 'Christian R', 
-                     `apaterno` = 'gbg', 
-                     `amaterno` = 'HERNANDEZR', 
-                     `user_name` = 'gggg', 
-                     `correo` = 'corggreo@gmail.com', 
-                     `nivel_acceso` = '1', 
-                     `path_img` = 'thhpggggg', 
-                     `estado` = '0' 
-                    WHERE `usuario`.`id_usuario` = 2";
-        $this->connect();
-        $resultado = $this->executeInstruction($query);
-        $this->close();
-        return $resultado;
-    }
-
-    public function eliminaUsuario($idUsuario){
-        $query = "DELETE FROM `usuario` WHERE `usuario`.`id_usuario` = ".$idUsuario;
-        $this->connect();
-        $resultado = $this->executeInstruction($query);
-        $this->close();
-        return $resultado;
-    }
-
-    public function login($username, $pw){
-        //CHRIS
-    }
 
 }

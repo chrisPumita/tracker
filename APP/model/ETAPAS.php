@@ -1,8 +1,9 @@
 <?php
 
-class ETAPAS 
+include_once "CONEXION.php";
+class ETAPAS extends CONEXION
 {
-	private $id_etapa;
+    private $id_etapa;
     private $id_proyecto_fk;
     private $nombre_etapa;
     private $estado_proceso;
@@ -10,31 +11,6 @@ class ETAPAS
     private $fecha_inicio;
     private $dias;
     private $indice;
-
-    /**
-     * ETAPAS CONSTRUCTOR.
-     * @param $id_etapa;
-     * @param $id_proyecto_fk;
-     * @param $nombre_etapa;
-     * @param $estado_proceso;
-     * @param $fecha_creacion;
-     * @param $fecha_inicio;
-     * @param $dias;
-     * @param $indice;
-     */
-
-    public function __construct($id_etapa, $id_proyecto_fk, $nombre_etapa, $estado_proceso, $fecha_creacion, $fecha_inicio, $dias, $indice)
-    {
-        $this->id_etapa = $id_etapa;
-        $this->id_proyecto_fk = $id_proyecto_fk;
-        $this->nombre_etapa = $nombre_etapa;
-        $this->estado_proceso = $estado_proceso;
-        $this->fecha_creacion = $fecha_creacion;
-        $this->fecha_inicio = $fecha_inicio;
-        $this->dias = $dias;
-        $this->indice = $indice;
-    }
-
 
     /**
      * @return mixed
@@ -50,7 +26,7 @@ class ETAPAS
     public function setIdEtapa($id_etapa): void
     {
         $this->id_etapa = $id_etapa;
-    } 
+    }
 
     /**
      * @return mixed
@@ -164,5 +140,15 @@ class ETAPAS
         $this->indice = $indice;
     }
 
-    
+
+   function consultaEtapas($idProyecto){
+        $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, `estado_proceso`, 
+                    `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
+                    FROM `etapas` where `id_proyecto_fk` = ". $idProyecto;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
+
 }

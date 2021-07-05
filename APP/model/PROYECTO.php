@@ -1,34 +1,54 @@
 <?php
 
-
-class PROYECTO
+include_once "CONEXION.php";
+class PROYECTO extends CONEXION
 {
-	private $id_proyecto;
-	private $id_gt_fk;
-	private $id_categoria_fk;
-	private $nombre_proyecto;
-	private $fecha_creacion;
-	private $fecha_inicio;
-	private $dias;
-	private $tipo_jornada;
-	private $estado;
+    private $id_proyecto;
+    private $id_gt_fk;
+    private $id_categoria_fk;
+    private $nombre_proyecto;
+    private $fecha_creacion;
+    private $fecha_inicio;
+    private $dias;
+    private $tipo_jornada;
+    private $estado;
+    private $link;
+    private $url_imagen;
 
-	private $categoria;
+    /* AGREGACION */
+    private $listaEtapas;
+    private $ListaProyecto;
 
     /**
      * @return mixed
      */
-    public function getCategoria()
+    public function getListaProyecto()
     {
-        return $this->categoria;
+        return $this->consultaListaProyecto();
     }
 
     /**
-     * @param mixed $categoria
+     * @param mixed $ListaProyecto
      */
-    public function setCategoria($categoria): void
+    public function setListaProyecto($ListaProyecto): void
     {
-        $this->categoria = $categoria;
+        $this->ListaProyecto = $ListaProyecto;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getListaEtapas()
+    {
+        return $this->consultListaEtapas();
+    }
+
+    /**
+     * @param mixed $listaEtapas
+     */
+    public function setListaEtapas($listaEtapas): void
+    {
+        $this->listaEtapas = $listaEtapas;
     }
 
     /**
@@ -206,6 +226,32 @@ class PROYECTO
     {
         $this->url_imagen = $url_imagen;
     }
-	private $link;
-	private $url_imagen;
+
+
+    /* Funciones propias de la clase*/
+
+    private function consultListaEtapas(){
+        include_once "ETAPAS.php";
+        $obj_etapa = new ETAPAS();
+        return $obj_etapa->consultaEtapas($this->getIdProyecto());
+    }
+
+    private function consultaListaProyecto(){
+        return $this->consultaProyecto($this->getIdProyecto());
+
+    }
+    private function consultaProyecto($idProyecto){
+        $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, `fecha_creacion`, 
+       `fecha_inicio`, `dias`, `tipo_jornada`, `estado` FROM `proyecto` WHERE `id_proyecto` = ". $idProyecto;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
+
+    public function consultaProyectosEmpresa($idEmpresa){
+        $query = "SELECT * FROM proyecto INNER JOIN grupo_trabajo ON proyecto.id_gt_fk=grupo_trabajo.id_gt INNER JOIN empresa
+                    ON grupo_trabajo.id_empresa_fk=empresa.id_empresa WHERE empresa.id_empresa= 1022 AND grupo_trabajo.id_gt=proyecto.id_gt_fk"
+    }
+
 }

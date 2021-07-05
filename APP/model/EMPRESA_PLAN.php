@@ -1,33 +1,14 @@
 <?php
-class EMPRESAPLAN
+
+
+class EMPRESA_PLAN
 {
     private $id_contrato;
     private $id_empresa_fk;
     private $id_plan_fk;
-    private $incio;
+    private $inicio;
     private $fin;
     private $estatus;
-
-    /**
-     * EMPRESAPLAN CONSTRUCTOR.
-     * @param $id_contrato;
-     * @param $id_empresa_fk;
-     * @param $id_plan_fk;
-     * @param $incio;
-     * @param $fin;
-     * @param $estatus;
-     */
-
-    public function __construct($id_contrato, $id_empresa_fk, $id_plan_fk, $incio, $fin, $estatus)
-    {
-        $this->id_contrato = $id_contrato;
-        $this->id_empresa_fk = $id_empresa_fk;
-        $this->id_plan_fk = $id_plan_fk;
-        $this->inicio = $incio;
-        $this->fin = $fin;
-        $this->estatus = $estatus;
-    }
-
 
     /**
      * @return mixed
@@ -48,7 +29,7 @@ class EMPRESAPLAN
     /**
      * @return mixed
      */
-    public function getIdEmpresaFK()
+    public function getIdEmpresaFk()
     {
         return $this->id_empresa_fk;
     }
@@ -56,7 +37,7 @@ class EMPRESAPLAN
     /**
      * @param mixed $id_empresa_fk
      */
-    public function setIdEmpresaFK($id_empresa_fk): void
+    public function setIdEmpresaFk($id_empresa_fk): void
     {
         $this->id_empresa_fk = $id_empresa_fk;
     }
@@ -64,7 +45,7 @@ class EMPRESAPLAN
     /**
      * @return mixed
      */
-    public function getIdPlanFK()
+    public function getIdPlanFk()
     {
         return $this->id_plan_fk;
     }
@@ -72,7 +53,7 @@ class EMPRESAPLAN
     /**
      * @param mixed $id_plan_fk
      */
-    public function setIdPlanFK($id_plan_fk): void
+    public function setIdPlanFk($id_plan_fk): void
     {
         $this->id_plan_fk = $id_plan_fk;
     }
@@ -126,5 +107,4 @@ class EMPRESAPLAN
     }
 
 
-}
 }

@@ -7,8 +7,7 @@ include_once "./include/header.php";
     <body>
     <div class="wrapper">
         <?php include_once "./include/sidebar.php";?>
-        <div class="main-panel">
-            <!-- Navbar -->
+        <div class="main-panel">            <!-- Navbar -->
             <?php include_once "./include/navbar.php";?>
             <div class="content">
                 <div class="container-fluid">

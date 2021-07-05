@@ -1,6 +1,7 @@
 <?php
 
-class GRUPOTRABAJOUSUARIO
+
+class GRUPO_TRABAJO_USUARIO
 {
     private $id_usuario_fk;
     private $id_gt_fk;
@@ -8,26 +9,6 @@ class GRUPOTRABAJOUSUARIO
     private $permisos;
     private $lider;
     private $estado;
-
-    /**
-     * GRUPOTRABAJOUSUARIO constructor.
-     * @param $id_usuario_fk
-     * @param $id_gt_fk
-     * @param $fecha_union
-     * @param $permisos
-     * @param $lider
-     * @param $estado
-     */
-    public function __construct($id_usuario_fk, $id_gt_fk, $fecha_union, $permisos, $lider, $estado)
-    {
-        $this->id_usuario_fk = $id_usuario_fk;
-        $this->id_gt_fk = $id_gt_fk;
-        $this->fecha_union = $fecha_union;
-        $this->permisos = $permisos;
-        $this->lider = $lider;
-        $this->estado = $estado;
-    }
-
 
     /**
      * @return mixed
@@ -124,6 +105,7 @@ class GRUPOTRABAJOUSUARIO
     {
         $this->estado = $estado;
     }
+
 
 
 }

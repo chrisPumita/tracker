@@ -1,37 +1,15 @@
 <?php
 
-class SUBETAPAS 
+
+class SUBETAPAS
 {
-	private $id_subetapa;
+    private $id_subetapa;
     private $id_etapa_fk;
     private $nombre_subetapa;
     private $estado;
     private $fecha_inicio;
     private $dias;
     private $indice;
-
-    /**
-     * SUBETAPAS CONSTRUCTOR.
-     * @param $id_subetapa;
-     * @param $id_etapa_fk;
-     * @param $nombre_subetapa;
-     * @param $estado;
-     * @param $fecha_inicio;
-     * @param $dias;
-     * @param $indice;
-     */
-
-    public function __construct($id_subetapa, $id_etapa_fk, $nombre_subetapa, $estado, $fecha_inicio, $dias, $indice)
-    {
-        $this->id_subetapa = $id_subetapa;
-        $this->id_etapa_fk = $id_estapa_fk;
-        $this->nombre_subetapa = $nombre_subetapa;
-        $this->estado = $estado;
-        $this->fecha_inicio = $fecha_inicio;
-        $this->dias = $dias;
-        $this->indice = $indice;
-    }
-
 
     /**
      * @return mixed
@@ -47,7 +25,7 @@ class SUBETAPAS
     public function setIdSubetapa($id_subetapa): void
     {
         $this->id_subetapa = $id_subetapa;
-    } 
+    }
 
     /**
      * @return mixed
@@ -68,7 +46,7 @@ class SUBETAPAS
     /**
      * @return mixed
      */
-    public function getNombreSubtapa()
+    public function getNombreSubetapa()
     {
         return $this->nombre_subetapa;
     }
@@ -76,7 +54,7 @@ class SUBETAPAS
     /**
      * @param mixed $nombre_subetapa
      */
-    public function setNombreEtapa($nombre_etapa): void
+    public function setNombreSubetapa($nombre_subetapa): void
     {
         $this->nombre_subetapa = $nombre_subetapa;
     }
@@ -145,5 +123,6 @@ class SUBETAPAS
         $this->indice = $indice;
     }
 
-    
+
+
 }

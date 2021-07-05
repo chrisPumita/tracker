@@ -1,6 +1,4 @@
 <?php
-
-
 class CONEXION
 {
     /* conexioon a servidor remoto
@@ -97,7 +95,7 @@ class CONEXION
         return null;
     }
 
-    function executeInstruction($sql)
+   public  function executeInstruction($sql)
     {
         $success = mysqli_query($this->connection, $sql);
 

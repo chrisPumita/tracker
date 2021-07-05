@@ -1,9 +1,10 @@
 <?php
 
-include_once "I_CATEGORIA.php";
-class CATEGORIA implements I_CATEGORIA
+
+class CATEGORIA
 {
-	private $id_categoria;
+    private $id_categoria;
+    private $nombre_categoria;
 
     /**
      * @return mixed
@@ -36,12 +37,6 @@ class CATEGORIA implements I_CATEGORIA
     {
         $this->nombre_categoria = $nombre_categoria;
     }
-	private $nombre_categoria;
 
 
-    /* Implementaciones de metodos de la interfaz */
-    public static function consultaCategorias()
-    {
-        // TODO: Implement consultaCategorias() method.
-    }
 }
