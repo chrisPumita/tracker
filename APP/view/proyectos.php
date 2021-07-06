@@ -1,5 +1,5 @@
 <?php
-$tittle = "Mis Proyectos";
+$tittle = "Mis Proyectos - ProyecTracker";
 $lugar = "Proyectos";
 include_once "./include/header.php";
 ?>
@@ -97,7 +97,7 @@ include_once "./include/header.php";
                                         <div class="col-md-6">
                                         </div>
                                         <div class="col-md-6">
-                                            <a class="nav-link" href="./plantilla.php">
+                                            <a class="nav-link" href="./plantilla_proyecto.php">
                                             <button type="submit" class="btn btn-info btn-fill upull-right">Crear proyecto</button>
                                             </a>
                                         </div>
