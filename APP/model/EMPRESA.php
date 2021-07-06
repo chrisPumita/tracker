@@ -15,7 +15,29 @@ class EMPRESA extends CONEXION
 
     //Los proyetos registrados de la empresa
     private $listaProyectos;
+    private $detallesEmpresa;
+    private $crearEmpresa;
 
+
+    /**
+     * @return mixed
+     */
+    public function getCrearEmpresa()
+    {
+        return $this->listCrearEmpresa();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDetallesEmpresa()
+    {
+        return $this->listDetallesEmpresa();
+    }
+
+    /**
+     * @return mixed
+     */
     /**
      * @return mixed
      */
@@ -143,6 +165,18 @@ class EMPRESA extends CONEXION
         $result = $this ->consultaProyectosEmpresa($this->getIdEmpresa());
         return $result;
     }
+    
+    function listDetallesEmpresa()
+    {
+        $result = $this->consultaDetallesEmpresa($this->getIdEmpresa());
+        return $result;
+    }
+    function listCrearEmpresa()
+    {
+        $result = $this->consultaCrearEmpresa($this->getNombre(),$this->getRazonSocial(),$this->getRfc(),$this->getTelefono(),$this->getCorreo(),$this->getTipoCuenta());
+        return $result;
+    }
+
     public function consultaProyectosEmpresa($idEmpresa){
         $query = "SELECT empresa.nombre, grupo_trabajo.id_gt, proyecto.nombre_proyecto
                     FROM empresa, grupo_trabajo, proyecto WHERE empresa.id_empresa= grupo_trabajo.id_empresa_fk 
@@ -150,6 +184,27 @@ class EMPRESA extends CONEXION
         $this->connect();
         $result = $this->getData($query);
         $this->close();
+        return $result;
+    }
+
+    public function consultaDetallesEmpresa($id_empresa){
+        $query ="SELECT * FROM empresa WHERE id_empresa =". $id_empresa;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
+
+    public function consultaCrearEmpresa(){
+        $query = "INSERT INTO `empresa` (`id_empresa`, `nombre`, `razon_social`, `rfc`, `telefono`, `correo`, `tipo_cuenta`) 
+        VALUES (NULL, '".$this->getNombre()."', '".$this->getRazonSocial()."', '".$this->getRfc()."',
+         '".$this->getTelefono()."', '".$this->getCorreo()."', '".$this->getTipoCuenta()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        if($result){
+            echo "Guardado con exito";
+        } else echo "Falló al guardar";
         return $result;
     }
 }
