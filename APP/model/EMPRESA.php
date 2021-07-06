@@ -1,7 +1,7 @@
 <?php
 
-
-class EMPRESA
+include_once "CONEXION.php";
+class EMPRESA extends CONEXION
 {
     private $id_empresa;
     private $nombre;
@@ -140,8 +140,16 @@ class EMPRESA
     /*funnciones de la empresa*/
     function listaProyectosEmpresa()
     {
-        include_once "PROYECTO.php";
-        $obj_proy = new PROYECTO();
-        $obj_proy ->consultaProyectosEmpresa($this->getIdEmpresa());
+        $result = $this ->consultaProyectosEmpresa($this->getIdEmpresa());
+        return $result;
+    }
+    public function consultaProyectosEmpresa($idEmpresa){
+        $query = "SELECT empresa.nombre, grupo_trabajo.id_gt, proyecto.nombre_proyecto
+                    FROM empresa, grupo_trabajo, proyecto WHERE empresa.id_empresa= grupo_trabajo.id_empresa_fk 
+                    AND grupo_trabajo.id_gt = proyecto.id_gt_fk AND id_empresa =". $idEmpresa;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
     }
 }

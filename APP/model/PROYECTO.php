@@ -249,9 +249,4 @@ class PROYECTO extends CONEXION
         return $result;
     }
 
-    public function consultaProyectosEmpresa($idEmpresa){
-        $query = "SELECT * FROM proyecto INNER JOIN grupo_trabajo ON proyecto.id_gt_fk=grupo_trabajo.id_gt INNER JOIN empresa
-                    ON grupo_trabajo.id_empresa_fk=empresa.id_empresa WHERE empresa.id_empresa= 1022 AND grupo_trabajo.id_gt=proyecto.id_gt_fk"
-    }
-
 }

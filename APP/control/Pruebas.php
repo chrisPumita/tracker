@@ -7,6 +7,10 @@ var_dump($result);
 
 */
 
-include_once "control_proyecto.php";
+/*include_once "control_proyecto.php";
 $var = consultaProyecto(4);
+var_dump($var);
+*/
+include_once "control_empresa.php";
+$var = consultaProyectoEmpresa(2525);
 var_dump($var);
