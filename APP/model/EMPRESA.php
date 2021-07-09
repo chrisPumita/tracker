@@ -159,7 +159,7 @@ class EMPRESA extends CONEXION
         return $result;
     }
 
-    public function consultaDetallesEmpresa($id_empresa){
+    public function queryDetallesEmpresa($id_empresa){
         $query ="SELECT * FROM empresa WHERE id_empresa =". $id_empresa;
         $this->connect();
         $result = $this->getData($query);

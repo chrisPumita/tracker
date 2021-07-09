@@ -113,7 +113,7 @@ class GRUPO_TRABAJO extends CONEXION
         $this->connect();
         $result = $this->getData($query);
         $this->close();
-        return json_encode($result);
+        return $result;
     }
 
     function queryCreateGT(){
@@ -135,5 +135,12 @@ class GRUPO_TRABAJO extends CONEXION
         $this->close();
         return $result;
     }
-
+    function  queryDeleteGT($idGt){
+        $query ="UPDATE `grupo_trabajo` SET `id_gt`=`id_gt`*-1 WHERE `id_gt`=".$idGt;
+        $this->connect();
+        $result = $this->executeInstruction($query); 
+        $this->close();
+        return $result;
+    }
+    
 }

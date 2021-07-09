@@ -17,15 +17,6 @@ class PROYECTO extends CONEXION
 
     /* AGREGACION */
     private $listaEtapas;
-    private $ListaProyecto;
-
-    /**
-     * @return mixed
-     */
-    public function getListaProyecto()
-    {
-        return $this->consultaListaProyecto();
-    }
 
     /**
      * @param mixed $ListaProyecto
@@ -237,17 +228,39 @@ class PROYECTO extends CONEXION
         return $obj_etapa->consultaEtapas();
     }
 
-    private function consultaListaProyecto(){
-        return $this->consultaProyecto($this->getIdProyecto());
-
-    }
-    private function consultaProyecto($idProyecto){
+        function queryDetallesProyecto($idProyecto){
         $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, `fecha_creacion`, 
        `fecha_inicio`, `dias`, `tipo_jornada`, `estado` FROM `proyecto` WHERE `id_proyecto` = ". $idProyecto;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
+        return json_encode($result);
+    }
+
+    function queryUpdateProyecto($idProyecto){
+        $query = "UPDATE `proyecto` SET `id_categoria_fk`=".$this->getIdCategoriaFk().",`nombre_proyecto`='".$this->getNombreProyecto().
+        "',`dias`=".$this->getDias().",`tipo_jornada`=".$this->getTipoJornada().",`estado`=".$this->getEstado()." WHERE `id_proyecto`=".$idProyecto;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+    function queryDeleteProyecto($idProyecto){
+        $query = "UPDATE `proyecto` SET `id_proyecto`=`id_proyecto`*-1 WHERE id_proyecto=".$idProyecto;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
         return $result;
     }
 
+    function queryCreateProyecto(){
+        $query = "INSERT INTO `proyecto`(`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, `url_imagen`) 
+        VALUES (NULL,".$this->getIdGtFk().",".$this->getIdCategoriaFk().",'".$this->getNombreProyecto().
+        "','".$this->getFechaCreacion()."','".$this->getFechaInicio()."',".$this->getDias().",".$this->getTipoJornada().
+        ",".$this->getEstado().",'".$this->getLink()."','".$this->getUrlImagen()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 }
