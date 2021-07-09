@@ -1,13 +1,25 @@
 <?php
 
-
-class GRUPO_TRABAJO
+include_once "CONEXION.php";
+class GRUPO_TRABAJO extends CONEXION
 {
     private $id_gt;
     private $id_empresa_fk;
     private $nombre_gt;
     private $fecha_creacion;
     private $status;
+
+    /*AGREGACION*/
+
+    private $detallesGrupo;
+
+    /**
+     * @return mixed
+     */
+    public function getDetallesGrupo()
+    {
+        return $this->listDetallesGrupo();
+    }
 
     /**
      * @return mixed
@@ -89,5 +101,39 @@ class GRUPO_TRABAJO
         $this->status = $status;
     }
 
+
+    function listDetallesGrupo()
+    {
+        $result = $this->queryDetallesGrupo($this->getIdGt());
+        return $result;
+    }
+    
+    function queryDetallesGrupo($idGt){
+        $query ="SELECT * FROM `grupo_trabajo` WHERE `id_gt`=".$idGt;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return json_encode($result);
+    }
+
+    function queryCreateGT(){
+        $query ="INSERT INTO `grupo_trabajo`(`id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status`)
+         VALUES (NULL, ".$this->getIdEmpresaFk().", '".$this->getNombreGt()."', '".$this->getFechaCreacion().
+         "', ".$this->getStatus().")";
+         echo $query;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+
+    function  queryUpdateGT($idGt){
+        $query ="UPDATE `grupo_trabajo` SET `nombre_gt`='".$this->getNombreGt()."',`status`=".$this->getStatus().
+        "  WHERE `id_gt` =".$idGt;
+        $this->connect();
+        $result = $this->executeInstruction($query); 
+        $this->close();
+        return $result;
+    }
 
 }

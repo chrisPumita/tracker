@@ -15,25 +15,7 @@ class EMPRESA extends CONEXION
 
     //Los proyetos registrados de la empresa
     private $listaProyectos;
-    private $detallesEmpresa;
-    private $crearEmpresa;
-
-
-    /**
-     * @return mixed
-     */
-    public function getCrearEmpresa()
-    {
-        return $this->listCrearEmpresa();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDetallesEmpresa()
-    {
-        return $this->listDetallesEmpresa();
-    }
+    
 
     /**
      * @return mixed
@@ -166,21 +148,11 @@ class EMPRESA extends CONEXION
         return $result;
     }
     
-    function listDetallesEmpresa()
-    {
-        $result = $this->consultaDetallesEmpresa($this->getIdEmpresa());
-        return $result;
-    }
-    function listCrearEmpresa()
-    {
-        $result = $this->consultaCrearEmpresa($this->getNombre(),$this->getRazonSocial(),$this->getRfc(),$this->getTelefono(),$this->getCorreo(),$this->getTipoCuenta());
-        return $result;
-    }
 
     public function consultaProyectosEmpresa($idEmpresa){
         $query = "SELECT empresa.nombre, grupo_trabajo.id_gt, proyecto.nombre_proyecto
                     FROM empresa, grupo_trabajo, proyecto WHERE empresa.id_empresa= grupo_trabajo.id_empresa_fk 
-                    AND grupo_trabajo.id_gt = proyecto.id_gt_fk AND id_empresa =". $idEmpresa;
+                    AND grupo_trabajo.id_gt = proyecto.id_gt_fk AND grupo_trabajo.id_gt>=0 AND id_empresa =". $idEmpresa;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
@@ -206,5 +178,26 @@ class EMPRESA extends CONEXION
             echo "Guardado con exito";
         } else echo "Falló al guardar";
         return $result;
+    }
+
+    public function DBUpdateEmpresa($idEmpresa){
+        $query = "UPDATE `empresa` SET nombre='".$this->getNombre().
+        "' ,`razon_social`= '".$this->getRazonSocial().
+        "' ,`rfc`='".$this->getRfc().
+        "' ,`telefono`='".$this->getTelefono().
+        "' ,`correo`='".$this->getCorreo().
+        "' WHERE id_empresa= ".$idEmpresa;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+
+    public function deleteEmpresa(){
+        $query="UPDATE empresa SET `id_empresa`=id_empresa*-1 WHERE id_empresa=".$this->getIdEmpresa();
+        $this->connect();
+        $result=$this->executeInstruction($query);
+        $this->close();
+       return $result;
     }
 }

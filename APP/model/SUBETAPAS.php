@@ -1,7 +1,8 @@
 <?php
 
+include_once "CONEXION.php";
 
-class SUBETAPAS
+class SUBETAPAS extends CONEXION
 {
     private $id_subetapa;
     private $id_etapa_fk;
@@ -123,6 +124,14 @@ class SUBETAPAS
         $this->indice = $indice;
     }
 
-
+    
+    function consultaListaSubetapas(){
+        $query = "SELECT `id_subetapa`, `id_etapa_fk`, `nombre_subetapa`, `estado`,
+         `fecha_inicio`, `dias`, `indice` FROM `subetapas` WHERE `id_etapa_fk` = ". $this->getIdEtapaFk();
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
 
 }

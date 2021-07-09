@@ -12,6 +12,19 @@ class ETAPAS extends CONEXION
     private $dias;
     private $indice;
 
+    /*GREGACION - SUBETAPA*/
+
+    private $lista_subestapa;
+
+    /**
+     * @return mixed
+     */
+    public function getListaSubEtapa()
+    {
+        return $this->consultaListaSubetapas();
+    }
+
+
     /**
      * @return mixed
      */
@@ -141,14 +154,24 @@ class ETAPAS extends CONEXION
     }
 
 
-   function consultaEtapas($idProyecto){
+   function consultaEtapas(){
         $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, `estado_proceso`, 
                     `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
-                    FROM `etapas` where `id_proyecto_fk` = ". $idProyecto;
+                    FROM `etapas` where `id_proyecto_fk` = ". $this->getIdEtapa;
         $this->connect();
         $result = $this->getData($query);
+
+        //iteracion para cosular las subetapas de cada etapa
+    
         $this->close();
         return $result;
+    }
+
+    function consultaListaSubetapas($idEtapa){
+        include_once "./SUBETAPAS.php";
+        $obj_setapa = new SUBETAPAS();
+        $obj_setapa -> setIdEtapaFk($idEtapa);
+        return $obj_setapa -> consultaListaSubetapas();
     }
 
 }

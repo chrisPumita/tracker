@@ -233,7 +233,8 @@ class PROYECTO extends CONEXION
     private function consultListaEtapas(){
         include_once "ETAPAS.php";
         $obj_etapa = new ETAPAS();
-        return $obj_etapa->consultaEtapas($this->getIdProyecto());
+        $obj_etapa -> setIdProyectoFk($this->getIdProyecto);
+        return $obj_etapa->consultaEtapas();
     }
 
     private function consultaListaProyecto(){
