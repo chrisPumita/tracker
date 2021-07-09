@@ -28,7 +28,8 @@ function updateGrupoTrabajo($idGt,$nombre,$status){
     return $result;
 }
 
-function deleteGrupoTrabjo($idGt){
+function deleteGrupoTrabajo($idGt){
     $obj_gt = new GRUPO_TRABAJO();
     $result= $obj_gt->queryDeleteGT($idGt);
+    return $result;
 }

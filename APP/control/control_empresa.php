@@ -10,8 +10,7 @@ function consultaProyectoEmpresa($id_empresa){
 
 function queryDetallesEmpresa($id_empresa){
     $obj_empresa =  new EMPRESA();
-    $obj_empresa->setIdEmpresa(2525);
-    $result = $obj_empresa->getDetallesEmpresa();
+    $result = $obj_empresa->queryDetallesEmpresa($id_empresa);
     return json_encode($result);
 }
 
