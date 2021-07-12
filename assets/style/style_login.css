@@ -459,3 +459,24 @@ body {
         opacity: 0;
     }
 }
+
+
+
+
+.btn-submit {
+    outline: 0 !important;
+    cursor: pointer!important;
+    position: relative!important;
+    display: inline-block!important;
+    background: 0!important;
+    width: 240px!important;
+    border: 2px solid #e3e3e3!important;
+    padding: 20px 0!important;
+    font-size: 24px!important;
+    font-weight: 600!important;
+    line-height: 1!important;
+    text-transform: uppercase!important;
+    overflow: hidden!important;
+    -webkit-transition: .3s ease!important;
+    transition: .3s ease!important;
+}

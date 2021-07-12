@@ -2,7 +2,7 @@
 include_once "../model/EMPRESA.php";
 function consultaProyectoEmpresa($id_empresa){
     $obj_empresa =  new EMPRESA();
-    $obj_empresa->setIdEmpresa(2525);
+    $obj_empresa->setIdEmpresa($id_empresa);
     $result= $obj_empresa->getListaProyectos();
     return json_encode($result);
 
@@ -20,7 +20,7 @@ function createEmpresa($nombre,$razon_social,$rfc,$telefono,$correo){
     $obj_empresa->setRazonSocial($razon_social);
     $obj_empresa->setRfc($rfc);
     $obj_empresa->setTelefono($telefono);;
-    $obj_empresa->setCorreo("costeña@gmail.com");
+    $obj_empresa->setCorreo($correo);
     $obj_empresa->setTipoCuenta(1);
     return $result = $obj_empresa->consultaCrearEmpresa();
 }
