@@ -167,9 +167,9 @@ class EMPRESA extends CONEXION
         return $result;
     }
 
-    public function consultaCrearEmpresa(){
+    public function CrearEmpresa(){
         $query = "INSERT INTO `empresa` (`id_empresa`, `nombre`, `razon_social`, `rfc`, `telefono`, `correo`, `tipo_cuenta`) 
-        VALUES (NULL, '".$this->getNombre()."', '".$this->getRazonSocial()."', '".$this->getRfc()."',
+        VALUES ('".$this->getIdEmpresa()."', '".$this->getNombre()."', '".$this->getRazonSocial()."', '".$this->getRfc()."',
          '".$this->getTelefono()."', '".$this->getCorreo()."', '".$this->getTipoCuenta()."')";
         $this->connect();
         $result = $this->executeInstruction($query);

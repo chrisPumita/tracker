@@ -193,7 +193,7 @@ class USUARIO extends CONEXION
 
     function queryCreateUser(){
         $query= "INSERT INTO `usuario`(`id_usuario`, `id_empresa_fk`, `nombre`, `apaterno`, `amaterno`, `user_name`, `correo`, `password`, `nivel_acceso`, `path_img`, `estado`)
-        VALUES (NULL,NULL,'".$this->getNombre()."','".$this->getApaterno()."','".$this->getAmaterno().
+        VALUES (NULL,'".$this->getIdEmpresaFk()."','".$this->getNombre()."','".$this->getApaterno()."','".$this->getAmaterno().
         "','".$this->getUserName()."','".$this->getCorreo()."','".$this->getPassword()."',".$this->getNivelAcceso().
         ",'".$this->getPathImg()."',".$this->getEstado().")";
         $this->connect();

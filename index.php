@@ -18,6 +18,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style/style.css">
     <!-- Plugins -->
+
 </head>
 <body>
 <nav class="navbar navbar-light bg-white  navbar-expand-md">
@@ -43,7 +44,7 @@
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
             </ul>
-            <a class="btn btn-danger ml-md-3" href="login.php">Iniciar Sesión</a>
+            <a class="btn btn-danger ml-md-3" href="APP/login.php">Iniciar Sesión</a>
         </div>
     </div>
 </nav>

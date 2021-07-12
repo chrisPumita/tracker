@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style/style_login.css">
+    <link rel="stylesheet" href="../../assets/style/style_login.css">
     <title>Hello, world!</title>
 </head>
 <body>
@@ -21,8 +21,8 @@
         <!-- Mixins-->
         <!-- Pen Title-->
         <div class="pen-title">
-            <a href="index.php">
-             <img src="./assets/image/logo.png" height="100px" alt="image">
+            <a href="../../index.php">
+             <img src="../../assets/image/logo.png" height="100px" alt="image">
             </a>
         </div>
         <div class="container">
@@ -97,7 +97,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="./APP/ajax/add_user_ajax.js"></script>
+<script src="../ajax/add_user_ajax.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
