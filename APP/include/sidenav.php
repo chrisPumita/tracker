@@ -55,5 +55,6 @@
     <div class="sb-sidenav-footer">
         <div class="small">Estas logeado como:</div>
         PEOPLE_NAME
+        <input type="hidden" id="idEmpresaGeneral" value="653561609">
     </div>
 </nav>

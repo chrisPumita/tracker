@@ -29,41 +29,22 @@
                     <div class="card-body">
                         <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
                             <div class="dataTable-top">
-                                <div class="dataTable-dropdown">
-                                    <label>
-                                        <select class="dataTable-selector">
-                                            <option value="5">5</option>
-                                            <option value="10" selected="">10</option>
-                                            <option value="15">15</option>
-                                            <option value="20">20</option>
-                                            <option value="25">25</option>
-                                        </select>
-                                        entries per page
-                                    </label>
-                                </div>
                                 <div class="dataTable-search"><input class="dataTable-input" placeholder="Search..." type="text"></div>
                             </div>
                             <div class="dataTable-container">
                                 <table id="datatablesSimple" class="dataTable-table">
                                     <thead>
                                     <tr>
-                                        <th data-sortable="" style="width: 19.5983%;"><a href="#" class="dataTable-sorter">Name</a></th>
-                                        <th data-sortable="" style="width: 28.9714%;"><a href="#" class="dataTable-sorter">Position</a></th>
-                                        <th data-sortable="" style="width: 15.5813%;"><a href="#" class="dataTable-sorter">Office</a></th>
-                                        <th data-sortable="" style="width: 9.19051%;"><a href="#" class="dataTable-sorter">Age</a></th>
-                                        <th data-sortable="" style="width: 15.2161%;"><a href="#" class="dataTable-sorter">Start date</a></th>
-                                        <th data-sortable="" style="width: 11.4425%;"><a href="#" class="dataTable-sorter">Salary</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">No</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Nombre</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Correo</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Username</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Acceso</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Acciones</a></th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
+                                    <tbody id="tbl-usuarios">
+                                    <!-- ajax response -->
                                     </tbody>
                                 </table>
                             </div>
@@ -79,3 +60,4 @@
 <?php include_once "./include/js.php"?>
 </body>
 </html>
+<script src="./ajax/list-usuarios.js"></script>

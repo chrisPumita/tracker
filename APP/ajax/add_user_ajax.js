@@ -2,10 +2,6 @@
 $(document).ready(function () {
     console.log("funcionana");
 
-
-
-
-
     //-------------------seleccionando el elemento boton agregar elemento
     $('#frm-add-user').submit(function (e) {
         let pw = $('#pw').val();
@@ -43,8 +39,5 @@ $(document).ready(function () {
         e.preventDefault();
     });
     //-------------------seleccionando el elemento boton agregar elemento
-
-
-
 
 });

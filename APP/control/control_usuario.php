@@ -39,3 +39,10 @@ function deleteUser($idUser){
     $result = $obj_user->queryDeleteUser($idUser);
     return $result;
 }
+
+function consultaUsuarios($idUser,$idEmpresa){
+    include_once "../model/USUARIO.php";
+    $obj_user = new USUARIO();
+    $result = $obj_user-> queryDetalleUser($idUser,$idEmpresa);
+    return json_encode($result);
+}

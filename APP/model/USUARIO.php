@@ -211,12 +211,13 @@ class USUARIO extends CONEXION
         return $result;
     }
 
-    function queryDetalleUser($idUser){
-        $query="SELECT * FROM usuario WHERE id_usuario= ".$idUser;
+    function queryDetalleUser($idUser, $idEmpresa){
+        $filtro = $idUser > 0 ? " AND id_usuario= ".$idUser : "";
+        $query="select * from usuario u where u.id_usuario >0 AND id_empresa_fk = ". $idEmpresa  . "  ". $filtro;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
-        return json_encode($result);
+        return $result;
     }
 
     function queryDeleteUser($idUser){
