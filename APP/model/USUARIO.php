@@ -1,7 +1,7 @@
 <?php
 
-
-class USUARIO
+include_once "CONEXION.php";
+class USUARIO extends CONEXION
 {
     private $id_usuario;
     private $id_empresa_fk;
@@ -191,5 +191,39 @@ class USUARIO
         $this->estado = $estado;
     }
 
+    function queryCreateUser(){
+        $query= "INSERT INTO `usuario`(`id_usuario`, `id_empresa_fk`, `nombre`, `apaterno`, `amaterno`, `user_name`, `correo`, `password`, `nivel_acceso`, `path_img`, `estado`)
+        VALUES (NULL,NULL,'".$this->getNombre()."','".$this->getApaterno()."','".$this->getAmaterno().
+        "','".$this->getUserName()."','".$this->getCorreo()."','".$this->getPassword()."',".$this->getNivelAcceso().
+        ",'".$this->getPathImg()."',".$this->getEstado().")";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+    function queryUpdateUser($idUser){
+        $query = "UPDATE `usuario` SET `nombre`='".$this->getNombre()."',`apaterno`='".$this->getApaterno().
+        "',`amaterno`='".$this->getAmaterno()."',`user_name`='".$this->getUserName()."',`correo`='".$this->getCorreo().
+        "' WHERE `id_usuario`=".$idUser;
+        $this->connect();
+        $result=$this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 
+    function queryDetalleUser($idUser){
+        $query="SELECT * FROM usuario WHERE id_usuario= ".$idUser;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return json_encode($result);
+    }
+
+    function queryDeleteUser($idUser){
+        $query="UPDATE usuario SET id_usuario=id_usuario*-1 WHERE id_usuario=".$idUser;
+        $this->connect();
+        $result=$this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 }
