@@ -16,7 +16,7 @@
             <div class="collapse" id="menuProyectos" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="#">Nuevo Proyecto</a>
-                    <a class="nav-link" href="#">Ver todos</a>
+                    <a class="nav-link" href="./proyectos.php">Ver todos</a>
                 </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuUsuarios" aria-expanded="false" aria-controls="collapsePages">

@@ -11,4 +11,4 @@ var_dump($result);
 $var = consultaProyecto(4);
 var_dump($var);
 */
-include_once "control_grupo_trabajo.php";
+include_once "control_proyecto.php";
