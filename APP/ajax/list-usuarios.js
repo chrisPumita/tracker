@@ -34,7 +34,6 @@ $(document).ready(function () {
                                               <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
                                               <button type="button" class="btn btn-warning"><i class="fas fa-user-clock"></i></button>
                                               <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-
                                             </div>
                                         </td>
                                         </tr>`;
