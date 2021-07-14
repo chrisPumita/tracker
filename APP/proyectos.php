@@ -27,13 +27,32 @@
             Proyectos
         </div>
         <div class="card-body">
+            <div class="card w-75">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                </div>
+                </div>
+
+                <div class="card w-50">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
                         <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-                        <form class="ms-8 me-0 me-md-3 my-2 my-md-0 md-8">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Buscar por nombre"  aria-describedby="btnBuscarProyecto" />
-                                <button class="btn btn-primary" id="btnBuscarProyecto" type="button"><i class="fas fa-search"></i></button>
-                            </div>
-                        </form>
+                            <form class="ms-8 me-0 me-md-3 my-2 my-md-0 md-8">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="Buscar por nombre"  aria-describedby="btnBuscarProyecto" />
+                                    <button class="btn btn-primary" id="btnBuscarProyecto" type="button"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                    
                             <div class="dataTable-container">
                                 <table id="datatablesSimple" class="dataTable-table">
                                     <thead>
