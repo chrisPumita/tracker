@@ -15,7 +15,7 @@
             </a>
             <div class="collapse" id="menuProyectos" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="#">Nuevo Proyecto</a>
+                    <a class="nav-link" href="./agrega-proyecto.php">Nuevo Proyecto</a>
                     <a class="nav-link" href="./proyectos.php">Ver todos</a>
                 </nav>
             </div>

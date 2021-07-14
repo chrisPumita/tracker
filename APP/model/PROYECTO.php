@@ -261,6 +261,7 @@ class PROYECTO extends CONEXION
         $this->connect();
         $result = $this->executeInstruction($query);
         $this->close();
+        echo $result;
         return $result;
     }
 

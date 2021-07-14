@@ -1,6 +1,6 @@
 // lo que sejecuta primero
 $(document).ready(function () {
-    console.log("funcionana");
+    console.log("Lista Proyectos");
     consultaAllProyectos();
 
     function consultaAllProyectos(){
@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 
 
-
+/* Obtener una jornada para convertirlo en texto  */
 function getTipoJornada($jornada) {
     switch ($jornada) {
         case "0":
@@ -38,6 +38,23 @@ function getTipoJornada($jornada) {
         case "2":
             return "7 DIAS";
             break;
+    }
+}
+/* Obtener un estado a través de la base de datos y convertirlo en string */
+function getEstado($estado){
+    switch($estado){
+    case "0":
+        return "Inactivo";
+        break;
+    case "1":
+        return "Activo";
+        break;
+    case "2":
+        return "En progreso";
+        break;
+    case "3":
+        return "Finalizado";
+        break;
     }
 }
 
@@ -74,14 +91,14 @@ function constuct_grid_proyectos(obj_proyect) {
     let template = '';
     obj_proyect.forEach(
         objProyect=>{
-            let jornada = getTipoJornada(objProyect.tipo_jornada);
+            let estado = getEstado(objProyect.estado);
             template +=
                 `<div class="col-md-4">
                     <div class="card p-3">
                         <div class="d-flex flex-row mb-3"><img class="icon-proyecto" src="${objProyect.url_imagen}" width="70">
                             <div class="d-flex flex-column ml-2">
-                                <span>Stripe</span>
-                                <span class="text-black-50">Payment Services</span>
+                                <span>${objProyect.nombre_proyecto}</span>
+                                <span class="text-black-50">${objProyect.nombre_gt}</span>
                                 <span class="ratings">
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -91,11 +108,11 @@ function constuct_grid_proyectos(obj_proyect) {
                                 </span>
                             </div>
                         </div>
-                        <h6>Get more context on your users with stripe data inside our platform.</h6>
+                        <h6>Estado: ${estado}</h6>
                         <div class="d-flex justify-content-between install mt-3">
-                            <span>Installed 172 times</span>
+                            <span>Tiempo: ${objProyect.dias} dias</span>
                             <span class="text-primary">
-                                <button type="button" class="btn btn-primary">Ver estatus</button>
+                                <a href="${objProyect.link}"<button type="button" class="btn btn-primary">Ver estatus</button></a>
                             </span>
                         </div>
                     </div>

@@ -46,3 +46,21 @@ function consultaUsuarios($idUser,$idEmpresa){
     $result = $obj_user-> queryDetalleUser($idUser,$idEmpresa);
     return json_encode($result);
 }
+
+function addUser($nombre,$ap,$am,$username,$correo,$idEmpresa,$nivelAcesso){
+    include_once "./tools/generar_clave.php";
+    $clave= generaClaveSesion();
+    $obj_user= new USUARIO();
+    $obj_user->setNombre($nombre);
+    $obj_user->setApaterno($ap);
+    $obj_user->setAmaterno($am);
+    $obj_user->setUserName($username);
+    $obj_user->setCorreo($correo);
+    $obj_user->setPassword(md5($clave));
+    $obj_user->setNivelAcceso($nivelAcesso);
+    $obj_user->setPathImg("https://freepikpsd.com/media/2019/10/no-image-available-icon-png-8-Transparent-Images.png");
+    $obj_user->setEstado(1);
+    $obj_user->setIdEmpresaFk($idEmpresa);
+    $result = $obj_user->queryCreateUser();
+    return $result;
+}

@@ -1,6 +1,6 @@
 // lo que sejecuta primero
 $(document).ready(function () {
-    console.log("funcionana");
+    console.log("Lista Usuarios");
     consultaAllUsuarios();
 
     function consultaAllUsuarios() {
@@ -49,13 +49,16 @@ $(document).ready(function () {
 function getNivelAcceso($nivel) {
     switch ($nivel) {
         case "0":
-            return "ALTO";
+            return "ADMINISTRADOR";
             break;
         case "1":
-            return "MEDIO";
+            return "LIDER";
             break;
         case "2":
-            return "BAJO";
+            return "EDITOR";
+            break;
+        case "3":
+            return "OBSERVADOR";
             break;
     }
 }

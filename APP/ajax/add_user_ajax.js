@@ -1,12 +1,9 @@
 // lo que sejecuta primero
 $(document).ready(function () {
-    console.log("funcionana");
+    console.log("Agrega Usuario");
 
     //-------------------seleccionando el elemento boton agregar elemento
-    $('#frm-add-user').submit(function (e) {
-        let pw = $('#pw').val();
-        let cpw = $('#cpw').val();
-        if (cpw===pw && cpw.length>0 && pw.length>0){
+    $('#frm-add-new-user').submit(function (e) {
             //obtenemos los datos de los valores que se enviaran al servidor
             const valoresCajas = {
                 nombre: $('#nombre').val(),
@@ -14,11 +11,10 @@ $(document).ready(function () {
                 apm: $('#apm').val(),
                 user: $('#user').val(),
                 correo: $('#email').val(),
-                empresa: $('#empresa').val(),
-                pw: pw,
-                cpw : cpw
+                nivelacceso:$('#nivelAcceso').val(),
+                idEmpresa: $('#idEmpresaGeneral').val(),
             };
-             let url = "./control/crea-cuenta.php";
+             let url = "./control/usuario-add.php";
             //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
             $.post(url,valoresCajas,function (mje) {
                 //tratamos los datos y hacemos acciones
@@ -27,14 +23,9 @@ $(document).ready(function () {
                               ${mje}
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>`;
-                $("#mjeAlerta").html(template);
-                $('#frm-add-user').trigger('reset');
+                $("#mjeAlertaAU").html(template);
+                $('#frm-add-new-user').trigger('reset');
             });
-        }
-        else {
-            alert("Las contraseñas no coinciden o estan vacias");
-        }
-
         //Cancela las funciones basicas del boton submit y evita regrescar la pagina
         e.preventDefault();
     });

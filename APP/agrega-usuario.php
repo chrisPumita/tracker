@@ -17,7 +17,7 @@
         <main>
             <!-- incuir los elementos del la vista para cada cosa-->
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Usuarios registrados</h1>
+                <h1 class="mt-4">Registra Usuarios</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active">Aqui puede agregar nuevos usuarios.</li>
                 </ol>
@@ -48,14 +48,26 @@
                                 <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" required="">
                                 <label for="email">Correo Electronico</label>
                             </div>
+                            <label for="nivelAcceso">Nivel Acceso</label>
+                            <div class="form-floating mb-0">
+                                <select class="form-select form-select-sm" id="nivelAcceso" name="nivelAcceso" type="text" required="" aria-label=".form-select-sm example">
+                                    <option selected>----  SELECCIONA  ----</option>
+                                    <option value="0">ADMINISTRADOR</option>
+                                    <option value="2">EDITOR</option>
+                                    <option value="3">OBSERVADOR</option>
+                                </select>
+                            </div>
                             <div class="mt-4 mb-0">
                                 <div class="d-grid">
                                     <input type="submit" id="btnEnviar" name="btnEnviar" value="Registrar" class="btn btn-primary btn-user btn-block">
                                 </div>
                             </div>
                         </form>
+                        <span id="mjeAlertaAU">
+                            <!-- Mje ajax-->
+                        </span>
+                    </div>
                 </div>
-            </div>
             <!-- incuir los elementos del la vista para cada cosa-->
         </main>
         <?php include_once "./include/footer.php"?>
@@ -65,3 +77,4 @@
 <?php include_once "./include/js.php"?>
 </body>
 </html>
+<script src="./ajax/add_user_ajax.js"></script>

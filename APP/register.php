@@ -89,4 +89,4 @@
 <?php include_once "./include/js.php"?>
 </body>
 </html>
-<script src="./ajax/add_user_ajax.js"></script>
+<script src="./ajax/create-user-ajax.js"></script>
