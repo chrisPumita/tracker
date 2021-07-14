@@ -38,7 +38,7 @@
                     <a class="nav-link" href="#">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Planes</a>
+                    <a class="nav-link" href="#Planes">Planes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
@@ -199,13 +199,13 @@
                 <p class="lead mt-4 aos-init" data-aos="fade-up">Organizate de una mejor manera y avanza firme en todos tus proyectos.</p>
                 <div class="row row-grid">
                     <div class="col-xs-4 col-md-4 my-1 aos-init" data-aos="fade-up">
-                        <img src="./assets/image/calendar.png" alt="" class="img-fluid">
+                        <img src="./assets/image/calendario.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-xs-4 col-md-4 my-1 aos-init" data-aos="fade-up">
-                        <img src="https://via.placeholder.com/150x45/ccc/ffffff&text=IMG LOGO" alt="" class="img-fluid">
+                        <img src="./assets/image/escuela.png" alt="" class="img-fluid">
                     </div>
                     <div class="col-xs-4 col-md-4 my-1 aos-init" data-aos="fade-up">
-                        <img src="https://via.placeholder.com/150x45/ccc/ffffff&text=IMG LOGO" alt="" class="img-fluid">
+                        <img src="./assets/image/freelance.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -229,7 +229,7 @@
                                             <p class="lead font-weight-bold mt-2">"Proyect traker es lo mejor para gestionar mis proyectos, gran herramienta".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
-                                                    <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                                                    <img class="d-block img-fluid rounded-circle" src="./assets/image/usuario.png" alt="user">
                                                 </div>
                                                 <div class="d-block">
                                                     <p class="mb-0">Ricardo</p>
@@ -258,7 +258,7 @@
                                             <p class="lead font-weight-bold mt-2">"Lo mejor de lo mejor que he probado para gestionar mis proyectos en grupo, altamente recomendable.".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
-                                                    <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                                                    <img class="d-block img-fluid rounded-circle" src="./assets/image/usuario_2.png" srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
                                                 </div>
                                                 <div class="d-block">
                                                     <p class="mb-0">Roberto</p>
@@ -287,7 +287,7 @@
                                             <p class="lead font-weight-bold mt-2">"Quien hizo esto es un genio, merecen 10 si hipoteticamente fuese un trabajo de una materia".</p>
                                             <div class="mt-3 d-flex align-items-center pt-2">
                                                 <div class="mr-3">
-                                                    <img class="d-block img-fluid rounded-circle" src="https://via.placeholder.com/40x40/5fa9f8/ffffff " srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
+                                                    <img class="d-block img-fluid rounded-circle" src="./assets/image/usuario.png" srcset="https://via.placeholder.com/120x120/5fa9f8/ffffff 2x" alt="user">
                                                 </div>
                                                 <div class="d-block">
                                                     <p class="mb-0">El profe chido</p>
@@ -380,7 +380,7 @@
 <section class="pt-5 pb-5">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <h2 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Conoce nuestros planes</h2>
+            <h2 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up" id="Planes">Conoce nuestros planes</h2>
             <div class="col-12 col-md-12 d-flex   mt-4 mt-md-0">
                 <!-- col // -->
                 <div class="col-md-4">
