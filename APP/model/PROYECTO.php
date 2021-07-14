@@ -263,4 +263,13 @@ class PROYECTO extends CONEXION
         $this->close();
         return $result;
     }
+
+        function queryDetallesProyectos($idEmpresa){
+            $query = "SELECT * FROM empresa, grupo_trabajo, proyecto WHERE empresa.id_empresa= grupo_trabajo.id_empresa_fk 
+            AND grupo_trabajo.id_gt = proyecto.id_gt_fk AND proyecto.id_proyecto>0 AND id_empresa =". $idEmpresa;
+            $this->connect();
+            $result = $this->getData($query);
+            $this->close();
+            return $result;
+        }
 }

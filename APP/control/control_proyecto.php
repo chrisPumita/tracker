@@ -49,3 +49,9 @@ function createProyecto($idGt,$idCategoria,$nombre,$fecha_creacion,$fecha_inicio
     $result = $obj_proyecto->queryCreateProyecto();
     return $result;
 }
+
+function queryProyectos($idEmpresa){
+    $obj_proyecto = new PROYECTO();
+    $result = $obj_proyecto->queryDetallesProyectos($idEmpresa);
+    return json_encode($result);
+}

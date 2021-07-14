@@ -32,8 +32,8 @@ $(document).ready(function () {
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                               <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
-                                              <button type="button" class="btn btn-danger"><i class="fas fa-user-clock"></i></button>
-                                              <button type="button" class="btn btn-warning"><i class="fas fa-trash-alt"></i></button>
+                                              <button type="button" class="btn btn-warning"><i class="fas fa-user-clock"></i></button>
+                                              <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
 
                                             </div>
                                         </td>
