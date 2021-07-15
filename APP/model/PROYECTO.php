@@ -254,8 +254,7 @@ class PROYECTO extends CONEXION
     }
 
     function queryCreateProyecto(){
-        $query = "INSERT INTO `proyecto`(`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
-        `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, `url_imagen`) 
+        $query = "INSERT INTO `proyecto`(`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, `url_imagen`) 
         VALUES (NULL,".$this->getIdGtFk().",".$this->getIdCategoriaFk().",'".$this->getNombreProyecto().
         "','".$this->getFechaCreacion()."','".$this->getFechaInicio()."',".$this->getDias().",".$this->getTipoJornada().
         ",".$this->getEstado().",'".$this->getLink()."','".$this->getUrlImagen()."')";

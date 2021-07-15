@@ -2,14 +2,13 @@
 let json_cat;
 $(document).ready(function () {
     cargaListaCategorias();
-    let boolLista= cargaListGrupos();
-    if (boolLista){
+    if (!cargaListGrupos()){
         $("#cardProyectos").html("");
         let template = `<div class="alert alert-warning " role="alert">
                           <h4 class="alert-heading">No tienes grupos de trabajo</h4>
-                          <p>Necesitas un grupo para crear un proyecto</p>
+                          <p>Necesitas un grupo</p>
                           <hr>
-                          <p class="mb-0">Porfavor cree primero un grupo de trabajo, asigne sus usuarios y podrá crear proyectos</p>
+                          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
                            <a href="./"><button type="button" class="btn btn-primary">Crear grupo de trabajo</button></a> 
                         </div>`;
 
@@ -21,16 +20,14 @@ $(document).ready(function () {
 function  cargaListGrupos(){
     let boolLista = false;
     $.ajax({
-        url: "./control/list-grupo-trabajo.php",
+        url: "./control/list-categorias.php",
         success: function (response) {
             //COnvertimos el string a JSON
-            console.log("Cargando Grupos");
-            let obj_gt = JSON.parse(response);
-            console.log(obj_gt);
-            if (obj_gt.length>0){
+            let obj_cat = JSON.parse(response);
+            if (obj_cat.count>0){
                 boolLista = true;
-                let template = construct_list_Desp_Gt(obj_gt);
-                $('#grupot').html(template);
+                let template = construct_list_Desp_Cat(obj_cat);
+                $('#categoria').html(template);
             }
         }
     });
@@ -42,9 +39,7 @@ function cargaListaCategorias(){
         url: "./control/list-categorias.php",
         success: function (response) {
             //COnvertimos el string a JSON
-            console.log("Cargando Categorias");
             let obj_cat = JSON.parse(response);
-            console.log(obj_cat)
             let template = construct_list_Desp_Cat(obj_cat);
             //let gridTemplate = constuct_grid_proyectos(obj_proyect);
             $('#categoria').html(template);
@@ -68,22 +63,9 @@ function construct_list_Desp_Cat(obj_cat){
     return template;
 }
 
-function construct_list_Desp_Gt(obj_gt){
-    let template= '';
-    obj_gt.forEach(
-        objGt=>{
-            template += `
-                    <option value="${objGt.id_gt}">${objGt.nombre_gt}</option>
-                     `;
-        }
-    );
-    return template;
-}
-
 /// Funcion que busca en un json y coloca en un input el valor del dela propíedad objeto
 $("#categoria").change(function ()
 {
-    alert("onchange dentro");
     console.log(json_cat);
     let idObj = $("#categoria").val();
     json_cat.forEach(

@@ -34,15 +34,12 @@ function deleteProyecto($idProyecto){
     return $result;
 }
 
-function createProyecto($idGt,$idCategoria,$nombre,$fecha_inicio,$dias,$tipojornada,$link,$urlI){
+function createProyecto($idGt,$idCategoria,$nombre,$fecha_creacion,$fecha_inicio,$dias,$tipojornada,$link,$urlI){
     $obj_proyecto =  new PROYECTO();
-    $Object = new DateTime();
-    $DateAndTime = $Object->format("dmhis");
-    $fecha_hoy  =   date("Y-m-d H:i:s");
     $obj_proyecto->setIdGtFk($idGt);
     $obj_proyecto->setIdCategoriaFk($idCategoria);
     $obj_proyecto->setNombreProyecto($nombre);
-    $obj_proyecto->setFechaCreacion($fecha_hoy);
+    $obj_proyecto->setFechaCreacion($fecha_creacion);
     $obj_proyecto->setFechaInicio($fecha_inicio);
     $obj_proyecto->setDias($dias);
     $obj_proyecto->setTipoJornada($tipojornada);
