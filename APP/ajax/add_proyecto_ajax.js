@@ -7,10 +7,11 @@ $(document).ready(function () {
             //obtenemos los datos de los valores que se enviaran al servidor
             const valoresCajas = {
                 nombrep: $('#nombrep').val(),
-                gt: $('#gt').val(),
+                gt: $('#grupot').val(),
                 categoria: $('#categoria').val(),
                 dias: $('#dias').val(),
-                urlImg: $('#url').val(),
+                fecha_inicio: $('#fecha_inicio').val(),
+                urlImg: $('#imgCat').val(),
             };
              let url = "./control/proyecto-add.php";
             //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
@@ -22,7 +23,7 @@ $(document).ready(function () {
                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>`;
                 $("#mjeAlertaAU").html(template);
-                $('#frm-add-new-user').trigger('reset');
+                $('#frm-add-new-proyect').trigger('reset');
             });
         //Cancela las funciones basicas del boton submit y evita regrescar la pagina
         e.preventDefault();

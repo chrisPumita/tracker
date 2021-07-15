@@ -35,25 +35,27 @@
                             <!--Put a select Item this row like GT, Categoria -->
                             <label for="gt">Grupo de Trabajo</label>
                             <div class="form-floating mb-3">
-                                <select class="form-select form-select-sm" id="gt" name="gt" type="text" required="" aria-label=".form-select-sm example">
-                                    <option selected>----  SELECCIONA  ----</option>
-                                    <option value="4">ProyecTracker</option>
-                                    <option value="5">Grupo Bananero</option>
-                                    <option value="6">RecKrea Studios</option>
+                                <select class="form-select form-select-sm" id="grupot" name="grupot" type="text" required="" aria-label=".form-select-sm example">
                                 </select>
                             </div>
                             <label for="categoria">Categoria</label>
                             <div class="form-floating mb-3">
                                 <select class="form-select form-select-sm" id="categoria" name="categoria" type="text" required="" aria-label=".form-select-sm example">
                                 </select>
-                                <input id="imgCat" name="imgCat" type="hidden" required="">
+                                <input id="imgCat" name="imgCat" type="text" required="">
                             </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
-                                <label for="dias">Dias</label>
+                            <div class="row">
+                                <div class="form-floating mb-3 col-md-4 pr-1">
+                                    <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
+                                    <label for="dias">Dias</label>
+                                </div>
+                                <div class="form-floating mb-3 col-md-4">
+                                    <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
+                                    <label for="fecha_inicio">Fecha Inicio</label>
+                                </div>
                             </div>
+                            
                                 <!--Hacer select Menu -->
-                                <input class="form-control" id="url" name="url" type="hidden"placeholder="">
                             <div class="mt-4 mb-0">
                                 <div class="d-grid">
                                     <input type="submit" id="btnEnviar" name="btnEnviar" value="Registrar" class="btn btn-primary btn-user btn-block">
@@ -76,3 +78,4 @@
 </html>
 <script src="./ajax/add_proyecto_ajax.js"></script>
 <script src="./ajax/list_agrega_proyecto.js"></script>
+<script src="./ajax/list-proyectos.js"></script>
