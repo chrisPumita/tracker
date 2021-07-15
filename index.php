@@ -49,147 +49,56 @@
     </div>
 </nav>
 <section class="pt-5 pb-5 bg-dark position-relative" style="min-height:75vh; background-image: url(./assets/image/fondo.jpg); background-size: cover;">
-    <div class="bg-overlay"></div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="./assets/image/fondo.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <div class="container pt-5 pb-5 position-relative">
-                    <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
-                        <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
-                            <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Feel the advance</h1>
-                            <div class="my-4 aos-init" data-aos="fade-up">
-                                <p class="lead text-white">¡Que tus clientes sepan como va su proyecto!</p>
-                            </div>
-                            <div class="d-flex justify-content-center justify-content-lg-start aos-init" data-aos="fade-up">
-                                <div class="d-flex mr-2">
-                                    <i class="fas fa-star fa-lg text-warning m-1"></i>
-                                    <i class="fas fa-star fa-lg text-warning m-1"></i>
-                                    <i class="fas fa-star fa-lg text-warning m-1"></i>
-                                    <i class="fas fa-star fa-lg text-warning m-1"></i>
-                                    <i class="fas fa-star fa-lg text-warning m-1"></i>
-                                </div>
-                                <span class="text-white">(Nuestra calificación: 4.9/5)</span>
-                            </div>
+    <div class="bg-overlay">
+        <div class="container pt-5 pb-5 position-relative">
+            <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
+                <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
+                    <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Feel the advance</h1>
+                    <div class="my-4 aos-init" data-aos="fade-up">
+                        <p class="lead text-white">¡Que tus clientes sepan como va su proyecto!</p>
+                    </div>
+                    <div class="d-flex justify-content-center justify-content-lg-start aos-init" data-aos="fade-up">
+                        <div class="d-flex mr-2">
+                            <i class="fas fa-star fa-lg text-warning m-1"></i>
+                            <i class="fas fa-star fa-lg text-warning m-1"></i>
+                            <i class="fas fa-star fa-lg text-warning m-1"></i>
+                            <i class="fas fa-star fa-lg text-warning m-1"></i>
+                            <i class="fas fa-star fa-lg text-warning m-1"></i>
                         </div>
-                        <div class="col">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-8 col-md-10">
-                                    <form class="position-relative d-block aos-init aos-animate" data-aos="fade-up">
-                                        <div class="form-group">
-                                            <label class="text-white" for="course-name-1">Ingresa tu nombre</label>
-                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Ingresa tu nombre">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="text-white" for="course-email-1">Correo electronico</label>
-                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
-                                        </div>
-                                          <div class="form-group">
-                                            <label class="text-white" for="course-password-1">Contraseña</label>
-                                            <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="text-white" for="course-password-2">Confirmar contraseña</label>
-                                            <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
-                                        </div>
-                                        <div class="form-group text-center">
-                                            <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Regístrate</button>
-                                            <small class="text-white">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="text-white">(Nuestra calificación: 4.9/5)</span>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./assets/image/fondo.jpg"  alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div> 
-    <!--
-    <div class="container pt-5 pb-5 position-relative">
-        <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
-            <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
-                <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Eslogan bien chido</h1>
-                <div class="my-4 aos-init" data-aos="fade-up">
-                    <p class="lead text-white">¡Que tus clientes sepan como va su proyecto!</p>
-                </div>
-                <div class="d-flex justify-content-center justify-content-lg-start aos-init" data-aos="fade-up">
-                    <div class="d-flex mr-2">
-                        <i class="fas fa-star fa-lg text-warning m-1"></i>
-                        <i class="fas fa-star fa-lg text-warning m-1"></i>
-                        <i class="fas fa-star fa-lg text-warning m-1"></i>
-                        <i class="fas fa-star fa-lg text-warning m-1"></i>
-                        <i class="fas fa-star fa-lg text-warning m-1"></i>
-                    </div>
-                    <span class="text-white">(Average score: 4.9/5)</span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-md-10">
-                        <form class="position-relative d-block aos-init aos-animate" data-aos="fade-up">
-                            <div class="form-group">
-                                <label class="text-white" for="course-name-1">Your Name</label>
-                                <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Type your name">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-white" for="course-email-1">Email Address</label>
-                                <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="you@yoursite.com">
-                            </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group mb-1">
-                                            <label class="text-white">Skill Level:</label>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group rounded bg-white p-2 border">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="course-radio-beginner-1" name="course-radio-1" class="custom-control-input">
-                                                <label class="custom-control-label" for="course-radio-beginner-1">Beginner</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group rounded bg-white p-2 border">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="course-radio-advanced-1" name="course-radio-1" class="custom-control-input">
-                                                <label class="custom-control-label" for="course-radio-advanced-1">Advanced</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-md-10">
+                            <form class="position-relative d-block aos-init aos-animate" data-aos="fade-up">
+                                <div class="form-group">
+                                    <label class="text-white" for="course-name-1">Ingresa tu nombre</label>
+                                    <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Ingresa tu nombre">
                                 </div>
-                            </div>
-                            <div class="form-group text-center">
-                                <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Regístrate</button>
-                                <small class="text-white">You’ll recieve your first lesson via email in less than a minute.</small>
-                            </div>
-                        </form>
+                                <div class="form-group">
+                                    <label class="text-white" for="course-email-1">Correo electronico</label>
+                                    <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-white" for="course-password-1">Contraseña</label>
+                                    <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-white" for="course-password-2">Confirmar contraseña</label>
+                                    <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Regístrate</button>
+                                    <small class="text-white">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
--->
 </section>
 <section class="pt-5 pb-5 bg-light" style="">
     <div class="container  pt-5 pb-5">
