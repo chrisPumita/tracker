@@ -1,16 +1,11 @@
 <?php
-class CONEXION
+require_once "../config/SERVER.php";
+class CONEXION 
 {
-    /* conexioon a servidor remoto
-    const SERVER = "localhost";
-    const DB = "bdname";
-    const USER = "root";
-    const PASS = "";
-*/
-    private $host = "localhost";
-    private $usuario = "root";
-    private $pass = "";
-    private $db = "proyectracker";
+    private $host = SERVER;
+    private $usuario = USER;
+    private $pass = PASS;
+    private $db = DB;
 
     private $connection;
 
