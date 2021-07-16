@@ -29,14 +29,17 @@ $(document).ready(function () {
 /* Obtener una jornada para convertirlo en texto  */
 function getTipoJornada($jornada) {
     switch ($jornada) {
-        case "0":
-            return "Normal";
-            break;
         case "1":
-            return "6 dias";
+            return "Lunes - Viernes";
             break;
         case "2":
-            return "7 DIAS";
+            return "Lunes - Sabado";
+            break;
+        case "3":
+            return "Lunes - Domingo";
+            break;
+        case "4":
+            return "Sabado y Domingo";
             break;
     }
 }
@@ -71,12 +74,13 @@ function construc_table_proyectos(obj_proyect) {
                     <td>${objProyect.nombre_proyecto} </td>
                     <td>${objProyect.nombre_gt} </td>
                     <td>${objProyect.fecha_creacion}</td>
+                    <td>${objProyect.fecha_inicio}</td>
                     <td>${objProyect.dias}</td>
                     <td>${jornada}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                           <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
-                          <button type="button" class="btn btn-warning"><i class="fas fa-user-clock"></i></button>
+                          <button type="button" class="btn btn-warning"><i class="bi bi-clock-fill"></i></button>
                           <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
 
                         </div>

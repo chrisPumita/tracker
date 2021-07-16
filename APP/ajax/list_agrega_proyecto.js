@@ -54,7 +54,6 @@ function cargaListaCategorias(){
     });
 }
 
-
 function construct_list_Desp_Cat(obj_cat){
     let template= '';
     json_cat = obj_cat;
@@ -83,8 +82,6 @@ function construct_list_Desp_Gt(obj_gt){
 /// Funcion que busca en un json y coloca en un input el valor del dela propíedad objeto
 $("#categoria").change(function ()
 {
-    alert("onchange dentro");
-    console.log(json_cat);
     let idObj = $("#categoria").val();
     json_cat.forEach(
         cat=>{
