@@ -45,13 +45,23 @@
                                 <input id="imgCat" name="imgCat" type="hidden" required="" value="https://wiki.guildwars2.com/images/thumb/a/a0/Elementalist_tango_icon_200px.png/128px-Elementalist_tango_icon_200px.png">
                             </div>
                             <div class="row">
-                                <div class="form-floating mb-3 col-md-4 pr-1">
+                                <div class="form-floating mb-3 col-md-2 pr-1">
                                     <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
                                     <label for="dias">Dias</label>
                                 </div>
-                                <div class="form-floating mb-3 col-md-4">
+                                <div class="form-floating mb-3 col-md-5 pr-1">
                                     <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
                                     <label for="fecha_inicio">Fecha Inicio</label>
+                                </div>
+                                <label for="categoria">Tipo Jornada</label>
+                                <div class="form-floating mb-3 col-md-3 pr-3">
+                                    <select class="form-select form-select-sm" id="jornada" name="jornada" type="text" required="" aria-label=".form-select-sm example">
+                                        <option>--- SELECCIONA ---</option>
+                                        <option value="1">Lunes - Viernes</option>
+                                        <option value="2">Lunes - Sabado</option>
+                                        <option value="3">Lunes - Domingo</option>
+                                        <option value="4">Fines de semana (S-D)</option>
+                                    </select>
                                 </div>
                             </div>
                             
@@ -78,4 +88,4 @@
 </html>
 <script src="./ajax/add_proyecto_ajax.js"></script>
 <script src="./ajax/list_agrega_proyecto.js"></script>
-<script src="./ajax/list-proyectos.js"></script>
+<!--<script src="./ajax/list-proyectos.js"></script>-->
