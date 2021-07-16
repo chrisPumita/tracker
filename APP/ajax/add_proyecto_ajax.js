@@ -10,6 +10,7 @@ $(document).ready(function () {
                 gt: $('#grupot').val(),
                 categoria: $('#categoria').val(),
                 dias: $('#dias').val(),
+                jornada: $('#jornada').val(),
                 fecha_inicio: $('#fecha_inicio').val(),
                 urlImg: $('#imgCat').val(),
             };

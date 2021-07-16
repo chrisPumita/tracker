@@ -52,14 +52,12 @@ function getNivelAcceso($nivel) {
             return "ADMINISTRADOR";
             break;
         case "1":
-            return "LIDER";
-            break;
-        case "2":
             return "EDITOR";
             break;
-        case "3":
-            return "OBSERVADOR";
+        case "2":
+            return "LECTOR";
             break;
+       
     }
 }
 /*

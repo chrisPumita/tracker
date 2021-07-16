@@ -49,6 +49,7 @@
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Nombre proyecto</a></th>
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Grupo Trabajo</a></th>
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Fecha Creacion</a></th>
+                                        <th data-sortable=""><a href="#" class="dataTable-sorter">Fecha Inicio</a></th>
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Dias</a></th>
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Jornada</a></th>
                                         <th data-sortable=""><a href="#" class="dataTable-sorter">Acciones</a></th>
