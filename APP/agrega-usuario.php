@@ -53,8 +53,8 @@
                                 <select class="form-select form-select-sm" id="nivelAcceso" name="nivelAcceso" type="text" required="" aria-label=".form-select-sm example">
                                     <option selected>----  SELECCIONA  ----</option>
                                     <option value="0">ADMINISTRADOR</option>
-                                    <option value="2">EDITOR</option>
-                                    <option value="3">OBSERVADOR</option>
+                                    <option value="1">EDITOR</option>
+                                    <option value="2">LECTOR</option>
                                 </select>
                             </div>
                             <div class="mt-4 mb-0">

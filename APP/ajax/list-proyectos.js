@@ -80,7 +80,7 @@ function construc_table_proyectos(obj_proyect) {
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                           <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
-                          <button type="button" class="btn btn-warning"><i class="bi bi-clock-fill"></i></button>
+                          <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i></button>
                           <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
 
                         </div>
