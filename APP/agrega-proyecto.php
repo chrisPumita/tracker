@@ -42,7 +42,7 @@
                             <div class="form-floating mb-3">
                                 <select class="form-select form-select-sm" id="categoria" name="categoria" type="text" required="" aria-label=".form-select-sm example">
                                 </select>
-                                <input id="imgCat" name="imgCat" type="text" required="">
+                                <input id="imgCat" name="imgCat" type="hidden" required="" value="https://wiki.guildwars2.com/images/thumb/a/a0/Elementalist_tango_icon_200px.png/128px-Elementalist_tango_icon_200px.png">
                             </div>
                             <div class="row">
                                 <div class="form-floating mb-3 col-md-4 pr-1">
