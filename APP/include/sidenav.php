@@ -37,7 +37,7 @@
             </a>
             <div class="collapse" id="menuGpo" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="#">Nuevo Grupo</a>
+                    <a class="nav-link" href="./agrega_grupo_trabajo.php">Nuevo Grupo</a>
                     <a class="nav-link" href="./grupos_trabajo.php">Ver todos</a>
                 </nav>
             </div>
