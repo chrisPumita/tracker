@@ -155,13 +155,13 @@ class ETAPAS extends CONEXION
 
 
    function consultaEtapas(){
-        $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, `estado_proceso`, 
-                    `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
-                    FROM `etapas` where `id_proyecto_fk` = ". $this->getIdEtapa;
+        $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, 
+        `estado_proceso`, `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
+        FROM `etapas` where `id_proyecto_fk` = ". $this->getIdProyectoFk();
         $this->connect();
         $result = $this->getData($query);
 
-        //iteracion para cosular las subetapas de cada etapa
+        //iteracion para consultar las subetapas de cada etapa
     
         $this->close();
         return $result;
