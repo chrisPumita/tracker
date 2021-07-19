@@ -224,17 +224,19 @@ class PROYECTO extends CONEXION
     private function consultListaEtapas(){
         include_once "ETAPAS.php";
         $obj_etapa = new ETAPAS();
-        $obj_etapa -> setIdProyectoFk($this->getIdProyecto);
+        $obj_etapa -> setIdProyectoFk($this->getIdProyecto());
         return $obj_etapa->consultaEtapas();
     }
 
         function queryDetallesProyecto($idProyecto){
-        $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, `fecha_creacion`, 
-       `fecha_inicio`, `dias`, `tipo_jornada`, `estado` FROM `proyecto` WHERE `id_proyecto` = ". $idProyecto;
+        $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
+        `proyecto`.`fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, 
+        `url_imagen`,`grupo_trabajo`.`nombre_gt` FROM `proyecto`,`grupo_trabajo` WHERE 
+        proyecto.id_gt_fk= grupo_trabajo.id_gt AND `id_proyecto` = ". $idProyecto;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
-        return json_encode($result);
+        return $result;
     }
 
     function queryUpdateProyecto($idProyecto){
