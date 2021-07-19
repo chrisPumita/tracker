@@ -3,7 +3,7 @@
         <div class="nav">
             <img src="./assets/img/logo.png" width="100%" class="rounded mx-auto d-block" alt="">
             <div class="sb-sidenav-menu-heading">INICIO</div>
-            <a class="nav-link" href="template/index.html">
+            <a class="nav-link" href="./inicio_prueba.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                 Inicio
             </a>
@@ -38,8 +38,8 @@
             <div class="collapse" id="menuGpo" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
 
-                    <a class="nav-link" href="./agrega_grupo_trabajo.php">Nuevo Grupo</a>
-                    <a class="nav-link" href="./grupos_trabajo.php">Ver todos</a>
+                    <a class="nav-link" href="./agrega_grupo_trabajo.php">Grupos de trabajo</a>
+                   <!-- <a class="nav-link" href="./grupos_trabajo.php">Ver todos</a> -->
                 </nav>
             </div>
             <div class="sb-sidenav-menu-heading">General</div>
@@ -47,10 +47,30 @@
                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                 Configuración
             </a>
+
+
             <a class="nav-link" href="template/tables.html">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Cuenta
             </a>
+
+
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#menuPerfil" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                Cuenta
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="menuPerfil" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="./perfil_usuario.php">Perfil de usuario</a>
+                    <a class="nav-link" href="./">Perfil de empresa</a>
+                </nav>
+            </div>
+
+
+
+
+
         </div>
     </div>
     <div class="sb-sidenav-footer">
