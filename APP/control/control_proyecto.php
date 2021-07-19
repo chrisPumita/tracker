@@ -7,8 +7,23 @@ include_once "../model/PROYECTO.php";
 function consultaEtapas($idProyecto){
     $obj_pryecto = new  PROYECTO();
     $obj_pryecto->setIdProyecto($idProyecto);
-    $result = $obj_pryecto->getListaEtapas();
-    return json_encode($result);
+    $listaEtapasDB = $obj_pryecto->getListaEtapas();
+    //allgoritmo para agregar nuevo array
+    $listaEtapas = array();
+
+    foreach ($listaEtapasDB as $etapa){
+        $subEtapas =consultaSubEtapa($etapa["id_etapa"]);
+        array_push($etapa,$subEtapas);
+        array_push($listaEtapas,$etapa);
+    }
+    return json_encode($listaEtapas);
+}
+
+function consultaSubEtapa($idEtapa){
+    include_once "../model/SUBETAPAS.php";
+    $obj_sub = new SUBETAPAS();
+    $obj_sub->setIdEtapaFk($idEtapa);
+    return $obj_sub->consultaListaSubetapas();
 }
 
 function queryProyecto($idProyecto){
