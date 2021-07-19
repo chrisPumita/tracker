@@ -116,7 +116,7 @@ function constuct_grid_proyectos(obj_proyect) {
                         <div class="d-flex justify-content-between install mt-3">
                             <span>Tiempo: ${objProyect.dias} dias</span>
                             <span class="text-primary">
-                                <a href="${objProyect.link}"<button type="button" class="btn btn-primary">Ver estatus</button></a>
+                                <a href="details-proyecto.php?idProyecto=${objProyect.id_proyecto}"<button type="button" class="btn btn-primary">Ver estatus</button></a>
                             </span>
                         </div>
                     </div>
