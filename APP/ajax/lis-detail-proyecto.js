@@ -13,7 +13,6 @@ $(document).ready(function () {
             success: function (response) {
                 //COnvertimos el string a JSON
                let obj_proyect = JSON.parse(response);
-
                console.log(obj_proyect);
                let proyecto = obj_proyect[0];
                constuct_grid_proyectos(proyecto);
@@ -31,7 +30,6 @@ $(document).ready(function () {
             },
             success: function (response) {
                 //COnvertimos el string a JSON
-
                let obj_proyect = JSON.parse(response);
                console.log(obj_proyect);
                let etapas=constructEtapas(obj_proyect);
@@ -171,4 +169,3 @@ function construyeSubetapa(etapasLista) {
                         </table>`;
     return templateSubetapa;
 }
-

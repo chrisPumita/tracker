@@ -91,8 +91,8 @@ else{
                 </div>
                 <!-- start  card lista etapa --->
                 <div class="row" id="tbl-etapa">
-                    <!-- AJAX RESPONSE-->
 
+                    <!-- AJAX RESPONSE-->
                 </div>
                 <!-- card lista etapa --->
 
