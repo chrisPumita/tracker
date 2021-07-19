@@ -91,50 +91,7 @@ else{
                 </div>
                 <!-- start  card lista etapa --->
                 <div class="row" id="tbl-etapa">
-                    <div class="card-body">
-                        <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
-                            <div class="dataTable-container"id="tbl-subetapa<">
-                                <table id="datatablesSimple" class="dataTable-table">
-                                    <thead>
-                                    <tr>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">#</a></th>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">Subetapa</a></th>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">Inicio</a></th>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">Dias</a></th>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">Estatus</a></th>
-                                        <th data-sortable="" ><a href="#" class="dataTable-sorter">Acciones</a></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="text-success"><i class="fas fa-check-circle"></i></td>
-                                        <td>Analisis</td>
-                                        <td>20 ago 21</td>
-                                        <td>61</td>
-
-                                        <td><i class="far fa-trash-alt"></i> <i class="far fa-edit"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td class="text-warning" ><i class="fas fa-clock"></i></td>
-                                        <td>Analisis</td>
-                                        <td>20 ago 21</td>
-                                        <td>61</td>
-
-                                        <td>
-                                            <i class="far fa-trash-alt"></i>
-                                            <a href="#">
-                                                <i class="far fa-edit" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- AJAX RESPONSE-->
                 </div>
                 <!-- card lista etapa --->
 

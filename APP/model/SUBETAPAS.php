@@ -126,8 +126,10 @@ class SUBETAPAS extends CONEXION
 
     
     function consultaListaSubetapas(){
-        $query = "SELECT `id_subetapa`, `id_etapa_fk`, `nombre_subetapa`, `estado`,
-         `fecha_inicio`, `dias`, `indice` FROM `subetapas` WHERE `id_etapa_fk` = ". $this->getIdEtapaFk();
+        $query = "SELECT `id_subetapa`, `id_etapa_fk`, `nombre_subetapa`, `estado`, 
+       `fecha_inicio`, `dias`, `indice` 
+        FROM `subetapas` WHERE `id_etapa_fk` = ".$this->getIdEtapaFk()." 
+        ORDER BY `subetapas`.`indice` ASC ";
         $this->connect();
         $result = $this->getData($query);
         $this->close();
