@@ -298,7 +298,7 @@
                         <figcaption class="info-wrap">
                             <h4 class="title">Prueba gratis</h4>
                             <p class="desc">Crea hasta tres proyectos y goza de todos nuestros beneficios durante ese perdiodo</p>
-                            <div class="rating-wrap">
+                        </br>                            <div class="rating-wrap">
                                 <div class="label-rating">182 vistas</div>
                                 <div class="label-rating">154 orders</div>
                             </div> <!-- rating-wrap.// -->
