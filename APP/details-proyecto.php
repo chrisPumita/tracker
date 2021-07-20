@@ -56,7 +56,7 @@ else{
                             <div class="card-body">Agregar Etapa</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddEtapa">
-                                    Modifcar
+                                    Agregar
                                 </button>
                                 <div class="small text-white">
                                 </div>
@@ -80,7 +80,7 @@ else{
                         <div class="card bg-danger text-white mb-4">
                             <div class="card-body">Eliminar proyecto</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDeleteProyect">
                                     Eliminar
                                 </button>
                                 <div class="small text-white">
@@ -110,3 +110,4 @@ else{
 </body>
 </html>
 <script src="./ajax/lis-detail-proyecto.js"></script>
+<script src="./ajax/list_agrega_proyecto.js"></script>

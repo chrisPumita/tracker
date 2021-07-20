@@ -114,10 +114,10 @@ function constructEtapas(obj_proyect){
             }
             else{
                 template +=`<div class="alert alert-warning" role="alert">
-                  <h4 class="alert-heading">Esta etapa nmo tiene subetapas que mostrar</h4>
-                  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                  <h4 class="alert-heading">Esta etapa no tiene subetapas que mostrar</h4>
+                  <p>Le sugerimos crear subetapas para llevar una mejor administración de su proyecto.</p>
                   <hr>
-                  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                  <p class="mb-0">Haga click en el boton "Agregar subestapa" para poder mostrar algo.</p>
                 </div>`;
             }
             template += `
@@ -166,7 +166,7 @@ function construyeSubetapa(etapasLista) {
                                 <td>
                                 <div class="btn-group text-light" role="group" aria-label="Basic example">
                                   <button type="button" class="btn btn-danger"><a class="text-light" href=""><i class="far fa-trash-alt"></i> </a></button>
-                                  <button type="button" class="btn btn-info"> <a class="text-light" href=""><i class="far fa-edit"></i></a></button>
+                                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"><i class="far fa-edit"><a class="text-light" href=""></i></a></button>
                                   ${btnCheck}
                                 </div>
                                 </td>
