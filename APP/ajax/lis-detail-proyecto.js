@@ -93,11 +93,13 @@ function constructEtapas(obj_proyect){
                         Etapa ${contador}  : ${objProyect.nombre_etapa}
                         <div class="row d-block justify-content-center align-items-center">
                             <div class="col">
+
                                 <div class="progress">
                                     <div class="progress-bar  progress-bar-striped bg-info" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                                 </div>
                             </div>
                             <div class="col py-3">
+
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa">
                                     Agrega Sub-etapa
@@ -118,6 +120,7 @@ function constructEtapas(obj_proyect){
                   <p>Le sugerimos crear subetapas para llevar una mejor administración de su proyecto.</p>
                   <hr>
                   <p class="mb-0">Haga click en el boton "Agregar subestapa" para poder mostrar algo.</p>
+
                 </div>`;
             }
             template += `
@@ -166,7 +169,7 @@ function construyeSubetapa(etapasLista) {
                                 <td>
                                 <div class="btn-group text-light" role="group" aria-label="Basic example">
                                   <button type="button" class="btn btn-danger"><a class="text-light" href=""><i class="far fa-trash-alt"></i> </a></button>
-                                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"><i class="far fa-edit"><a class="text-light" href=""></i></a></button>
+                                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"><i class="far fa-edit"><a class="text-light" href=""></i></a></button>                                  
                                   ${btnCheck}
                                 </div>
                                 </td>
