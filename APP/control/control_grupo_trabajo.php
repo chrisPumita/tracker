@@ -33,3 +33,9 @@ function deleteGrupoTrabajo($idGt){
     $result= $obj_gt->queryDeleteGT($idGt);
     return $result;
 }
+
+function listDetallesGt($idEmpresa){
+    $obj_gt = new GRUPO_TRABAJO();
+    $result = $obj_gt->queryListDetallesGrupo($idEmpresa);
+    return json_encode($result);
+}
