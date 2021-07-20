@@ -23,7 +23,7 @@
 <body>
 <nav class="navbar navbar-light bg-white  navbar-expand-md">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="./">
             <img src="./assets/image/logo.png" height="50px" alt="image">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
@@ -298,7 +298,7 @@
                         <figcaption class="info-wrap">
                             <h4 class="title">Prueba gratis</h4>
                             <p class="desc">Crea hasta tres proyectos y goza de todos nuestros beneficios durante ese perdiodo</p>
-                            <div class="rating-wrap">
+                        </br>                            <div class="rating-wrap">
                                 <div class="label-rating">182 vistas</div>
                                 <div class="label-rating">154 orders</div>
                             </div> <!-- rating-wrap.// -->
@@ -409,22 +409,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--
-                                    <div class="card">
-                                        <div class="card-header" id="headingFour">
-                                            <h5 class="mb-0">
-                                                <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                    <i class="fa fa-envelope main"></i><i class="fa fa-angle-double-right mr-3"></i>How to contact us.
-                                                </button>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseFour" class="collapse fade" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                            <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>View More designs <i class="fa fa-angle-double-right"></i></strong></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                -->
                                 </div>
                             </div>
                         </section>
@@ -504,22 +488,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <!--    <div class="col-lg-3 col-md-6 col-sm-6">
-                                                   <div class="our-team">
-                                                     <div class="pic">
-                                                       <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                     </div>
-                                                     <div class="team-content">
-                                                       <h3 class="title">Dr. Georges WANET</h3>
-                                                       <span class="post">Docteur</span>
-                                                     </div>
-                                                     <ul class="social">
-                                                       <li>
-                                                           <a href="#" class="fa fa-envelope"></a>
-                                                       </li>
-                                                     </ul>
-                                                   </div>
-                                                 </div> -->
                                         </div>
                                         <!--.row-->
                                     </div>
@@ -561,39 +529,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <!--
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                              <div class="our-team">
-                                                <div class="pic">
-                                                  <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                  <h3 class="title">Dr. Saverio TOMASELLA</h3>
-                                                  <span class="post">Auteur et Chercheur - Brand Psychoanalysis</span>
-                                                </div>
-                                                <ul class="social">
-                                                  <li>
-                                                      <a href="#" class="fa fa-envelope"></a>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                              <div class="our-team">
-                                                <div class="pic">
-                                                  <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                  <h3 class="title">Ray BENEDICKTUS</h3>
-                                                  <span class="post">Experienced Marketing Consultant</span>
-                                                </div>
-                                                <ul class="social">
-                                                  <li>
-                                                      <a href="#" class="fa fa-envelope"></a>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                            </div>-->
                                         </div>
                                         <!--.row-->
                                     </div>
@@ -624,27 +559,49 @@
                         <div class="col-md-8">
                             <div class="row justify-content-center">
                                 <div class="col-xl-8 col-md-10">
-                                    <form>
+                                    <form id="frm-registro-home">
                                         <div class="form-group">
-                                            <label class=" " for="course-name-1">Nombre de usuario</label>
-                                            <input name="course-name" id="course-name-1" type="text" class="form-control form-control-lg" placeholder="Nombre de usuario">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class=" " for="course-email-1">Correo electronico</label>
-                                            <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
+                                            <input name="idPage" id="idPage" type="hidden" class="form-control form-control-lg" value="1">
+                                            <label class=" " for="nombre">Nombre</label>
+                                            <input name="nombre" id="nombre" type="text" class="form-control form-control-lg" placeholder="Nombre">
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="course-password-1">Contraseña</label>
-                                            <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
+                                            <label class=" " for="app">Primer Apellido</label>
+                                            <input name="app" id="app" type="text" class="form-control form-control-lg" placeholder="Primer Apellido">
                                         </div>
                                         <div class="form-group">
-                                            <label class="" for="course-password-2">Confirmar contraseña</label>
-                                            <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
+                                            <label class=" " for="apm">Segundo Apellido</label>
+                                            <input name="apm" id="apm" type="text" class="form-control form-control-lg" placeholder="Segundo Apellido">
                                         </div>
-                                        <div class="form-group text-center">
-                                            <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Registrarse</button>
-                                            <small class=" ">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
+                                        <div class="form-group">
+                                            <label class=" " for="user">Nombre de usuario</label>
+                                            <input name="user" id="user" type="text" class="form-control form-control-lg" placeholder="Nombre de usuario">
                                         </div>
+                                        <div class="form-group">
+                                            <label class=" " for="email">Correo electronico</label>
+                                            <input name="email" id="email" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="pw">Contraseña</label>
+                                            <input name="pw" id="pw" type="password" class="form-control form-control-lg" placeholder="Contraseña">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="" for="cpw">Confirmar contraseña</label>
+                                            <input name="cpw" id="cpw" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class=" " for="empresa">Nombre de la empresa</label>
+                                            <input name="empresa" id="empresa" type="text" class="form-control form-control-lg" placeholder="Nombre de empresa">
+                                        </div>
+                                        
+                                        <div class="mt-4 mb-0">
+                                            <div class="d-grid">
+                                                <input type="submit" id="btnEnviar" name="btnEnviar" value="Registrarme" class="btn btn-success btn-user btn-block">
+                                            </div>
+                                        </div>
+                                        <span id="mjeAlerta">
+                                            <!-- Mje ajax-->
+                                        </span>
                                     </form>
                                 </div>
                             </div>
@@ -783,6 +740,9 @@
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- jQuery is required -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -797,5 +757,7 @@
         duration: 1200,
     })
 </script>
+
+<script src="./APP/ajax/registro-home-ajax.js"></script>
 </body>
 </html>

@@ -14,3 +14,13 @@
     margin-right: 2rem;
 }
 
+.proyecto-perfil{
+    display: flex;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .proyecto-perfil{
+        display: block !important;
+    }
+}
