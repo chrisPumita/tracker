@@ -174,9 +174,6 @@ class EMPRESA extends CONEXION
         $this->connect();
         $result = $this->executeInstruction($query);
         $this->close();
-        if($result){
-            echo "Guardado con exito";
-        } else echo "Falló al guardar";
         return $result;
     }
 

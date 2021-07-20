@@ -21,6 +21,7 @@
                             <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
                             <div class="card-body">
                                 <form id="frm-add-user">
+                                    <input name="idPage" id="idPage" type="hidden" class="form-control form-control-lg" value="2">
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Enter your first name" required/>
                                         <label for="nombre">Nombre</label>

@@ -18,7 +18,8 @@ $(document).ready(function () {
                 pw: pw,
                 cpw : cpw
             };
-             let url = "./control/crea-cuenta.php";
+            let url ="./control/crea-cuenta.php"
+             
             //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
             $.post(url,valoresCajas,function (mje) {
                 //tratamos los datos y hacemos acciones
@@ -39,5 +40,4 @@ $(document).ready(function () {
         e.preventDefault();
     });
     //-------------------seleccionando el elemento boton agregar elemento
-
 });
