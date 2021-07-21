@@ -95,3 +95,14 @@ function terminaSubEtapa($idSE){
     $mje = $objSE->terminaSubEtapaDB($idSE)? "Sub etapa terminada con exito": "Error interno al terminar etapa";
     return $mje;
 }
+
+/*
+ * SUBETAPAS DELETE
+ * */
+
+function eliminaSubEtapa($idSE){
+    include_once "../model/SUBETAPAS.php";
+    $objSE = new SUBETAPAS();
+    $mje = $objSE->eliminaSubEtapaDB($idSE)? "Sub etapa eliminada con exito": "Error interno al eliminar etapa";
+    return $mje;
+}

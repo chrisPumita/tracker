@@ -167,7 +167,7 @@ function construyeSubetapa(etapasLista) {
                                 <td>61</td>
                                 <td>
                                 <div class="btn-group text-light" role="group" aria-label="Basic example">
-                                  <button type="button" class="btn btn-danger"><a class="text-light" href=""><i class="far fa-trash-alt"></i> </a></button>
+                                  <button type="button" class="btn btn-danger btnDeleteSE"><i class="far fa-trash-alt"></i></button>
                                   <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"><i class="far fa-edit"><a class="text-light" href=""></i></a></button>                                  
                                   ${btnCheck}
                                 </div>
@@ -194,9 +194,34 @@ $(document).on("click", ".btnEndSubE", function () {
 
 });
 
+//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+$(document).on("click", ".btnDeleteSE", function () {
+    if (confirm("¿Esta seguro de que desea eliminar esta subetapa? Esta acción no se podrá revertir")){
+        let elementoSubEtapaSelect = $(this)[0].parentElement.parentElement.parentElement;
+        let idSubEtapa = $(elementoSubEtapaSelect).attr("idSubEtapa");
+        eliminaSubEtapa(idSubEtapa);
+    }
+
+});
+
+
 function finalizaSubEtapa(idSubEtapa){
     $.ajax({
         url: "./control/subetapa-concluida.php",
+        type: 'POST',
+        data: {
+            idSEtapa: idSubEtapa
+        },
+        success: function (mje) {
+        }
+    });
+    consultaDetailsProyecto();
+    consultaEtapasProyecto();
+}
+
+function eliminaSubEtapa(idSubEtapa){
+    $.ajax({
+        url: "./control/subetapa-eliminada.php",
         type: 'POST',
         data: {
             idSEtapa: idSubEtapa

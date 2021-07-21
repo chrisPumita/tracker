@@ -144,4 +144,13 @@ class SUBETAPAS extends CONEXION
         return $result;
     }
 
+    public function eliminaSubEtapaDB($idSUBETAPA){
+        $query="DELETE FROM `subetapas` WHERE `id_subetapa`= ".$idSUBETAPA;
+        $this->connect();
+        $result=$this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+
+
 }
