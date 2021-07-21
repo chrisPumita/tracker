@@ -1,4 +1,4 @@
-<?php $plantilla = "Plantilla"; ?>
+<?php $plantilla = "Menu "; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,20 +18,89 @@
         <main>
              <link rel="stylesheet" href="style_empresa.css">
             <!-- incuir los elementos del la vista para cada cosa-->
-            <section class="form-register">
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Panel de control</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Panel principal</li>
+                </ol>
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Usuarios</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="./usuarios.php">Ver todos</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Grupos de trabajo</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="./agrega_grupo_trabajo.php">Ver</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Proyectos</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="./agrega-proyecto.php">Agregar Proyecto</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Asignar usuarios</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">Asignar</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <ol class="breadcrumb mb-4">
+                        <i class="fas fa-book-reader me-1"></i>
+                        Proyectos
+                    </ol>
+                    <hr>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="row" id="grid_proyectos">
+                        <!-- ajax response--->
+                    </div>
+                    <hr>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Grupos de trabajo
+                    </div>
+                    <div class="card-body">
+                    <table class="table table-striped" >
+                    <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nombre</th>
+                                <th>Fecha de Creacion</th>
+                                <th>Numero de trabajadores</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tbl-grupo-trabajo">
+                            
+                            </tbody>
 
-                <h4>Formulario Registro</h4>
-
-                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese nombre de la empresa">
-                <input class="controls" type="text" name="razonsocial" id="razonsocial" placeholder="Ingrese razon social de la empresa">
-                <input class="controls" type="text" name="rfc" id="rfc" placeholder="Ingrese RFC de la empresa">
-                <input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese telefono de la empresa">
-                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese correo de la empresa">
-                <p>Estoy deacuerdo con <a href="#">Terminos y condiciones </a></p>
-                <imput class="botons" type="submit" value="Registrar">
-                <p><a href="#">¿Ya tengo cuenta?</a></p>
-
-            </section>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            <!--  Termina contenido dinamico del dashboard-->
         </main>
         <?php include_once "./include/footer.php"?>
     </div>
@@ -40,3 +109,5 @@
 <?php include_once "./include/js.php"?>
 </body>
 </html>
+<script src="./ajax/list-proyectos.js"></script>
+<script src="./ajax/list-grupo-trabajo.js"></script>

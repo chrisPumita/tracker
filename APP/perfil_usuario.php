@@ -24,6 +24,7 @@
                                         <div class="row text-center justify-content-center">
                                             <div class="col-12 col-md-9 col-lg-7 aos-init" data-aos="fade-up">
                                                 <h3 class="mb-0 display-4 font-weight-bold" id="nombre">¿Algún cambio Luis Fernando?</h3>
+
                                             </div>
                                         </div>
                                         <div class="row d-flex justify-content-between pt-5 align-items-center">

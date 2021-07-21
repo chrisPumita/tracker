@@ -3,7 +3,7 @@
         <div class="nav">
             <img src="./assets/img/logo.png" width="100%" class="rounded mx-auto d-block" alt="">
             <div class="sb-sidenav-menu-heading">INICIO</div>
-            <a class="nav-link" href="./inicio_prueba.php">
+            <a class="nav-link" href="./index.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                 Inicio
             </a>

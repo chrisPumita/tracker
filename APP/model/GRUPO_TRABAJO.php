@@ -143,8 +143,9 @@ class GRUPO_TRABAJO extends CONEXION
         return $result;
     }
     
-    function queryListDetallesGrupo(){
-        $query ="SELECT `id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status` FROM `grupo_trabajo`";
+    function queryListDetallesGrupo($idEmpresa){
+        $query ="SELECT `id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, 
+        `status` FROM `grupo_trabajo` WHERE `id_empresa_fk`= ".$idEmpresa;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
