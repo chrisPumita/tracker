@@ -2,45 +2,45 @@ $(document).ready(function () {
     console.log("Lista Proyectos");
     consultaDetailsProyecto();
     consultaEtapasProyecto();
-
-    function consultaDetailsProyecto(){
-        $.ajax({
-            url: "./control/proyecto-detalles.php",
-            type: 'POST',
-            data: {
-                idProyecto: $("#idProyecto").val()
-            },
-            success: function (response) {
-                //COnvertimos el string a JSON
-               let obj_proyect = JSON.parse(response);
-               console.log(obj_proyect);
-               let proyecto = obj_proyect[0];
-               constuct_grid_proyectos(proyecto);
-            }
-
-        });
-    }
-    
-    function consultaEtapasProyecto(){
-        $.ajax({
-            url: "./control/etapa-detalles.php",
-            type: 'POST',
-            data: {
-                idProyecto: $("#idProyecto").val()
-            },
-            success: function (response) {
-                //COnvertimos el string a JSON
-               let obj_proyect = JSON.parse(response);
-               console.log(obj_proyect);
-               let etapas=constructEtapas(obj_proyect);
-               $("#tbl-etapa").html(etapas);
-               
-            }
-
-        });
-    }
-
 });
+
+function consultaDetailsProyecto(){
+    $.ajax({
+        url: "./control/proyecto-detalles.php",
+        type: 'POST',
+        data: {
+            idProyecto: $("#idProyecto").val()
+        },
+        success: function (response) {
+            //COnvertimos el string a JSON
+            let obj_proyect = JSON.parse(response);
+            console.log(obj_proyect);
+            let proyecto = obj_proyect[0];
+            constuct_grid_proyectos(proyecto);
+        }
+
+    });
+}
+
+function consultaEtapasProyecto(){
+    $.ajax({
+        url: "./control/etapa-detalles.php",
+        type: 'POST',
+        data: {
+            idProyecto: $("#idProyecto").val()
+        },
+        success: function (response) {
+            //COnvertimos el string a JSON
+            let obj_proyect = JSON.parse(response);
+            console.log(obj_proyect);
+            let etapas=constructEtapas(obj_proyect);
+            $("#tbl-etapa").html(etapas);
+
+        }
+
+    });
+}
+
 function constuct_grid_proyectos(obj_proyect) {
     $("#nombre_proyecto").html(obj_proyect.nombre_proyecto);
     let template =
@@ -153,14 +153,13 @@ function construyeSubetapa(etapasLista) {
                         `;
     etapasLista.forEach(
         sub=>{
-            console.log(sub.nombre_subetapa);
-
             let boton = sub.estado === "1" ? `<i class="fas fa-check-circle"></i>`:`<i class="fas fa-clock"></i>`;
             let textCustom = sub.estado === "1" ? `success`:`warning`;
-            let btnCheck = sub.estado === "0" ? `<button type="button" class="btn btn-success"><a class="text-light" href=""><i class="fas fa-clipboard-check"></i> </a></button>`:``;
+            let btnCheck = sub.estado === "0" ? `<button type="button" class="btn btn-success btnEndSubE">
+                <i class="fas fa-clipboard-check"></i></button>`:``;
 
             templateSubetapa += `
-                            <tr>
+                            <tr idSubEtapa ="${sub.id_subetapa}">
                                 <td>${sub.indice}</td>
                                 <td class="text-${textCustom}"><h2>${boton}</h2></td>
                                 <td>${sub.nombre_subetapa}</td>
@@ -180,4 +179,31 @@ function construyeSubetapa(etapasLista) {
     templateSubetapa += `</tbody>
                         </table>`;
     return templateSubetapa;
+}
+
+
+////// ------------------ ACCIONES CON ETAPAS Y SUB ETAPAS ---------///
+
+//-------------------seleccionando el elemento boton agregar elemento
+$(document).on("click", ".btnEndSubE", function () {
+    if (confirm("Porfavor confirme por teminada la Sub-Etapa ¿Desea continuar?")){
+        let elementoSubEtapaSelect = $(this)[0].parentElement.parentElement.parentElement;
+        let idSubEtapa = $(elementoSubEtapaSelect).attr("idSubEtapa");
+        finalizaSubEtapa(idSubEtapa);
+    }
+
+});
+
+function finalizaSubEtapa(idSubEtapa){
+    $.ajax({
+        url: "./control/subetapa-concluida.php",
+        type: 'POST',
+        data: {
+            idSEtapa: idSubEtapa
+        },
+        success: function (mje) {
+        }
+    });
+    consultaDetailsProyecto();
+    consultaEtapasProyecto();
 }

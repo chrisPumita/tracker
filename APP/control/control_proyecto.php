@@ -73,3 +73,25 @@ function queryProyectos($idEmpresa){
     $result = $obj_proyecto->queryDetallesProyectos($idEmpresa);
     return json_encode($result);
 }
+
+/*
+ * ETAPAS ACCIONES
+ * */
+
+
+
+
+
+
+
+
+/*
+ * SUBETAPAS UPDATE
+ * */
+
+function terminaSubEtapa($idSE){
+    include_once "../model/SUBETAPAS.php";
+    $objSE = new SUBETAPAS();
+    $mje = $objSE->terminaSubEtapaDB($idSE)? "Sub etapa terminada con exito": "Error interno al terminar etapa";
+    return $mje;
+}

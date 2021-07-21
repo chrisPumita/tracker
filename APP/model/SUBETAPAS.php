@@ -136,4 +136,12 @@ class SUBETAPAS extends CONEXION
         return $result;
     }
 
+    public function terminaSubEtapaDB($idSUBETAPA){
+        $query="UPDATE `subetapas` SET `estado` = '1' WHERE `subetapas`.`id_subetapa` = ".$idSUBETAPA;
+        $this->connect();
+        $result=$this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
+
 }

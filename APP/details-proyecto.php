@@ -109,5 +109,6 @@ else{
 <?php include_once "./include/js.php"?>
 </body>
 </html>
+<script src="./ajax/escuchas-proyectos-ajax.js"></script>
 <script src="./ajax/lis-detail-proyecto.js"></script>
 <script src="./ajax/list_agrega_proyecto.js"></script>
