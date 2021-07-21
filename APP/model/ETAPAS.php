@@ -157,7 +157,7 @@ class ETAPAS extends CONEXION
    function consultaEtapas(){
         $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, 
         `estado_proceso`, `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
-        FROM `etapas` where `id_proyecto_fk` = ". $this->getIdProyectoFk();
+        FROM `etapas` where `id_proyecto_fk` = ". $this->getIdProyectoFk()." ORDER BY `etapas`.`indice` ASC";
         $this->connect();
         $result = $this->getData($query);
 
@@ -174,4 +174,15 @@ class ETAPAS extends CONEXION
         return $obj_setapa -> consultaListaSubetapas();
     }
 
+    function createEtapa(){
+        $query = "INSERT INTO `etapas` (`id_etapa`, `id_proyecto_fk`, `nombre_etapa`, `estado_proceso`, 
+        `fecha_creacion`, `fecha_inicio`, `dias`, `indice`) VALUES 
+        (NULL, '".$this->getIdProyectoFk()."', '".$this->getNombreEtapa()."', '".$this->getEstadoProceso()."
+        ', '".$this->getFechaCreacion()."', '".$this->getFechaInicio()."', '".$this->getDias()."', '".$this->getIndice()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        echo $result;
+        return $result;
+    }
 }

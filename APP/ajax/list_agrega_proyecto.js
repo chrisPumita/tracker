@@ -21,10 +21,15 @@ $(document).ready(function () {
 function  cargaListGrupos(){
     let boolLista = false;
     $.ajax({
+        type: 'POST',
+        data: {
+            idEmpresa: $("#idEmpresaGeneral").val()
+        },
         url: "./control/list-grupo-trabajo.php",
         success: function (response) {
             //COnvertimos el string a JSON
             console.log("Cargando Grupos");
+            console.log(response);
             let obj_gt = JSON.parse(response);
             console.log(obj_gt);
             if (obj_gt.length>0){

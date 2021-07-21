@@ -85,17 +85,22 @@
                             Agregar etapas al proyecto
                         </div>
                         <div class="form-floating col-mb-3 py-2">
-                            <input class="form-control" id="nombrep" name="nombre" type="text" placeholder="Enter your first name" required="">
+                            <input class="form-control" id="nombreE" name="nombreE" type="text" placeholder="Enter your first name" required="">
                             <label for="nombre">Nombre de la etapa</label>
+                            <input type="hidden" id="idProyectoInsert">
                         </div>
                         <div class ="row"> 
                             <div class="form-floating mb-3 col-md-2 pr-1">
-                                <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
+                                <input class="form-control" id="diasE" name="diasE" type="number" placeholder="Ingrese tiempo en dias" required="">
                                 <label for="dias">Dias</label>
                             </div>
                             <div class="form-floating mb-3 col-md-5 pr-1">
-                                <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
+                                <input class="form-control" id="fecha_inicioE" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
                                 <label for="fecha_inicio">Fecha Inicio</label>
+                            </div>
+                            <div class="form-floating mb-3 col-md-2 pr-1">
+                                <input class="form-control" id="indiceE" name="indiceE" min="1" type="number" placeholder="Numero de etapa" required="" value="1">
+                                <label for="dias">Numero de etapa</label>
                             </div>
                         </div>
                         <div class="mt-4 mb-0">
@@ -103,6 +108,7 @@
                                 <input type="submit" id="btnEnviar" name="btnEnviar" value="Crear Etapa" class="btn btn-primary btn-user btn-block">
                             </div>
                         </div>
+                        <span id="mjeAlertaAUE">
                     </div>
                 </form>
             </div>
@@ -138,46 +144,7 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="modalAddSubetapa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar/Agregar subetapa</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="frm-add-etapa">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <svg class="svg-inline--fa fa-table fa-w-16 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg><!-- <i class="fas fa-table me-1"></i> Font Awesome fontawesome.com -->
-                            Agregar Subetapa 
-                        </div>
-                        <div class="form-floating col-mb-3 py-2">
-                            <input class="form-control" id="nombrep" name="nombre" type="text" placeholder="Enter your first name" required="">
-                            <label for="nombre">Nombre de la Subetapa</label>
-                        </div>
-                        <div class ="row"> 
-                            <div class="form-floating mb-3 col-md-2 pr-1">
-                                <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
-                                <label for="dias">Dias</label>
-                            </div>
-                            <div class="form-floating mb-3 col-md-5 pr-1">
-                                <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
-                                <label for="fecha_inicio">Fecha Inicio</label>
-                            </div>
-                        </div>
-                        <div class="mt-4 mb-0">
-                            <div class="d-grid">
-                                <input type="submit" id="btnEnviar" name="btnEnviar" value="Crear Etapa" class="btn btn-primary btn-user btn-block">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="modalDeleteProyect" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -222,3 +189,65 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal AGREGAR SUB ETAPA -->
+<div class="modal fade" id="modalAddSubetapa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar/Agregar subetapa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="frm-add-etapa">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <svg class="svg-inline--fa fa-table fa-w-16 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg><!-- <i class="fas fa-table me-1"></i> Font Awesome fontawesome.com -->
+                            Agregar Subetapa  <input type="text" class="form-control" id="recipient-name" >
+                        </div>
+                        <div class="form-floating col-mb-3 py-2">
+                            <input class="form-control" id="nombrep" name="nombre" type="text" placeholder="Enter your first name" required="">
+                            <label for="nombre">Nombre de la Subetapa</label>
+                            
+                        </div>
+                        <div class ="row"> 
+                            <div class="form-floating mb-3 col-md-2 pr-1">
+                                <input class="form-control" id="dias" name="dias" type="number" placeholder="Ingrese tiempo en dias" required="">
+                                <label for="dias">Dias</label>
+                            </div>
+                            <div class="form-floating mb-3 col-md-5 pr-1">
+                                <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="date" placeholder="Ingrese tiempo en dias" required="">
+                                <label for="fecha_inicio">Fecha Inicio</label>
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-0">
+                            <div class="d-grid">
+                                <input type="submit" id="btnEnviar" name="btnEnviar" value="Crear Etapa" class="btn btn-primary btn-user btn-block">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+var exampleModal = document.getElementById('modalAddSubetapa')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+  // Button that triggered the modal
+  var button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  var recipient = button.getAttribute('data-bs-whatever')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  modalTitle.textContent = 'Agregar Sub-Etapa';
+  modalBodyInput.value = recipient
+})
+</script>
