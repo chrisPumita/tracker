@@ -146,10 +146,10 @@ function construyeSubetapa(etapasLista) {
                         <thead>
                         <tr>
                             <th data-sortable="" ><a href="#" class="dataTable-sorter">#</a></th>
-                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Subetapa</a></th>
-                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Inicio</a></th>
-                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Dias</a></th>
                             <th data-sortable="" ><a href="#" class="dataTable-sorter">Estatus</a></th>
+                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Nombre</a></th>
+                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Fecha de Creacion</a></th>
+                            <th data-sortable="" ><a href="#" class="dataTable-sorter">Dias</a></th>
                             <th data-sortable="" ><a href="#" class="dataTable-sorter">Acciones</a></th>
                         </tr>
                         </thead>
@@ -167,8 +167,8 @@ function construyeSubetapa(etapasLista) {
                                 <td>${sub.indice}</td>
                                 <td class="text-${textCustom}"><h2>${boton}</h2></td>
                                 <td>${sub.nombre_subetapa}</td>
-                                <td>20 ago 21</td>
-                                <td>61</td>
+                                <td>${sub.fecha_inicio}</td>
+                                <td>${sub.dias}</td>
                                 <td>
                                 <div class="btn-group text-light" role="group" aria-label="Basic example">
                                   <button type="button" class="btn btn-danger btnDeleteSE"><i class="far fa-trash-alt"></i></button>
