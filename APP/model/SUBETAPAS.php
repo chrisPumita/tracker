@@ -152,5 +152,14 @@ class SUBETAPAS extends CONEXION
         return $result;
     }
 
-
+    public function createSubEtapa(){
+        $query = "INSERT INTO `subetapas` (`id_subetapa`, `id_etapa_fk`, `nombre_subetapa`, `estado`,
+         `fecha_inicio`, `dias`, `indice`) VALUES 
+         (NULL, '".$this->getIdEtapaFk()."', '".$this->getNombreSubetapa()."', '".$this->getEstado()."'
+         , '".$this->getFechaInicio()."', '".$this->getDias()."', '".$this->getIndice()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 }

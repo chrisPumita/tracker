@@ -112,3 +112,4 @@ else{
 <script src="./ajax/lis-detail-proyecto.js"></script>
 <script src="./ajax/list_agrega_proyecto.js"></script>
 <script src="./ajax/add-etapa.js"></script>
+<script src="./ajax/add-subetapa.js"></script>
