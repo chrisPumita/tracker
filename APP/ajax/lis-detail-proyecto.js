@@ -45,7 +45,6 @@ function constuct_grid_proyectos(obj_proyect) {
     $("#nombre_proyecto").html(obj_proyect.nombre_proyecto);
     $("#idProyectoInsert").val(obj_proyect.id_proyecto);
     let template =
-
                 `<div class="col">
                     <div class="card p-3">
                         <div class="row justify-content-center align-items-center proyecto-perfil">
@@ -72,26 +71,22 @@ function constuct_grid_proyectos(obj_proyect) {
                                 </div>
                             </div>
                         </div>
-
-                        
                     </div>
                 </div>`;
                 $("#grd-proyecto").html(template);
 }
 
 function constructEtapas(obj_proyect){
-    let contador=0;
     let template='';
     obj_proyect.forEach(
         objProyect=>{
             let subetapas = objProyect[0];
-            contador++;
             template += `
             <!-- start  card lista etapa --->
-                <div class="card">
+                <div class="card my-3">
                     <div class="card-header">
                         <svg class="svg-inline--fa fa-table fa-w-16 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg><!-- <i class="fas fa-table me-1"></i> Font Awesome fontawesome.com -->
-                        Etapa ${contador}  : ${objProyect.nombre_etapa}
+                        Etapa ${objProyect.indice}  : ${objProyect.nombre_etapa}
                         <div class="row d-block justify-content-center align-items-center">
                             <div class="col">
 
@@ -217,10 +212,11 @@ function finalizaSubEtapa(idSubEtapa){
             idSEtapa: idSubEtapa
         },
         success: function (mje) {
+            consultaDetailsProyecto();
+            consultaEtapasProyecto();
         }
     });
-    consultaDetailsProyecto();
-    consultaEtapasProyecto();
+
 }
 
 function eliminaSubEtapa(idSubEtapa){
@@ -231,8 +227,9 @@ function eliminaSubEtapa(idSubEtapa){
             idSEtapa: idSubEtapa
         },
         success: function (mje) {
+            consultaDetailsProyecto();
+            consultaEtapasProyecto();
         }
     });
-    consultaDetailsProyecto();
-    consultaEtapasProyecto();
+
 }
