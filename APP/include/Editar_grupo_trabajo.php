@@ -24,13 +24,12 @@
                                         <div class="row text-center justify-content-center">
                                             <div class="col-12 col-md-9 col-lg-7 aos-init" data-aos="fade-up">
                                                 <h3 class="mb-0 display-4 font-weight-bold" id="nombre">¿Algún cambio Luis Fernando?</h3>
-
                                             </div>
                                         </div>
                                         <div class="row d-flex justify-content-between pt-5 align-items-center">
                                             <div class="col-xl-5 col-lg-6 col-md-7 text-center mb-5 mb-lg-0">
                                                 <div class="container-fluid align-items-center">
-                                                    <img alt="image" class="img-fluid text-center m-4" id="imgUser" data-aos-offset="300" src="./assets/img/Obi.jpg" width="300" height="100">
+                                                    <img alt="image" class="img-fluid text-center m-4" id="imgUser" data-aos-offset="300" src="./assets/img/Obi.jpg">
                                                 </div>
                                                 <p id="nombrecompleto">Luis Fernando Obi</p>
                                             </div>

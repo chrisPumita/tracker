@@ -63,7 +63,7 @@
             <div class="collapse" id="menuPerfil" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="./perfil_usuario.php">Perfil de usuario</a>
-                    <a class="nav-link" href="./">Perfil de empresa</a>
+                    <a class="nav-link" href="./perfil_empresa.php">Perfil de empresa</a>
                 </nav>
             </div>
 
