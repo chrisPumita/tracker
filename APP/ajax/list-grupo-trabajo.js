@@ -40,7 +40,7 @@ function construc_table_gt(obj_gt) {
                     <td>${estado}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
+                            <a href="./detalles-equipo.php?idGpo=${objGt.id_gt}"><button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button></a>
                             <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i></button>
                             <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>    
                         </div>

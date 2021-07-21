@@ -1,17 +1,17 @@
-<?php $plantilla = "Plantilla"; ?>
+<?php $plantilla = "Grupos de Trabajo"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include_once "./include/header.php"?>
+    <?php include_once "./include/header.php"; ?>
 </head>
 <body class="sb-nav-fixed">
 
-<?php include_once "./include/navbar.php"?>
+<?php include_once "./include/navbar.php"; ?>
 
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
-        <?php include_once "./include/sidenav.php"?>
+        <?php include_once "./include/sidenav.php";?>
     </div>
     <div id="layoutSidenav_content">
         <main>
@@ -22,7 +22,7 @@
                     <div class="container mt-4"> 
                         <div class="row">
                             <!-- Button trigger modal -->
-                            <<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCreateGT">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCreateGT">
                             Crear nuevo grupo de trabajo
                             </button>
                             <!-- Modal -->

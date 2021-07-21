@@ -10,7 +10,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-primary">
+<body class="bg-primary" style="background: url(./assets/img/bgProtect.jpg) top center no-repeat;">
 <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
@@ -18,7 +18,13 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                            <div class="card-header text-center">
+                                <a href="../">
+                                    <img src="./assets/img/logo.png" height="120" alt="image">
+                                </a>
+                                <h6 class="text-center font-weight-light my-4">Bienvenido</h6>
+                                <h3 class="text-center font-weight-light my-4">Iniciar Sesión</h3>
+                            </div>
                             <div class="card-body">
                                 <form>
                                     <div class="form-floating mb-3">
@@ -34,13 +40,13 @@
                                         <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="password.html">Forgot Password?</a>
-                                        <a class="btn btn-primary" href="index.php">Login</a>
+                                       <!-- <a class="small" href="password.html">Forgot Password?</a>-->
+                                        <a class="btn btn-primary w-100" href="index.php">Iniciar</a>
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="register.php">Need an account? Sign up!</a></div>
+                                <div class="small"><a href="register.php">¿Necesitas una cuenta? Registrate gratis!</a></div>
                             </div>
                         </div>
                     </div>

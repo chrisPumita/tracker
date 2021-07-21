@@ -35,13 +35,13 @@
                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#nosotros">Nosotros<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Planes">Planes</a>
+                    <a class="nav-link" href="#Planes">Planes<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#registro">Registro<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <a class="btn btn-danger ml-md-3" href="APP/login.php">Iniciar Sesión</a>
@@ -214,7 +214,7 @@
         </div>
     </div>
 </section>
-<section class="pt-5 pb-5">
+<section class="pt-5 pb-5" id="nosotros">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-md-8 text-center aos-init" data-aos="fade-up" data-aos-offset="300">
@@ -296,17 +296,23 @@
                     <figure class="card card-product">
                         <div class="img-wrap"><img src="./assets/image/estrella_bronce.png"> </div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Prueba gratis</h4>
-                            <p class="desc">Crea hasta tres proyectos y goza de todos nuestros beneficios durante ese perdiodo</p>
-                        </br>                            <div class="rating-wrap">
-                                <div class="label-rating">182 vistas</div>
-                                <div class="label-rating">154 orders</div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">Tracker Free</h4>
+                            <p class="desc">Todas las cuentas nuevas inician con un periodo de prueba de 1 mes a <strong>ProTracker</strong></p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">3 Proyectos Publicos</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea hasta 5 Grupos de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra un maximo de  10 usuarios</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">GRATIS</span> <del class="price-old">$0.01</del>
+                                <span class="price-new">GRATIS</span> <del class="price-old">$90.00 MXN/mes</del>
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -315,17 +321,23 @@
                     <figure class="card card-product">
                         <div class="img-wrap"><img src="./assets/image/estrella_plata.png"></div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">ProTracker</h4>
-                            <p class="desc">Crea hasta cincuenta proyectos con la mayoria de beneficios de Proyect Tracker incluidos</p>
-                            <div class="rating-wrap">
-                                <div class="label-rating">132 reviews</div>
-                                <div class="label-rating">154 orders </div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">ProTracker Platino</h4>
+                            <p class="desc">Crea hasta cincuenta proyectos con la mayoria de beneficios de Proyect Tracker incluidos, tus proyectos pasados seguiran siendo visibles para tus solicitantes</p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">50 Proyectos Publicos</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea hasta 10 Grupos de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra un maximo de  100 usuarios</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$899</span> <del class="price-old">$1199</del>
+                                <span class="price-new">$99 MXN</span> <del class="price-old">$199</del> /mes
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -333,19 +345,33 @@
                 <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
-                        <div class="img-wrap"><img src="./assets/image/estrella_oro.png"></div>
+                        <div class="img-wrap">
+                            <img src="./assets/image/estrella_oro.png">
+                        </div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Plan Premium</h4>
-                            <p class="desc">Crea proyectos sin limites y goza de todas las herramientas de Proyect Tracker sin limites</p>
-                            <div class="rating-wrap">
-                                <div class="label-rating">215 reviews</div>
-                                <div class="label-rating">154 orders </div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">Pro TRacker Premium</h4>
+                            <p class="desc">Crea proyectos sin limites y goza de todas las herramientas de Proyect Tracker sin limites. Nadie te detendra, todos tus proyectos seran visbles cuando lo deses</p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Proyectos Publicos Ilimitados</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea Grupos Ilimitrados de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra usuarios ilimitados</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Oculta los proyectos</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Atencion especializada rapida</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$1499</span> <del class="price-old">$2199</del>
+                                <span class="price-new">$199</span> <del class="price-old">$399</del> / mes
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -356,13 +382,13 @@
     </div>
 </section>
 <section class="pt-5 pb-5">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center">
                 <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Preguntas frecuentes</h3>
                 <!-- Accordion -->
-                <div class="container-fluid bg-gray" id="accordion-style-1">
-                    <div class="container">
+                <div class="container-fluid bg-gray text-left" id="accordion-style-1">
+                    <div class="container-fluid">
                         <section>
                             <div class="row">
                                 <div class="accordion" id="accordionExample">
@@ -376,12 +402,12 @@
                                         </div>
                                         <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Estamos dirigidos a líderes de proyecto, freelance y estudiantes en proceso de titulación que deban informar a un solicitante el estado actual de su proyecto.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Estamos dirigidos a líderes de proyecto, freelance y estudiantes en proceso de titulación que deban informar a un solicitante el estado actual de su proyecto.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <div class="card-header" id="headingTwo">
+                                        <div class="card-header " id="headingTwo">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                     <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>¿Cómo funciona? 
@@ -390,8 +416,13 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Cada usuario puede colocar las etapas que considere necesarias, y se les asignará una fecha aproximada de entrega en cada una de las etapas, en cada actualización se pondrá un porcentaje de avance a cada etapa que, a la vez, irá calculando el porcentaje de avance total del proyecto.
-                                                El solicitante podrá entrar a la liga del proyecto y ver de una forma muy simple el estado actual del proyecto que solicitó<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                <p>
+                                                    Cada usuario puede colocar las etapas que considere necesarias, y se les asignará una fecha aproximada de entrega en cada una de las etapas, en cada actualización se pondrá un porcentaje de avance a cada etapa que, a la vez, irá calculando el porcentaje de avance total del proyecto.
+                                                    El solicitante podrá entrar a la liga del proyecto y ver de una forma muy simple el estado actual del proyecto que solicitó
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi dolor doloremque dolores eius ex excepturi fugit inventore iure laudantium libero minima nihil non omnis perspiciatis placeat quasi, totam vel!
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -405,7 +436,7 @@
                                         </div>
                                         <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Cualquier usuario que tenga el vínculo de la página. El lider del proyecto podra mandar links de invitacion para colaboradores y clientes.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Cualquier usuario que tenga el vínculo de la página. El lider del proyecto podra mandar links de invitacion para colaboradores y clientes.
                                             </div>
                                         </div>
                                     </div>
@@ -475,7 +506,7 @@
                                             <div class="col-lg-4 col-md-6 col-sm-6" >
                                                 <div class="our-team">
                                                     <div class="pic">
-                                                        <img src="./assets/image/cico.jpg">
+                                                        <img src="https://scontent.fmex24-1.fna.fbcdn.net/v/t1.6435-9/66604592_2232510353528273_1263085573208276992_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=RSKyDYpDZ-gAX-0NnqR&_nc_ht=scontent.fmex24-1.fna&oh=84afdef62524f3034bfc50c7df7cc5fa&oe=60FDE175">
                                                     </div>
                                                     <div class="team-content">
                                                         <h3 class="title">Luis Fernando <br>Hernandez Ledezma</h3>
@@ -544,7 +575,7 @@
         </div>
     </div>
 </section>
-<section class="pt-5 pb-5" style="">
+<section class="pt-5 pb-5" id="registro">
     <div class="container">
         <div class="row">
             <div class="col">
