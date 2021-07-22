@@ -120,7 +120,6 @@ class GRUPO_TRABAJO extends CONEXION
         $query ="INSERT INTO `grupo_trabajo`(`id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status`)
          VALUES (NULL, ".$this->getIdEmpresaFk().", '".$this->getNombreGt()."', '".$this->getFechaCreacion().
          "', ".$this->getStatus().")";
-         echo $query;
         $this->connect();
         $result = $this->executeInstruction($query);
         $this->close();

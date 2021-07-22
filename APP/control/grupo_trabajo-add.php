@@ -1,10 +1,9 @@
 <?php
-include_once "control_grupo_trabajo.php";
-$nombre= "SANSON";
-$idEmpresa_Fk =2525;
-$fechacreacion = "2010-05-05";
-$result = createGrupoTrabajo($nombre,$idEmpresa_Fk,$fechacreacion);
-
-if($result){
-    echo "Agregado con exito";
-} else echo "Falló";
+if(isset($_POST['nombre'])&& isset($_POST['idEmpresa'])){
+    $nombre= $_POST['nombre'];
+    $idEmpresa_Fk =$_POST['idEmpresa'];
+    include_once "./control_grupo_trabajo.php";
+    if(createGrupoTrabajo($nombre,$idEmpresa_Fk)){
+        echo "Se ha creado correctamente";
+    }
+} else echo "Datos incompletos";

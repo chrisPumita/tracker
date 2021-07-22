@@ -175,33 +175,36 @@
 
 
 <!--Modal CREAR GRUPO DE TRABAJO -->
-<div class="modal fade" id="modalCreateGT" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal fade" id="modalAddGt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nuevo grupo de trabajo</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5>Crear grupo de trabajo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-
             <div class="modal-body">
-            <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre del Proyecto">
-                    <label for="floatingInput">Nombre del proyecto</label>
-                </div>
-            </div>
-
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Crear</button>
+                <form id="frm_add_gt">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <svg class="svg-inline--fa fa-table fa-w-16 me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg><!-- <i class="fas fa-table me-1"></i> Font Awesome fontawesome.com -->
+                            Crea un nuevo grupo de trabajo
+                        </div>
+                        <div class="form-floating col-mb-3 py-2">
+                            <input class="form-control" id="nombreGt" name="nombreE" type="text" placeholder="Enter your first name" required="">
+                            <label for="nombre">Nombre del grupo de trabajo</label>
+                        </div>
+                        <div class="mt-4 mb-0">
+                            <div class="d-grid">
+                                <input type="submit" id="btnEnviar" name="btnEnviar" value="Crear grupo" class="btn btn-primary btn-user btn-block">
+                            </div>
+                        </div>
+                        <span id="mjeAlertaAUGt">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <!-- Modal AGREGAR SUB ETAPA -->
 <div class="modal fade" id="modalAddSubetapa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

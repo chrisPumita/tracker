@@ -9,12 +9,11 @@ function consultaGrupoTrabajo($idGt){
     return json_encode($result);
 }
 
-function createGrupoTrabajo($nombre,$idEmpresaFk,$fechaCreacion){
+function createGrupoTrabajo($nombre,$idEmpresaFk){
     $obj_gt = new GRUPO_TRABAJO;
-    $obj_gt = new GRUPO_TRABAJO();
     $obj_gt->setIdEmpresaFk($idEmpresaFk);
     $obj_gt->setNombreGt($nombre);
-    $obj_gt->setFechaCreacion($fechaCreacion);
+    $obj_gt->setFechaCreacion(date("Y-m-d H:i:s"));
     $obj_gt->setStatus(1);
     $result = $obj_gt->queryCreateGT();
     return $result;      

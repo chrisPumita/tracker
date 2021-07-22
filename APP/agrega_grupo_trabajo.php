@@ -22,7 +22,7 @@
                     <div class="container mt-4"> 
                         <div class="row">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCreateGT">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddGt">
                             Crear nuevo grupo de trabajo
                             </button>
                             <!-- Modal -->
@@ -63,3 +63,4 @@
 </body>
 </html>
 <script src="./ajax/list-grupo-trabajo.js"></script>
+<script src="./ajax/add_grupo_trabajo.js"></script>
