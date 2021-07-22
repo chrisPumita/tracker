@@ -66,8 +66,8 @@ function constuct_grid_proyectos(obj_proyect) {
                                 <span class="text-black-50">${obj_proyect.nombre_gt}</span>
                                 <span class="ratings">
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                                            50%
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: ${parseInt(obj_proyect.porcent)}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                            ${parseInt(obj_proyect.porcent)}%
                                         </div>
                                     </div>
                                 </span>

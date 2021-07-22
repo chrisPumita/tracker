@@ -229,9 +229,21 @@ class PROYECTO extends CONEXION
     }
 
         function queryDetallesProyecto($idProyecto){
-        $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
+       /* $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`,
         `proyecto`.`fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, 
         `url_imagen`,`grupo_trabajo`.`nombre_gt` FROM `proyecto`,`grupo_trabajo` WHERE 
+        proyecto.id_gt_fk= grupo_trabajo.id_gt AND `id_proyecto` = ". $idProyecto;
+       "
+       */
+            $query = "SELECT `id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
+        `proyecto`.`fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, 
+        `url_imagen`,`grupo_trabajo`.`nombre_gt`, (
+	SELECT 
+	((COUNT(IF(s.estado = 1, s.estado ,NULL))*100)/(COUNT(IF(s.estado = 0, s.estado ,NULL))+COUNT(IF(s.estado = 1, s.estado ,NULL)))) as porc
+	from subetapas s, etapas e 
+	where e.id_proyecto_fk = id_proyecto
+	and s.id_etapa_fk  = e.id_etapa 
+) as porcent FROM `proyecto`,`grupo_trabajo` WHERE 
         proyecto.id_gt_fk= grupo_trabajo.id_gt AND `id_proyecto` = ". $idProyecto;
         $this->connect();
         $result = $this->getData($query);
