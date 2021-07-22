@@ -1,9 +1,11 @@
+/** Carga documento para consultar las etapas y los detalles de un proyecto**/
+
 $(document).ready(function () {
     console.log("Lista Proyectos");
     consultaDetailsProyecto();
     consultaEtapasProyecto();
 });
-
+//Contruye el Grid para el proyecto en especifico
 function consultaDetailsProyecto(){
     $.ajax({
         url: "./control/proyecto-detalles.php",
@@ -13,15 +15,18 @@ function consultaDetailsProyecto(){
         },
         success: function (response) {
             //COnvertimos el string a JSON
+            
             let obj_proyect = JSON.parse(response);
+            if(obj_proyect.length>0){
             console.log(obj_proyect);
             let proyecto = obj_proyect[0];
             constuct_grid_proyectos(proyecto);
+            } else location.href="./proyectos.php";
         }
 
     });
 }
-
+//Construye la tabla con las etapas y subetapas de cada proyecto
 function consultaEtapasProyecto(){
     $.ajax({
         url: "./control/etapa-detalles.php",
@@ -33,14 +38,15 @@ function consultaEtapasProyecto(){
             //COnvertimos el string a JSON
             let obj_proyect = JSON.parse(response);
             console.log(obj_proyect);
-            let etapas=constructEtapas(obj_proyect);
-            $("#tbl-etapa").html(etapas);
+                let etapas=constructEtapas(obj_proyect);
+                $("#tbl-etapa").html(etapas);
+
 
         }
 
     });
 }
-
+// FUNCION PARA CREAR EL GRID DEL PROYECTO
 function constuct_grid_proyectos(obj_proyect) {
     $("#nombre_proyecto").html(obj_proyect.nombre_proyecto);
     $("#idProyectoInsert").val(obj_proyect.id_proyecto);
@@ -76,6 +82,7 @@ function constuct_grid_proyectos(obj_proyect) {
                 $("#grd-proyecto").html(template);
 }
 
+// FUNCION PARA CREAR LAS TABLAS DE ETAPA DE EL PROYECTO SELECCIONADO
 function constructEtapas(obj_proyect){
     let template='';
     obj_proyect.forEach(
@@ -100,7 +107,7 @@ function constructEtapas(obj_proyect){
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa" data-bs-whatever="${objProyect.id_etapa}">
                                     Agrega Sub-etapa
                                 </button>
-                                 <button type="button" class="btn btn-danger">
+                                 <button type="button" class="btn btn-danger btnDeleteE">
                                    Eliminar Etapa
                                 </button>
                             </div>
@@ -110,6 +117,7 @@ function constructEtapas(obj_proyect){
                         <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
                             <div class="dataTable-container">
 `;
+            //REALIZAMOS UNA CONDICION DE QUE SI UN CONTEO ES MAYOR A 0, TRAIGA HE IMPRIMA LAS SUB ETAPAS DE LA ETAPA
             if (subetapas.length>0){
                 template += construyeSubetapa(subetapas);
             }
@@ -133,7 +141,7 @@ function constructEtapas(obj_proyect){
     );
     return template;  
 }
-
+// FUNCION PARA CREAR LAS SUBETAPAS DE UNA ETAPA
 function construyeSubetapa(etapasLista) {
 // console.log(subetapas);
     let templateSubetapa = `
@@ -193,9 +201,11 @@ $(document).on("click", ".btnEndSubE", function () {
 
 });
 
+//------------------- Eliminar sub etapa ---------------------------//
+
 //-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
 $(document).on("click", ".btnDeleteSE", function () {
-    if (confirm("¿Esta seguro de que desea eliminar esta subetapa? Esta acción no se podrá revertir")){
+    if (confirm("¿Esta seguro de que desea eliminar esta Sub-Etapa? Esta acción no se podrá revertir")){
         let elementoSubEtapaSelect = $(this)[0].parentElement.parentElement.parentElement;
         let idSubEtapa = $(elementoSubEtapaSelect).attr("idSubEtapa");
         eliminaSubEtapa(idSubEtapa);
@@ -203,7 +213,32 @@ $(document).on("click", ".btnDeleteSE", function () {
 
 });
 
+//------------------- Eliminar sub etapa ---------------------------//
 
+//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+$(document).on("click", ".btnDeleteE", function () {
+    if (confirm("¿Esta seguro de que desea eliminar esta Etapa? Esta acción no se podrá revertir")){
+        let elementEtapaSelect = $(this)[0].parentElement;
+        let idEtapa = $(elementEtapaSelect).attr("idetapa");
+        eliminaEtapa(idEtapa);
+    }
+
+});
+
+
+//------------------- Eliminar Proyecto Definitivamente ---------------------------//
+
+//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+$(document).on("click", ".btnDeleteProyectDef", function () {
+    if (confirm("¿Esta seguro de que desea eliminar esta Etapa? Esta acción no se podrá revertir")){
+        let elementProyecto = $("#idProyecto").val();
+        eliminaProyecto(elementProyecto);
+        
+    }
+
+});
+
+//------------------- Finaliza la sub etapa seleccionada  ---------------------------//
 function finalizaSubEtapa(idSubEtapa){
     $.ajax({
         url: "./control/subetapa-concluida.php",
@@ -218,7 +253,7 @@ function finalizaSubEtapa(idSubEtapa){
     });
 
 }
-
+//------------------- FUNCION ELIMINA SUBETAPA ---------------------------//
 function eliminaSubEtapa(idSubEtapa){
     $.ajax({
         url: "./control/subetapa-eliminada.php",
@@ -227,6 +262,22 @@ function eliminaSubEtapa(idSubEtapa){
             idSEtapa: idSubEtapa
         },
         success: function (mje) {
+            consultaDetailsProyecto();
+            consultaEtapasProyecto();
+        }
+    });
+
+}
+//----------------Funcion elimina Proyecto --------------//
+function eliminaProyecto(elementProyecto){
+    $.ajax({
+        url: "./control/proyecto-delete.php",
+        type: 'POST',
+        data: {
+            idProyecto: elementProyecto
+        },
+        success: function (mje) {
+            console.log(mje)
             consultaDetailsProyecto();
             consultaEtapasProyecto();
         }

@@ -185,4 +185,13 @@ class ETAPAS extends CONEXION
         echo $result;
         return $result;
     }
+
+    function eliminaEtapaDB($idEtapa){
+        $query = "DELETE FROM `etapas` WHERE `id_etapa`=".$idEtapa;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        echo $result;
+        return $result;
+    }
 }

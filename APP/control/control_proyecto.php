@@ -77,7 +77,12 @@ function queryProyectos($idEmpresa){
 /*
  * ETAPAS ACCIONES
  * */
-
+function eliminaEtapa($idEtapa){
+    include_once "../model/ETAPAS.php";
+    $obj_E = new ETAPAS();
+    $mje = $obj_E->eliminaEtapaDB($idEtapa)?"Etapa Eliminada con Exito" :"Error interno al eliminar";
+    return $mje;
+}
 
 
 

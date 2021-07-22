@@ -2,6 +2,8 @@
 $(document).ready(function () {
     console.log("Lista Proyectos");
     consultaAllProyectos();
+});
+
 
     function consultaAllProyectos(){
         $.ajax({
@@ -14,17 +16,29 @@ $(document).ready(function () {
                 //COnvertimos el string a JSON
                let obj_proyect = JSON.parse(response);
                 console.log(obj_proyect);
-                let template = construc_table_proyectos(obj_proyect);
-                let gridTemplate = constuct_grid_proyectos(obj_proyect);
-                $('#tbl-proyectos').html(template);
-                $('#grid_proyectos').html(gridTemplate);
+                if(obj_proyect.length>0)
+                {
+                    let template = construc_table_proyectos(obj_proyect);
+                    let gridTemplate = constuct_grid_proyectos(obj_proyect);
+                    $('#tbl-proyectos').html(template);
+                    $('#grid_proyectos').html(gridTemplate);
+                }
+                else {
+                    template =`
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">No hay proyectos que mostrar</h4>
+                        <p>Aun no ha creado ningun proyecto, le sugerimos crear algún proyecto para llevar 
+                        acabo su seguimiento</p>
+                        <hr>
+                        <a class="btn btn-primary" href="./agrega-proyecto.php" role="button">Crear Proyecto</a>
+                        
+                  </div>`;
+                    $('#containerProyectos').html(template)
+                }
             }
 
         });
     }
-
-});
-
 
 /* Obtener una jornada para convertirlo en texto  */
 function getTipoJornada($jornada) {
@@ -69,7 +83,7 @@ function construc_table_proyectos(obj_proyect) {
             contador++;
             let jornada = getTipoJornada(objProyect.tipo_jornada);
             template += `
-                <tr>
+                <tr id=${objProyect.id_proyecto}>
                     <td>${contador}</td>
                     <td>${objProyect.nombre_proyecto} </td>
                     <td>${objProyect.nombre_gt} </td>
@@ -81,7 +95,7 @@ function construc_table_proyectos(obj_proyect) {
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                           <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
                           <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i></button>
-                          <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                          <button type="button" class="btn btn-danger btnDeleteProyectDef"><i class="fas fa-trash-alt"></i></button>
 
                         </div>
                     </td>
@@ -124,4 +138,33 @@ function constuct_grid_proyectos(obj_proyect) {
         }
     );
     return template;
+}
+
+//------------------- Eliminar Proyecto Definitivamente ---------------------------//
+
+//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+$(document).on("click", ".btnDeleteProyectDef", function () {
+    if (confirm("¿Esta seguro de que desea eliminar esta Etapa? Esta acción no se podrá revertir")){
+        let elementProyecto = $(this)[0].parentElement.parentElement.parentElement;
+        let idProyecto = $(elementProyecto).attr("id");
+        eliminaProyecto(idProyecto);
+        
+    }
+
+});
+
+//----------------Funcion elimina Proyecto --------------//
+function eliminaProyecto(idProyecto){
+    $.ajax({
+        url: "./control/proyecto-delete.php",
+        type: 'POST',
+        data: {
+            idProyecto: idProyecto
+        },
+        success: function (mje) {
+            console.log(mje)
+            consultaAllProyectos();
+        }
+    });
+
 }
