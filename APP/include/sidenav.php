@@ -49,7 +49,7 @@
             </a>
 
 
-            <a class="nav-link" href="template/tables.html">
+            <a class="nav-link" href="./tipo_cuenta.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Cuenta
             </a>
