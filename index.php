@@ -44,7 +44,8 @@
                     <a class="nav-link" href="#registro">Registro<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <a class="btn btn-danger ml-md-3" href="APP/login.php">Iniciar Sesión</a>
+            <a class="btn btn-success ml-md-3" href="./consulta">Consultar</a>
+            <a class="btn btn-info ml-md-3" href="APP/login.php">Iniciar Sesión</a>
         </div>
     </div>
 </nav>
