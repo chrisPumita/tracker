@@ -647,92 +647,6 @@
     <div class="footer text-white">
         <div class="   bg-dark pt-5 pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="#">
-                            <svg class="d-block mb-4" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                                <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path>
-                                <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path>
-                            </svg>
-                        </a>
-                        <address class="color-light-20">
-                            1600 Amphitheatre Parkway
-                            <br> Mountain View, CA 94043
-                        </address>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Disclaimer</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Product</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#">Features</a>
-                            </li>
-                            <li>
-                                <a href="#">Customers</a>
-                            </li>
-                            <li>
-                                <a href="#">Store</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <br style="clear:both" class="hidden-sm-up">
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Company</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Careers</a>
-                            </li>
-                            <li>
-                                <a href="#">Press</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Connect</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Support</a>
-                            </li>
-                            <li>
-                                <a href="#">Social</a>
-                            </li>
-                            <li>
-                                <a href="#">Community</a>
-                            </li>
-                        </ul>
-                        <p class="color-light mt-2">Stay up-to-date!</p>
-                        <form>
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary btn-sm" type="button">Ok</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr>
                 <div class="row f-flex justify-content-center pb-4" style="">
                     <div class="col text-center  text-secondary my-1">
                         <p class="mt-2  text-white"> © Copyright 2021 • All Rights Reserved ProyectTraker |
@@ -756,14 +670,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Aviso de privacidad simplificado de capacitaciones o eventos presenciales
-                El Instituto Veracruzano de Acceso a la Información y Protección de Datos Personales, es el responsable del tratamiento de los datos personales que nos proporcione.
-                Sus datos personales, serán utilizados para las siguientes finalidades: a) Registrar su inscripción a la modalidad de capacitación que haya elegido; b) generar listas de asistencias y validación de  las mismas; c) emisión de constancia de participación o asistencia de acuerdo a la modalidad de que se trate; d) establecer comunicación para dar seguimiento de los cursos o aclaración de dudas sobre sus datos, notificación de cancelación o cambio de horario, fecha o sede; y e) generar estadísticas para informes obligatorios del Instituto ante otros organismos públicos o privados.
-                De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son necesarias, pero que nos permiten y facilitan brindarle una mejor atención: a) envío de material de exposición o apoyo; y, b) invitaciones a futuros eventos.
-                En caso de que no desee que sus datos personales sean tratados para las finalidades adicionales, usted puede manifestarlo en el correo electrónico capacitaciónivai@outlook.com
-                Se informa que no se realizarán transferencias que requieran su consentimiento, salvo aquellas que sean necesarias para atender requerimientos de información de una autoridad competente, debidamente fundados y motivados.
-                Para mayor información acerca del tratamiento y de los derechos que puede hacer valer, usted puede acceder al aviso de privacidad integral de cursos o eventos a través de www.ivai.org.mx, en la sección de Avisos de Privacidad.
-            </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur esse expedita in inventore nam ullam! Animi doloremque ea et eveniet excepturi facilis magni modi, quo ratione reiciendis saepe, voluptate.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
