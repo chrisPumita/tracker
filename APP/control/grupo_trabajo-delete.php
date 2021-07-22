@@ -1,10 +1,12 @@
 <?php
-
+if(isset($_POST{'idGt'}))
+{
+$id=$_POST['idGt'];
 include_once "control_grupo_trabajo.php";
 
-$id=7;
 $result = deleteGrupoTrabajo($id);
-
 if($result){
-    echo "Eiminado con exito";
+    echo "Eliminado con exito";
 } else echo "Fallo";
+
+} else echo "Datos incompletos";
