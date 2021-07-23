@@ -1,5 +1,7 @@
-<?php $plantilla = "Plantilla"; ?>
-
+<?php
+    include_once "./include/session_verify.php";
+    $plantilla = "Agrega Usuario";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

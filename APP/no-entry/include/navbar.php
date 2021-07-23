@@ -38,7 +38,7 @@
             
             <ul class="navbar-nav ml-auto">
                <li class="nav-item">
-                    <a class="nav-link" href="../../index.php">
+                    <a class="nav-link" href="../../home.php">
                     <span class="no-icon">Log out</span>
                     </a>
                 </li>

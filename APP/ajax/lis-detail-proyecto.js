@@ -11,14 +11,23 @@ function consultaDetailsProyecto(){
         url: "./control/proyecto-detalles.php",
         type: 'POST',
         data: {
-            idProyecto: $("#idProyecto").val()
+            idProyecto: $("#idProyecto").val(),
+            key: $("#key").val(),
+            idEmpresa: $("#idEmpresaGeneral").val(),
         },
         success: function (response) {
             //COnvertimos el string a JSON
+            console.log(response);
             let obj_proyect = JSON.parse(response);
             if(obj_proyect.length>0){
             console.log(obj_proyect);
             let proyecto = obj_proyect[0];
+            let templateBoton =`
+                                <a href="../consulta/public-view-proyecto/?noSeguimiento=${proyecto.no_seguimiento}">
+                                <button type="button" class="btn btn-primary">
+                                    Ver
+                                </button></a>`;
+            $("#btnVistaPublica").html(templateBoton);
             constuct_grid_proyectos(proyecto);
             } else location.href="./proyectos.php";
         }
@@ -63,8 +72,9 @@ function constuct_grid_proyectos(obj_proyect) {
                                 </div>
                             </div>
                             <div class="col-10">
-                                <span>${obj_proyect.nombre_proyecto}</span>
-                                <span class="text-black-50">${obj_proyect.nombre_gt}</span>
+                                <span>${obj_proyect.nombre_proyecto}</span> (
+                                <span class="text-black-50">${obj_proyect.categoriaName}</span>)<br>
+                                <span class="text-black-50">Equipo: ${obj_proyect.nombre_gt}</span> 
                                 <span class="ratings">
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: ${parseInt(obj_proyect.porcent)}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -72,7 +82,8 @@ function constuct_grid_proyectos(obj_proyect) {
                                         </div>
                                     </div>
                                 </span>
-                                <h5>Fecha de creacion: ${obj_proyect.fecha_creacion}</h5>
+                                <h6>Fecha de creacion: ${obj_proyect.fecha_creacion}</h6>
+                                <h5>No. Seguimiento: ${obj_proyect.no_seguimiento}</h5>
                                 <div class="d-flex justify-content-between install mt-3">
                                     <span>Tiempo: ${obj_proyect.dias} dias</span>
                                 </div>

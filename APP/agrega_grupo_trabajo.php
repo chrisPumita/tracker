@@ -1,4 +1,6 @@
-<?php $plantilla = "Grupos de Trabajo"; ?>
+<?php
+include_once "./include/session_verify.php";
+$plantilla = "Grupos de Trabajo"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

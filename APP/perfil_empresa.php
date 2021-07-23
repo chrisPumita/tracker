@@ -1,4 +1,7 @@
-<?php $plantilla = "Plantilla"; ?>
+
+<?php
+include_once "./include/session_verify.php";
+$plantilla = "Empresa"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

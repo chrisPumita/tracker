@@ -1,4 +1,6 @@
-<?php $plantilla = "Plantilla"; ?>
+<?php
+include_once "./include/session_verify.php";
+$plantilla = "Usuario | Perfil"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

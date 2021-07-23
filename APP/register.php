@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="login.php">Ya tengo una cuentta, iniciar sesión</a></div>
+                                <div class="small"><a href="index.php">Ya tengo una cuentta, iniciar sesión</a></div>
                             </div>
                         </div>
                     </div>

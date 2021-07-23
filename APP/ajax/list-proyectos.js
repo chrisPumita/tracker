@@ -93,10 +93,10 @@ function construc_table_proyectos(obj_proyect) {
                     <td>${jornada}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                          <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
-                          <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i></button>
+                            <a href="details-proyecto.php?idProyecto=${objProyect.id_proyecto}&key=${objProyect.s_key}">
+                              <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
+                            </a>
                           <button type="button" class="btn btn-danger btnDeleteProyectDef"><i class="fas fa-trash-alt"></i></button>
-
                         </div>
                     </td>
                 </tr>`;
@@ -110,6 +110,20 @@ function constuct_grid_proyectos(obj_proyect) {
     obj_proyect.forEach(
         objProyect=>{
             let estado = getEstado(objProyect.estado);
+            let bar = objProyect.porcent != null ?
+                `
+                                     <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: ${objProyect.porcent}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                            ${parseInt(objProyect.porcent)}%
+                                        </div>
+                                    </div>
+                `: `
+                                     <div class="progress">
+                                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                        No ha iniciado
+                                        </div>
+                                    </div>
+                `;
             template +=
                 `<div class="col-md-4">
                     <div class="card p-3">
@@ -117,20 +131,16 @@ function constuct_grid_proyectos(obj_proyect) {
                             <div class="d-flex flex-column ml-2">
                                 <span>${objProyect.nombre_proyecto}</span>
                                 <span class="text-black-50">${objProyect.nombre_gt}</span>
-                                <span class="ratings">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                                            50%
-                                        </div>
-                                    </div>
-                                </span>
                             </div>
                         </div>
                         <h6>Estado: ${estado}</h6>
+                              <span class="ratings">
+                                    ${bar}
+                                </span>
                         <div class="d-flex justify-content-between install mt-3">
                             <span>Tiempo: ${objProyect.dias} dias</span>
                             <span class="text-primary">
-                                <a href="details-proyecto.php?idProyecto=${objProyect.id_proyecto}"<button type="button" class="btn btn-primary">Ver estatus</button></a>
+                                <a href="details-proyecto.php?idProyecto=${objProyect.id_proyecto}&key=${objProyect.s_key}"><button type="button" class="btn btn-primary">Ver estatus</button></a>
                             </span>
                         </div>
                     </div>

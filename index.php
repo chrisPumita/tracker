@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <a class="btn btn-success ml-md-3" href="./consulta">Consultar</a>
-            <a class="btn btn-info ml-md-3" href="APP/login.php">Iniciar Sesión</a>
+            <a class="btn btn-info ml-md-3" href="APP/index.php">Iniciar Sesión</a>
         </div>
     </div>
 </nav>
@@ -311,7 +311,7 @@
                             </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="./APP/login.php" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="APP/index.php" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">GRATIS</span> <del class="price-old">$90.00 MXN/mes</del>
                             </div> <!-- price-wrap.// -->
@@ -336,7 +336,7 @@
                             </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="APP/index.php" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">$99 MXN</span> <del class="price-old">$199</del> /mes
                             </div> <!-- price-wrap.// -->
@@ -370,7 +370,7 @@
                             </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="APP/index.php" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
                                 <span class="price-new">$199</span> <del class="price-old">$399</del> / mes
                             </div> <!-- price-wrap.// -->

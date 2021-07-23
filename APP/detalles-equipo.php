@@ -1,4 +1,6 @@
 <?php
+
+include_once "./include/session_verify.php";
     if (!isset($_GET['idGpo'])){
         //el id del grpo NO entro a consulta regresamos
         header("Location: ./agrega_grupo_trabajo.php");

@@ -17,8 +17,23 @@ function consultaEtapas($idProyecto){
         array_push($etapa,$subEtapas);
         array_push($etapa,$infoPortecates);
         array_push($listaEtapas,$etapa);
+    }
+    return json_encode($listaEtapas);
+}
 
+function consultaPublicaProyecto($noSeguimiento){
+    $obj_pryecto = new  PROYECTO();
+    $obj_pryecto->setIdProyecto($obj_pryecto->getIdProyectoConsult($noSeguimiento));
+    $listaEtapasDB = $obj_pryecto->getListaEtapas();
+    //allgoritmo para agregar nuevo array
+    $listaEtapas = array();
 
+    foreach ($listaEtapasDB as $etapa){
+        $subEtapas =consultaSubEtapa($etapa["id_etapa"]);
+        $infoPortecates = consultaPorcentajes($etapa["id_etapa"]);
+        array_push($etapa,$subEtapas);
+        array_push($etapa,$infoPortecates);
+        array_push($listaEtapas,$etapa);
     }
     return json_encode($listaEtapas);
 }
@@ -37,9 +52,9 @@ function consultaPorcentajes($idEtapa){
     return $obj_sub->consultaInfoPorcentajes();
 }
 
-function queryProyecto($idProyecto){
+function queryProyecto($idProyecto, $key, $idEmpresa){
     $obj_proyecto =  new PROYECTO();
-    $result= $obj_proyecto->queryDetallesProyecto($idProyecto);
+    $result= $obj_proyecto->queryDetallesProyecto($idProyecto, $key, $idEmpresa);
     return json_encode($result);
 
 }
@@ -61,14 +76,15 @@ function deleteProyecto($idProyecto){
 }
 
 function createProyecto($idGt,$idCategoria,$nombre,$fecha_inicio,$dias,$tipojornada,$link,$urlI){
+    include_once "./tools/generar_clave.php";
     $obj_proyecto =  new PROYECTO();
     $Object = new DateTime();
     $DateAndTime = $Object->format("dmhis");
     $fecha_hoy  =   date("Y-m-d H:i:s");
     $obj_proyecto->setIdGtFk($idGt);
     $obj_proyecto->setIdCategoriaFk($idCategoria);
-    $obj_proyecto->setNoSeguimiento(1);
-    $obj_proyecto->setSKey("Hola");
+    $obj_proyecto->setNoSeguimiento(genNoSegProyecto(6));
+    $obj_proyecto->setSKey(md5($obj_proyecto->getNoSeguimiento()));
     $obj_proyecto->setNombreProyecto($nombre);
     $obj_proyecto->setFechaCreacion($fecha_hoy);
     $obj_proyecto->setFechaInicio($fecha_inicio);

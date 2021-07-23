@@ -227,4 +227,17 @@ class USUARIO extends CONEXION
         $this->close();
         return $result;
     }
+
+
+    function consultaCuentaUsuario(){
+        $query="select u.`id_usuario`, u.`id_empresa_fk`, u.`nombre`, u.`apaterno`, u.`amaterno`, u.`user_name`, 
+                u.`correo`, u.`password`, u.`nivel_acceso`, u.`path_img`, u.`estado`, 
+                 e.`id_empresa`, e.`nombre` as empresaName, e.`razon_social`, e.`rfc`, e.`telefono`, e.`correo`, e.`tipo_cuenta` 
+                from usuario u, empresa e 
+                where u.id_empresa_fk  = e.id_empresa and u.estado > 0 and u.correo = '".$this->getCorreo()."' and u.password = '".$this->getPassword()."'";
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
 }

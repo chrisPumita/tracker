@@ -1,9 +1,14 @@
 <?php
+
+include_once "./include/session_verify.php";
+
 $idProyecto = "";
-if (!isset($_GET['idProyecto']))
+if (!isset($_GET['idProyecto']) || !isset($_GET['key']) || $_GET['key']=="null"){
     echo "<script>location.href ='javascript:history.back()';</script>";
+}
 else{
     $idProyecto = $_GET['idProyecto'];
+    $key = $_GET['key'];
 }
 ?>
 
@@ -26,26 +31,21 @@ else{
         <main>
             <!-- incuir los elementos del la vista para cada cosa-->
             <input type="hidden" value="<?php echo $idProyecto?>" id="idProyecto">
+            <input type="hidden" value="<?php echo $key?>" id="key">
             <div class="container-fluid px-4 p-5">
                 <h1 class="mt-4" id="nombre_proyecto"></h1>
                 <div class="row" id="grd-proyecto">
                     <!--Ajax response-->
                 </div>
                 <hr>
-                <h2>Visualizador general del proyecto</h2>
-                <div class="row my-4">
-                    <div class="progress">
-                        <div class="progress-bar  progress-bar-striped bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                    </div>
-                </div>
+                <h4>Visualizador general del proyecto</h4>
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-info text-white mb-4">
-                            <div class="card-body">Editar informacion</div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditaProyecto">
-                                    Modifcar
-                                </button>
+                            <div class="card-body">Vista Pública</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between" id="btnVistaPublica">
+                                <span id="btnVistaPublica"></span>
+
                                 <div class="small text-white">
                                 </div>
                             </div>

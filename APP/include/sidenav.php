@@ -1,9 +1,15 @@
 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
         <div class="nav">
-            <img src="./assets/img/logo.png" width="100%" class="rounded mx-auto d-block" alt="">
+            <a href="./home.php">
+                <img src="./assets/img/logo.png" width="100%" class="rounded mx-auto d-block" alt="">
+            </a>
+            <a class="nav-link" href="./perfil_empresa.php">
+                <div class="sb-nav-link-icon"><i class="far fa-building"></i></div>
+                <?php echo $_SESSION['empresaName']; ?>
+            </a>
             <div class="sb-sidenav-menu-heading">INICIO</div>
-            <a class="nav-link" href="./index.php">
+            <a class="nav-link" href="./home.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                 Inicio
             </a>
@@ -75,7 +81,7 @@
     </div>
     <div class="sb-sidenav-footer">
         <div class="small">Estas logeado como:</div>
-        PEOPLE_NAME
-        <input type="hidden" id="idEmpresaGeneral" value="653561609">
+        <?php echo $_SESSION['user_name']; ?>
+        <input type="hidden" id="idEmpresaGeneral" value="<?php echo $_SESSION['id_empresa']; ?>">
     </div>
 </nav>

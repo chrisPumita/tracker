@@ -47,6 +47,33 @@ function consultaUsuarios($idUser,$idEmpresa){
     return json_encode($result);
 }
 
+//consultamos el usuario con sus credenciales y
+// creamos las variables de sesion
+function verficaUsuario($correo, $pw){
+    include_once "../model/USUARIO.php";
+    $obj_empleado = new USUARIO();
+    $obj_empleado->setCorreo($correo);
+    $obj_empleado->setPassword(md5($pw));
+    $obj_user = $obj_empleado->consultaCuentaUsuario();
+
+    if(count($obj_user) > 0 ){
+        //creamos la sesion
+        session_start();
+        $_SESSION['no_empleado']    = $obj_user[0]['id_usuario'];
+        $_SESSION['usuario']        = $obj_user[0]['nombre'];
+        $_SESSION['app']       = $obj_user[0]['apaterno'];
+        $_SESSION['apm']       = $obj_user[0]['amaterno'];
+        $_SESSION['user_name']         = $obj_user[0]['user_name'];
+        $_SESSION['nivel_acceso']   = $obj_user[0]['nivel_acceso'];
+        $_SESSION['id_empresa']    = $obj_user[0]['id_empresa'];
+        $_SESSION['empresaName']    = $obj_user[0]['empresaName'];
+        $_SESSION['tipo_cuenta']    = $obj_user[0]['tipo_cuenta'];
+        $_SESSION['sessionSuccess']    = true;
+        return true;
+    }
+    return false;
+}
+
 function addUser($nombre,$ap,$am,$username,$correo,$idEmpresa,$nivelAcesso){
     include_once "./tools/generar_clave.php";
     $clave= generaClaveSesion();
