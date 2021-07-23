@@ -108,7 +108,7 @@ function constructEtapas(obj_proyect){
                                 ${barraShow}
                             </div>
                             <div class="col py-3" idEtapa="${objProyect.id_etapa}">
-                    
+                   
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa" data-bs-whatever="${objProyect.id_etapa}">
                                     Agrega Sub-etapa
@@ -184,7 +184,6 @@ function construyeSubetapa(etapasLista) {
                                   <!-- 
                                   <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalAddSubetapa"><i class="far fa-edit"><a class="text-light" href=""></i></a></button>
                                   -->
-                                                                    
                                   ${btnCheck}
                                 </div>
                                 </td>

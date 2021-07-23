@@ -142,10 +142,7 @@
         </div>
     </div>
 </div>
-
-
-
-
+  
 <!-- Modal ELIMINA PROYECTO-->
 <div class="modal fade" id="modalDeleteProyect" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

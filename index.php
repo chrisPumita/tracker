@@ -625,7 +625,6 @@
                                             <label class=" " for="empresa">Nombre de la empresa</label>
                                             <input name="empresa" id="empresa" type="text" class="form-control form-control-lg" placeholder="Nombre de empresa">
                                         </div>
-                                        
                                         <div class="mt-4 mb-0">
                                             <div class="d-grid">
                                                 <input type="submit" id="btnEnviar" name="btnEnviar" value="Registrarme" class="btn btn-success btn-user btn-block">
