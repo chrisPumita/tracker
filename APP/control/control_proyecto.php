@@ -13,8 +13,12 @@ function consultaEtapas($idProyecto){
 
     foreach ($listaEtapasDB as $etapa){
         $subEtapas =consultaSubEtapa($etapa["id_etapa"]);
+        $infoPortecates = consultaPorcentajes($etapa["id_etapa"]);
         array_push($etapa,$subEtapas);
+        array_push($etapa,$infoPortecates);
         array_push($listaEtapas,$etapa);
+
+
     }
     return json_encode($listaEtapas);
 }
@@ -24,6 +28,13 @@ function consultaSubEtapa($idEtapa){
     $obj_sub = new SUBETAPAS();
     $obj_sub->setIdEtapaFk($idEtapa);
     return $obj_sub->consultaListaSubetapas();
+}
+
+function consultaPorcentajes($idEtapa){
+    include_once "../model/ETAPAS.php";
+    $obj_sub = new ETAPAS();
+    $obj_sub->setIdEtapa($idEtapa);
+    return $obj_sub->consultaInfoPorcentajes();
 }
 
 function queryProyecto($idProyecto){

@@ -167,6 +167,22 @@ class ETAPAS extends CONEXION
         return $result;
     }
 
+    function consultaInfoPorcentajes(){
+        $query = "SELECT 
+                    COUNT(IF(s.estado = 1, s.estado ,NULL)) as terminado,
+                    COUNT(IF(s.estado = 0, s.estado ,NULL)) as pendiente,
+                    ((COUNT(IF(s.estado = 1, s.estado ,NULL))*100)/(COUNT(IF(s.estado = 0, s.estado ,NULL))+COUNT(IF(s.estado = 1, s.estado ,NULL)))) as porc,
+                    (COUNT(IF(s.estado = 0, s.estado ,NULL))+COUNT(IF(s.estado = 1, s.estado ,NULL))) as suma
+                    from subetapas s, etapas e 
+                    where s.id_etapa_fk  = e.id_etapa and e.id_etapa = ". $this->getIdEtapa();
+        $this->connect();
+        $result = $this->getData($query);
+        //iteracion para consultar las subetapas de cada etapa
+
+        $this->close();
+        return $result;
+    }
+
     function consultaListaSubetapas($idEtapa){
         include_once "./SUBETAPAS.php";
         $obj_setapa = new SUBETAPAS();
