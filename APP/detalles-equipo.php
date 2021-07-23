@@ -171,3 +171,4 @@
 <?php include_once "./include/js.php"?>
 </body>
 </html>
+<script src="./ajax/equipo-detalles.js"></script>

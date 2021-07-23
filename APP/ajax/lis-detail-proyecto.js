@@ -15,7 +15,6 @@ function consultaDetailsProyecto(){
         },
         success: function (response) {
             //COnvertimos el string a JSON
-            
             let obj_proyect = JSON.parse(response);
             if(obj_proyect.length>0){
             console.log(obj_proyect);
@@ -221,7 +220,7 @@ $(document).on("click", ".btnDeleteSE", function () {
 
 });
 
-//------------------- Eliminar sub etapa ---------------------------//
+//------------------- Eliminar etapa ---------------------------//
 
 //-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
 $(document).on("click", ".btnDeleteE", function () {
@@ -283,6 +282,23 @@ function eliminaProyecto(elementProyecto){
         type: 'POST',
         data: {
             idProyecto: elementProyecto
+        },
+        success: function (mje) {
+            console.log(mje)
+            consultaDetailsProyecto();
+            consultaEtapasProyecto();
+        }
+    });
+
+}
+
+//----------------Funcion elimina etapa --------------//
+function eliminaEtapa(idEtapa){
+    $.ajax({
+        url: "./control/etapa-eliminada.php",
+        type: 'POST',
+        data: {
+            idEtapa: idEtapa
         },
         success: function (mje) {
             console.log(mje)

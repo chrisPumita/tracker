@@ -67,6 +67,8 @@ function createProyecto($idGt,$idCategoria,$nombre,$fecha_inicio,$dias,$tipojorn
     $fecha_hoy  =   date("Y-m-d H:i:s");
     $obj_proyecto->setIdGtFk($idGt);
     $obj_proyecto->setIdCategoriaFk($idCategoria);
+    $obj_proyecto->setNoSeguimiento(1);
+    $obj_proyecto->setSKey("Hola");
     $obj_proyecto->setNombreProyecto($nombre);
     $obj_proyecto->setFechaCreacion($fecha_hoy);
     $obj_proyecto->setFechaInicio($fecha_inicio);

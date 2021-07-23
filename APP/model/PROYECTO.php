@@ -14,9 +14,44 @@ class PROYECTO extends CONEXION
     private $estado;
     private $link;
     private $url_imagen;
-
+    private $no_seguimiento;
+    private $s_key;
     /* AGREGACION */
     private $listaEtapas;
+
+    /**
+     * @return mixed
+     */
+    public function getNoSeguimiento()
+    {
+        return $this->no_seguimiento;
+    }
+
+    /**
+     * @param mixed $no_seguimiento
+     */
+    public function setNoSeguimiento($no_seguimiento): void
+    {
+        $this->no_seguimiento = $no_seguimiento;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSKey()
+    {
+        return $this->s_key;
+    }
+
+    /**
+     * @param mixed $id_proyecto
+     */
+    public function setSKey($s_key): void
+    {
+        $this->s_key = $s_key;
+    }
+
+
 
     /**
      * @param mixed $ListaProyecto
@@ -243,7 +278,7 @@ class PROYECTO extends CONEXION
 	from subetapas s, etapas e 
 	where e.id_proyecto_fk = id_proyecto
 	and s.id_etapa_fk  = e.id_etapa 
-) as porcent FROM `proyecto`,`grupo_trabajo` WHERE 
+        ) as porcent FROM `proyecto`,`grupo_trabajo`,empresa WHERE 
         proyecto.id_gt_fk= grupo_trabajo.id_gt AND `id_proyecto` = ". $idProyecto;
         $this->connect();
         $result = $this->getData($query);
@@ -268,11 +303,18 @@ class PROYECTO extends CONEXION
     }
 
     function queryCreateProyecto(){
-        $query = "INSERT INTO `proyecto`(`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
-        `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, `link`, `url_imagen`) 
+        /*$query = "INSERT INTO `proyecto`(`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `nombre_proyecto`, 
+        `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jo
+        rnada`, `estado`, `link`, `url_imagen`) 
         VALUES (NULL,".$this->getIdGtFk().",".$this->getIdCategoriaFk().",'".$this->getNombreProyecto().
         "','".$this->getFechaCreacion()."','".$this->getFechaInicio()."',".$this->getDias().",".$this->getTipoJornada().
-        ",".$this->getEstado().",'".$this->getLink()."','".$this->getUrlImagen()."')";
+        ",".$this->getEstado().",'".$this->getLink()."','".$this->getUrlImagen()."')";*/
+        $query="INSERT INTO `proyecto` (`id_proyecto`, `id_gt_fk`, `id_categoria_fk`, `no_seguimiento`,
+         `s_key`, `nombre_proyecto`, `fecha_creacion`, `fecha_inicio`, `dias`, `tipo_jornada`, `estado`, 
+         `link`, `url_imagen`) VALUES 
+         (NULL, '".$this->getIdGtFk()."', '".$this->getIdCategoriaFk()."', '".$this->getNoSeguimiento()."
+         ', '".$this->getSKey()."', '".$this->getNombreProyecto()."', '".$this->getFechaCreacion()."', '".$this->getFechaInicio()."
+         ', '".$this->getDias()."', '".$this->getTipoJornada()."', '".$this->getEstado()."', '".$this->getLink()."', '".$this->getUrlImagen()."')";
         $this->connect();
         $result = $this->executeInstruction($query);
         $this->close();
