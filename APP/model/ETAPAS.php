@@ -157,12 +157,28 @@ class ETAPAS extends CONEXION
    function consultaEtapas(){
         $query = "SELECT `id_etapa`, `id_proyecto_fk`, `nombre_etapa`, 
         `estado_proceso`, `fecha_creacion`, `fecha_inicio`, `dias`, `indice` 
-        FROM `etapas` where `id_proyecto_fk` = ". $this->getIdProyectoFk();
+        FROM `etapas` where `id_proyecto_fk` = ". $this->getIdProyectoFk()." ORDER BY `etapas`.`indice` ASC";
         $this->connect();
         $result = $this->getData($query);
 
         //iteracion para consultar las subetapas de cada etapa
     
+        $this->close();
+        return $result;
+    }
+
+    function consultaInfoPorcentajes(){
+        $query = "SELECT 
+                    COUNT(IF(s.estado = 1, s.estado ,NULL)) as terminado,
+                    COUNT(IF(s.estado = 0, s.estado ,NULL)) as pendiente,
+                    ((COUNT(IF(s.estado = 1, s.estado ,NULL))*100)/(COUNT(IF(s.estado = 0, s.estado ,NULL))+COUNT(IF(s.estado = 1, s.estado ,NULL)))) as porc,
+                    (COUNT(IF(s.estado = 0, s.estado ,NULL))+COUNT(IF(s.estado = 1, s.estado ,NULL))) as suma
+                    from subetapas s, etapas e 
+                    where s.id_etapa_fk  = e.id_etapa and e.id_etapa = ". $this->getIdEtapa();
+        $this->connect();
+        $result = $this->getData($query);
+        //iteracion para consultar las subetapas de cada etapa
+
         $this->close();
         return $result;
     }
@@ -174,4 +190,24 @@ class ETAPAS extends CONEXION
         return $obj_setapa -> consultaListaSubetapas();
     }
 
+    function createEtapa(){
+        $query = "INSERT INTO `etapas` (`id_etapa`, `id_proyecto_fk`, `nombre_etapa`, `estado_proceso`, 
+        `fecha_creacion`, `fecha_inicio`, `dias`, `indice`) VALUES 
+        (NULL, '".$this->getIdProyectoFk()."', '".$this->getNombreEtapa()."', '".$this->getEstadoProceso()."
+        ', '".$this->getFechaCreacion()."', '".$this->getFechaInicio()."', '".$this->getDias()."', '".$this->getIndice()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        echo $result;
+        return $result;
+    }
+
+    function eliminaEtapaDB($idEtapa){
+        $query = "DELETE FROM `etapas` WHERE `id_etapa`=".$idEtapa;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        echo $result;
+        return $result;
+    }
 }

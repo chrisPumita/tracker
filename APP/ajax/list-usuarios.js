@@ -30,11 +30,7 @@ $(document).ready(function () {
                                         <td>${objUser.user_name}</td>
                                         <td>${nivelAcceso}</td>
                                         <td>
-                                            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                              <button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button>
-                                              <button type="button" class="btn btn-warning"><i class="fas fa-user-clock"></i></button>
-                                              <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                                            </div>
+                                            <button type="button" class="btn btn-danger btnDeleteUser"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                         </tr>`;
                         }
@@ -60,6 +56,17 @@ function getNivelAcceso($nivel) {
        
     }
 }
+//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+$(document).on("click", ".btnDeleteUser", function () {
+    if (confirm("¿Esta seguro de que desea eliminar esta subetapa? Esta acción no se podrá revertir")){
+        let elementoUserSelect = $(this)[0].parentElement.parentElement.parentElement;
+        console.log(elementoUserSelect);
+/*        let idSubEtapa = $(elementoSubEtapaSelect).attr("idSubEtapa");
+        eliminaSubEtapa(idSubEtapa);*/
+    }
+
+});
+//btnDeleteUser
 /*
 
 

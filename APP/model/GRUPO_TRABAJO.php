@@ -120,7 +120,6 @@ class GRUPO_TRABAJO extends CONEXION
         $query ="INSERT INTO `grupo_trabajo`(`id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status`)
          VALUES (NULL, ".$this->getIdEmpresaFk().", '".$this->getNombreGt()."', '".$this->getFechaCreacion().
          "', ".$this->getStatus().")";
-         echo $query;
         $this->connect();
         $result = $this->executeInstruction($query);
         $this->close();
@@ -143,8 +142,9 @@ class GRUPO_TRABAJO extends CONEXION
         return $result;
     }
     
-    function queryListDetallesGrupo(){
-        $query ="SELECT `id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status` FROM `grupo_trabajo`";
+    function queryListDetallesGrupo($idEmpresa){
+        $query ="SELECT `id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, 
+        `status` FROM `grupo_trabajo` WHERE `id_empresa_fk`= ".$idEmpresa." and id_gt > 0";
         $this->connect();
         $result = $this->getData($query);
         $this->close();

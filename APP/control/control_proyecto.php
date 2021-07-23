@@ -13,8 +13,12 @@ function consultaEtapas($idProyecto){
 
     foreach ($listaEtapasDB as $etapa){
         $subEtapas =consultaSubEtapa($etapa["id_etapa"]);
+        $infoPortecates = consultaPorcentajes($etapa["id_etapa"]);
         array_push($etapa,$subEtapas);
+        array_push($etapa,$infoPortecates);
         array_push($listaEtapas,$etapa);
+
+
     }
     return json_encode($listaEtapas);
 }
@@ -24,6 +28,13 @@ function consultaSubEtapa($idEtapa){
     $obj_sub = new SUBETAPAS();
     $obj_sub->setIdEtapaFk($idEtapa);
     return $obj_sub->consultaListaSubetapas();
+}
+
+function consultaPorcentajes($idEtapa){
+    include_once "../model/ETAPAS.php";
+    $obj_sub = new ETAPAS();
+    $obj_sub->setIdEtapa($idEtapa);
+    return $obj_sub->consultaInfoPorcentajes();
 }
 
 function queryProyecto($idProyecto){
@@ -72,4 +83,42 @@ function queryProyectos($idEmpresa){
     $obj_proyecto = new PROYECTO();
     $result = $obj_proyecto->queryDetallesProyectos($idEmpresa);
     return json_encode($result);
+}
+
+/*
+ * ETAPAS ACCIONES
+ * */
+function eliminaEtapa($idEtapa){
+    include_once "../model/ETAPAS.php";
+    $obj_E = new ETAPAS();
+    $mje = $obj_E->eliminaEtapaDB($idEtapa)?"Etapa Eliminada con Exito" :"Error interno al eliminar";
+    return $mje;
+}
+
+
+
+
+
+
+
+/*
+ * SUBETAPAS UPDATE
+ * */
+
+function terminaSubEtapa($idSE){
+    include_once "../model/SUBETAPAS.php";
+    $objSE = new SUBETAPAS();
+    $mje = $objSE->terminaSubEtapaDB($idSE)? "Sub etapa terminada con exito": "Error interno al terminar etapa";
+    return $mje;
+}
+
+/*
+ * SUBETAPAS DELETE
+ * */
+
+function eliminaSubEtapa($idSE){
+    include_once "../model/SUBETAPAS.php";
+    $objSE = new SUBETAPAS();
+    $mje = $objSE->eliminaSubEtapaDB($idSE)? "Sub etapa eliminada con exito": "Error interno al eliminar etapa";
+    return $mje;
 }

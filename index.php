@@ -35,16 +35,17 @@
                     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#nosotros">Nosotros<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Planes">Planes</a>
+                    <a class="nav-link" href="#Planes">Planes<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#registro">Registro<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <a class="btn btn-danger ml-md-3" href="APP/login.php">Iniciar Sesión</a>
+            <a class="btn btn-success ml-md-3" href="./consulta">Consultar</a>
+            <a class="btn btn-info ml-md-3" href="APP/login.php">Iniciar Sesión</a>
         </div>
     </div>
 </nav>
@@ -214,7 +215,7 @@
         </div>
     </div>
 </section>
-<section class="pt-5 pb-5">
+<section class="pt-5 pb-5" id="nosotros">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col col-md-8 text-center aos-init" data-aos="fade-up" data-aos-offset="300">
@@ -296,17 +297,23 @@
                     <figure class="card card-product">
                         <div class="img-wrap"><img src="./assets/image/estrella_bronce.png"> </div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Prueba gratis</h4>
-                            <p class="desc">Crea hasta tres proyectos y goza de todos nuestros beneficios durante ese perdiodo</p>
-                        </br>                            <div class="rating-wrap">
-                                <div class="label-rating">182 vistas</div>
-                                <div class="label-rating">154 orders</div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">Tracker Free</h4>
+                            <p class="desc">Todas las cuentas nuevas inician con un periodo de prueba de 1 mes a <strong>ProTracker</strong></p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">3 Proyectos Publicos</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea hasta 5 Grupos de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra un maximo de  10 usuarios</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php" class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">GRATIS</span> <del class="price-old">$0.01</del>
+                                <span class="price-new">GRATIS</span> <del class="price-old">$90.00 MXN/mes</del>
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -315,17 +322,23 @@
                     <figure class="card card-product">
                         <div class="img-wrap"><img src="./assets/image/estrella_plata.png"></div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">ProTracker</h4>
-                            <p class="desc">Crea hasta cincuenta proyectos con la mayoria de beneficios de Proyect Tracker incluidos</p>
-                            <div class="rating-wrap">
-                                <div class="label-rating">132 reviews</div>
-                                <div class="label-rating">154 orders </div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">ProTracker Platino</h4>
+                            <p class="desc">Crea hasta cincuenta proyectos con la mayoria de beneficios de Proyect Tracker incluidos, tus proyectos pasados seguiran siendo visibles para tus solicitantes</p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">50 Proyectos Publicos</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea hasta 10 Grupos de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra un maximo de  100 usuarios</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$899</span> <del class="price-old">$1199</del>
+                                <span class="price-new">$99 MXN</span> <del class="price-old">$199</del> /mes
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -333,19 +346,33 @@
                 <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
-                        <div class="img-wrap"><img src="./assets/image/estrella_oro.png"></div>
+                        <div class="img-wrap">
+                            <img src="./assets/image/estrella_oro.png">
+                        </div>
                         <figcaption class="info-wrap">
-                            <h4 class="title">Plan Premium</h4>
-                            <p class="desc">Crea proyectos sin limites y goza de todas las herramientas de Proyect Tracker sin limites</p>
-                            <div class="rating-wrap">
-                                <div class="label-rating">215 reviews</div>
-                                <div class="label-rating">154 orders </div>
-                            </div> <!-- rating-wrap.// -->
+                            <h4 class="title">Pro TRacker Premium</h4>
+                            <p class="desc">Crea proyectos sin limites y goza de todas las herramientas de Proyect Tracker sin limites. Nadie te detendra, todos tus proyectos seran visbles cuando lo deses</p>
+                            <ol class="list-unstyled mt-4">
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Proyectos Publicos Ilimitados</span></li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Crea Grupos Ilimitrados de trabajo</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Registra usuarios ilimitados</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Oculta los proyectos</span>
+                                </li>
+                                <li class="d-flex mb-2 mt-2 aos-init aos-animate" data-aos="fade-up">
+                                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1">Atencion especializada rapida</span>
+                                </li>
+                            </ol>
                         </figcaption>
                         <div class="bottom-wrap">
-                            <a href="" class="btn btn-sm btn-primary float-right">Comprar</a>
+                            <a href="./APP/login.php"  class="btn btn-sm btn-primary float-right">Comprar</a>
                             <div class="price-wrap h5">
-                                <span class="price-new">$1499</span> <del class="price-old">$2199</del>
+                                <span class="price-new">$199</span> <del class="price-old">$399</del> / mes
                             </div> <!-- price-wrap.// -->
                         </div> <!-- bottom-wrap.// -->
                     </figure>
@@ -356,13 +383,13 @@
     </div>
 </section>
 <section class="pt-5 pb-5">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center">
                 <h3 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up">Preguntas frecuentes</h3>
                 <!-- Accordion -->
-                <div class="container-fluid bg-gray" id="accordion-style-1">
-                    <div class="container">
+                <div class="container-fluid bg-gray text-left" id="accordion-style-1">
+                    <div class="container-fluid">
                         <section>
                             <div class="row">
                                 <div class="accordion" id="accordionExample">
@@ -376,12 +403,12 @@
                                         </div>
                                         <div id="collapseOne" class="collapse show fade" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Estamos dirigidos a líderes de proyecto, freelance y estudiantes en proceso de titulación que deban informar a un solicitante el estado actual de su proyecto.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Estamos dirigidos a líderes de proyecto, freelance y estudiantes en proceso de titulación que deban informar a un solicitante el estado actual de su proyecto.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <div class="card-header" id="headingTwo">
+                                        <div class="card-header " id="headingTwo">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                     <i class="fa fa-plus main"></i><i class="fa fa-angle-double-right mr-3"></i>¿Cómo funciona? 
@@ -390,8 +417,13 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse fade" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Cada usuario puede colocar las etapas que considere necesarias, y se les asignará una fecha aproximada de entrega en cada una de las etapas, en cada actualización se pondrá un porcentaje de avance a cada etapa que, a la vez, irá calculando el porcentaje de avance total del proyecto.
-                                                El solicitante podrá entrar a la liga del proyecto y ver de una forma muy simple el estado actual del proyecto que solicitó<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                <p>
+                                                    Cada usuario puede colocar las etapas que considere necesarias, y se les asignará una fecha aproximada de entrega en cada una de las etapas, en cada actualización se pondrá un porcentaje de avance a cada etapa que, a la vez, irá calculando el porcentaje de avance total del proyecto.
+                                                    El solicitante podrá entrar a la liga del proyecto y ver de una forma muy simple el estado actual del proyecto que solicitó
+                                                </p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi dolor doloremque dolores eius ex excepturi fugit inventore iure laudantium libero minima nihil non omnis perspiciatis placeat quasi, totam vel!
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -405,7 +437,7 @@
                                         </div>
                                         <div id="collapseThree" class="collapse fade" aria-labelledby="headingThree" data-parent="#accordionExample">
                                             <div class="card-body">
-                                                Cualquier usuario que tenga el vínculo de la página. El lider del proyecto podra mandar links de invitacion para colaboradores y clientes.<a href="https://www.fiverr.com/share/qb8D02" class="ml-3" target="_blank"><strong>Ver más <i class="fa fa-angle-double-right"></i></strong></a>
+                                                Cualquier usuario que tenga el vínculo de la página. El lider del proyecto podra mandar links de invitacion para colaboradores y clientes.
                                             </div>
                                         </div>
                                     </div>
@@ -475,7 +507,7 @@
                                             <div class="col-lg-4 col-md-6 col-sm-6" >
                                                 <div class="our-team">
                                                     <div class="pic">
-                                                        <img src="./assets/image/cico.jpg">
+                                                        <img src="https://scontent.fmex24-1.fna.fbcdn.net/v/t1.6435-9/66604592_2232510353528273_1263085573208276992_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=RSKyDYpDZ-gAX-0NnqR&_nc_ht=scontent.fmex24-1.fna&oh=84afdef62524f3034bfc50c7df7cc5fa&oe=60FDE175">
                                                     </div>
                                                     <div class="team-content">
                                                         <h3 class="title">Luis Fernando <br>Hernandez Ledezma</h3>
@@ -544,7 +576,7 @@
         </div>
     </div>
 </section>
-<section class="pt-5 pb-5" style="">
+<section class="pt-5 pb-5" id="registro">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -593,7 +625,6 @@
                                             <label class=" " for="empresa">Nombre de la empresa</label>
                                             <input name="empresa" id="empresa" type="text" class="form-control form-control-lg" placeholder="Nombre de empresa">
                                         </div>
-                                        
                                         <div class="mt-4 mb-0">
                                             <div class="d-grid">
                                                 <input type="submit" id="btnEnviar" name="btnEnviar" value="Registrarme" class="btn btn-success btn-user btn-block">
@@ -616,92 +647,6 @@
     <div class="footer text-white">
         <div class="   bg-dark pt-5 pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3">
-                        <a href="#">
-                            <svg class="d-block mb-4" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
-                                <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path>
-                                <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path>
-                            </svg>
-                        </a>
-                        <address class="color-light-20">
-                            1600 Amphitheatre Parkway
-                            <br> Mountain View, CA 94043
-                        </address>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Disclaimer</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Product</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#">Features</a>
-                            </li>
-                            <li>
-                                <a href="#">Customers</a>
-                            </li>
-                            <li>
-                                <a href="#">Store</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <br style="clear:both" class="hidden-sm-up">
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Company</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Careers</a>
-                            </li>
-                            <li>
-                                <a href="#">Press</a>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <h4 class="my-2">Connect</h4>
-                        <ul class="list-unstyled list-light">
-                            <li>
-                                <a href="#">Support</a>
-                            </li>
-                            <li>
-                                <a href="#">Social</a>
-                            </li>
-                            <li>
-                                <a href="#">Community</a>
-                            </li>
-                        </ul>
-                        <p class="color-light mt-2">Stay up-to-date!</p>
-                        <form>
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary btn-sm" type="button">Ok</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr>
                 <div class="row f-flex justify-content-center pb-4" style="">
                     <div class="col text-center  text-secondary my-1">
                         <p class="mt-2  text-white"> © Copyright 2021 • All Rights Reserved ProyectTraker |
@@ -725,14 +670,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Aviso de privacidad simplificado de capacitaciones o eventos presenciales
-                El Instituto Veracruzano de Acceso a la Información y Protección de Datos Personales, es el responsable del tratamiento de los datos personales que nos proporcione.
-                Sus datos personales, serán utilizados para las siguientes finalidades: a) Registrar su inscripción a la modalidad de capacitación que haya elegido; b) generar listas de asistencias y validación de  las mismas; c) emisión de constancia de participación o asistencia de acuerdo a la modalidad de que se trate; d) establecer comunicación para dar seguimiento de los cursos o aclaración de dudas sobre sus datos, notificación de cancelación o cambio de horario, fecha o sede; y e) generar estadísticas para informes obligatorios del Instituto ante otros organismos públicos o privados.
-                De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son necesarias, pero que nos permiten y facilitan brindarle una mejor atención: a) envío de material de exposición o apoyo; y, b) invitaciones a futuros eventos.
-                En caso de que no desee que sus datos personales sean tratados para las finalidades adicionales, usted puede manifestarlo en el correo electrónico capacitaciónivai@outlook.com
-                Se informa que no se realizarán transferencias que requieran su consentimiento, salvo aquellas que sean necesarias para atender requerimientos de información de una autoridad competente, debidamente fundados y motivados.
-                Para mayor información acerca del tratamiento y de los derechos que puede hacer valer, usted puede acceder al aviso de privacidad integral de cursos o eventos a través de www.ivai.org.mx, en la sección de Avisos de Privacidad.
-            </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur esse expedita in inventore nam ullam! Animi doloremque ea et eveniet excepturi facilis magni modi, quo ratione reiciendis saepe, voluptate.</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>

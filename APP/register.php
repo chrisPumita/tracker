@@ -10,7 +10,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-primary">
+<body class="bg-primary" style="background: url(./assets/img/bgProtect.jpg) top center no-repeat;">
 <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
@@ -18,7 +18,12 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                            <div class="card-header text-center">
+                                <a href="../">
+                                    <img src="./assets/img/logo.png" height="120" alt="image">
+                                </a>
+                                <h3 class="text-center font-weight-light my-4">Crear Nueva Cuenta</h3>
+                            </div>
                             <div class="card-body">
                                 <form id="frm-add-user">
                                     <input name="idPage" id="idPage" type="hidden" class="form-control form-control-lg" value="2">

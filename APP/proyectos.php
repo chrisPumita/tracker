@@ -21,7 +21,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Todos los proyectos</li>
     </ol>
-    <div class="card mb-4">
+    <div class="card mb-4" id="containerProyectos">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
             Proyectos
@@ -74,13 +74,3 @@
 </body>
 </html>
 <script src="./ajax/list-proyectos.js"></script>
-/*
-*<tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                </tr> 
-*/ 

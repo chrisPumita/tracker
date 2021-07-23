@@ -30,7 +30,7 @@
                                         <div class="row d-flex justify-content-between pt-5 align-items-center">
                                             <div class="col-xl-5 col-lg-6 col-md-7 text-center mb-5 mb-lg-0">
                                                 <div class="container-fluid align-items-center">
-                                                    <img alt="image" class="img-fluid text-center m-4" id="imgUser" data-aos-offset="300" src="./assets/img/Obi.jpg">
+                                                    <img alt="image" class="img-fluid text-center m-4" id="imgUser" data-aos-offset="300" src="./assets/img/Obi.jpg" width="300" height="100">
                                                 </div>
                                                 <p id="nombrecompleto">Luis Fernando Obi</p>
                                             </div>

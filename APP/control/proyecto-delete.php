@@ -1,10 +1,6 @@
 <?php
-
-include_once "control_proyecto.php";
-
-$id =4;
-$result=deleteProyecto($id);
-
-if($result){
-    echo "Se ha eliminado exitosamente";
-}   else    echo "Falló";
+if(isset($_POST['idProyecto'])){
+$id= $_POST['idProyecto'];
+include_once "./control_proyecto.php";
+return deleteProyecto($id);
+} else echo "el id no instanciado";

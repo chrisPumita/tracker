@@ -3,7 +3,7 @@
         <div class="nav">
             <img src="./assets/img/logo.png" width="100%" class="rounded mx-auto d-block" alt="">
             <div class="sb-sidenav-menu-heading">INICIO</div>
-            <a class="nav-link" href="./inicio_prueba.php">
+            <a class="nav-link" href="./index.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                 Inicio
             </a>
@@ -49,7 +49,7 @@
             </a>
 
 
-            <a class="nav-link" href="template/tables.html">
+            <a class="nav-link" href="./tipo_cuenta.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Cuenta
             </a>
@@ -63,7 +63,7 @@
             <div class="collapse" id="menuPerfil" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="./perfil_usuario.php">Perfil de usuario</a>
-                    <a class="nav-link" href="./">Perfil de empresa</a>
+                    <a class="nav-link" href="./perfil_empresa.php">Perfil de empresa</a>
                 </nav>
             </div>
 
