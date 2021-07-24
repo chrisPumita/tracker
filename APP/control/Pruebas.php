@@ -11,3 +11,8 @@ var_dump($result);
 $var = consultaProyecto(4);
 var_dump($var);
 */
+
+include_once "./control_grupo-trabajo-usuario.php";
+
+$idUsuario= 32;
+echo consultaUsuariosGt($idUsuario);

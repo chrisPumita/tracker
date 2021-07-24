@@ -4,8 +4,7 @@ include_once "../model/GRUPO_TRABAJO.php";
 
 function consultaGrupoTrabajo($idGt){
     $obj_gt = new GRUPO_TRABAJO;
-    $obj_gt->setIdGt($idGt);
-    $result = $obj_gt->getDetallesGrupo();
+    $result = $obj_gt->queryDetallesGrupo($idGt);
     return json_encode($result);
 }
 

@@ -109,7 +109,7 @@ class GRUPO_TRABAJO extends CONEXION
     }
     
     function queryDetallesGrupo($idGt){
-        $query ="SELECT * FROM `grupo_trabajo` WHERE `id_gt`=".$idGt;
+        $query ="SELECT `id_gt`, `id_empresa_fk`, `nombre_gt`, `fecha_creacion`, `status` FROM `grupo_trabajo` WHERE `id_gt`= ".$idGt;
         $this->connect();
         $result = $this->getData($query);
         $this->close();

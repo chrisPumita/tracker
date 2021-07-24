@@ -1,7 +1,7 @@
 <?php
 
-
-class GRUPO_TRABAJO_USUARIO
+include_once "CONEXION.php";
+class GRUPO_TRABAJO_USUARIO extends CONEXION
 {
     private $id_usuario_fk;
     private $id_gt_fk;
@@ -108,4 +108,22 @@ class GRUPO_TRABAJO_USUARIO
 
 
 
+    function queryDetallesGTU($idGt){
+        $filter= if()
+        $query="SELECT gtu.`id_usuario_fk`, gtu.`id_gt_fk`, gtu.`fecha_union`, gtu.`permisos`
+        , gtu.`lider`, gtu.`estado`, u.nombre,u.apaterno,u.amaterno,u.correo ,u.user_name
+        from usuario u,grupo_trabajo gt,grupotrabajo_usuario gtu
+         WHERE u.id_usuario= gtu.id_usuario_fk AND gt.id_gt = gtu.id_gt_fk AND gt.id_gt =".$idGt;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
+
+    function queryAddUserToGroup($idGt,$idUser){
+        $query="INSERT INTO `grupotrabajo_usuario` (`id_usuario_fk`, `id_gt_fk`, `fecha_union`
+        , `permisos`, `lider`, `estado`) 
+        VALUES ('32', '8', '2021-07-13', '0', '1', '1')";
+
+    }
 }
