@@ -29,16 +29,17 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center form_container">
-                <form class="links" action="./public-view-proyecto">
+                <form class="links" id="frm-consulta">
                     <h4 class="h4">Ingresa el numero de seguimiento de su proyecto:</h4>
                     <div class="d-flex justify-content-center mt-3 login_container">
-                        <input type="text" id="login" class="fadeIn second" name="NoSeguimiento" placeholder="Ejemplo XXX">
+                        <input type="text" id="noSeguimiento" class="fadeIn second" name="NoSeguimiento" placeholder="Ejemplo 1234567890">
                     </div>
                     <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" class="fadeIn fourth" value="Consultar">
                     </div>
                 </form>
             </div>
+            <span id="mensaje">            </span>
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
                     No tengo una No de Seguimiento,<a href="#" class="ml-2" data-toggle="modal" data-target="#exampleModal"> necesito Ayuda</a>
@@ -81,6 +82,6 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<script>let search = false;</script>
 <script src="../APP/ajax/public-proyect.js"></script>
 <!------ Include the above in your HEAD tag ---------->

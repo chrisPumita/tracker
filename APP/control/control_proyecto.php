@@ -21,7 +21,7 @@ function consultaEtapas($idProyecto){
     return json_encode($listaEtapas);
 }
 
-function consultaPublicaProyecto($noSeguimiento){
+function consultaPublicaProyectoEtapas($noSeguimiento){
     $obj_pryecto = new  PROYECTO();
     $obj_pryecto->setIdProyecto($obj_pryecto->getIdProyectoConsult($noSeguimiento));
     $listaEtapasDB = $obj_pryecto->getListaEtapas();
@@ -36,6 +36,16 @@ function consultaPublicaProyecto($noSeguimiento){
         array_push($listaEtapas,$etapa);
     }
     return json_encode($listaEtapas);
+}
+ function consultaPublicaProyectoDetalles($noSeguimiento){
+     $obj_pryecto = new  PROYECTO();
+     return json_encode($obj_pryecto->consultaPublicaProyecto($noSeguimiento));
+ }
+
+function veriticaPublicProyect($noSeguimiento){
+    $obj_pryecto = new  PROYECTO();
+    $id = $obj_pryecto->getIdProyectoConsult($noSeguimiento);
+    return $id >"0" ? true:false;
 }
 
 function consultaSubEtapa($idEtapa){

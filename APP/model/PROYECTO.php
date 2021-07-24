@@ -297,7 +297,7 @@ class PROYECTO extends CONEXION
         FROM `proyecto` p,`grupo_trabajo` gp,empresa e, categoria c WHERE 
         e.id_empresa = gp.id_empresa_fk AND 
         c.id_categoria= p.id_categoria_fk AND
-        p.id_gt_fk= gp.id_gt AND p.`s_key` = '".$noSeguimiento;
+        p.id_gt_fk= gp.id_gt AND p.`no_seguimiento` = ".$noSeguimiento;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
@@ -309,9 +309,17 @@ class PROYECTO extends CONEXION
         $this->connect();
         $result = $this->getData($query);
         $this->close();
-        $obj = $result[0];
-        $id = $obj["id_proyecto"];
-        return $id;
+        if (count($result)>0){
+            $obj = $result[0];
+            $id = $obj["id_proyecto"];
+            return $id;
+        }
+        else
+            return false;
+    }
+
+    function getIdProyectoPublico(){
+
     }
 
     function queryUpdateProyecto($idProyecto){
