@@ -165,14 +165,37 @@
 
     </div>
 </section>
-
 <section class="mt-0 align-items-center d-flex">
+    <span id="estapasContainer"></span>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="main-timeline2">
+                <div class="main-timeline2" id="timeLineEtapas">
                     <div class="timeline">
                         <span class="icon fa fa-hourglass-half"></span>
+                        <a href="#" class="timeline-content">
+                            <h3 class="title"> <i class="fas fa-hourglass-half"></i> Web Designer</h3>
+                            <div class="progress my-3">
+                                <div class="progress-bar  progress-bar-striped bg-info" role="progressbar" style="width: 50.0000%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                            <ul class="list-group text-dark">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Cras justo odio
+                                    <span class="badge  badge-pill text-warning"><i class="fas fa-hourglass-half"></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Dapibus ac facilisis in
+                                    <span class="badge badge-pill text-warning"><i class="fas fa-hourglass-half"></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Morbi leo risus
+                                    <span class="badge badge-pill text-warning"><i class="fas fa-check-circle"></i> </span>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <span class="icon fa fa-check-circle"></span>
                         <a href="#" class="timeline-content">
                             <h3 class="title"> <i class="fas fa-hourglass-half"></i> Web Designer</h3>
                             <ul class="list-group text-dark">

@@ -29,6 +29,7 @@ function consultaDetailsProyecto(){
                                 </button></a>`;
             $("#btnVistaPublica").html(templateBoton);
             constuct_grid_proyectos(proyecto);
+            consultaDetailsProyectoPublico(proyecto);
             } else location.href="./proyectos.php";
         }
 

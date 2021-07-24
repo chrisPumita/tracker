@@ -63,11 +63,11 @@ $(document).ready(function(){
 
 
 function consultaSeguimientoPage(noSeguimiento) {
-    consultaDetailsProyecto(noSeguimiento);
+    consultaDetailsProyectoPublico(noSeguimiento);
 }
 
 //Contruye el Grid para el proyecto en especifico
-function consultaDetailsProyecto(noSeguimiento){
+function consultaDetailsProyectoPublico(noSeguimiento){
     $.ajax({
         url: "../../APP/control/consulta_no_seguimiento_details.php",
         type: 'POST',
@@ -98,15 +98,17 @@ function consultaEtapasProyecto(idProyecto){
         success: function (response) {
             //COnvertimos el string a JSON
             let obj_proyect = JSON.parse(response);
+            console.log("_______________________________");
             console.log(obj_proyect);
-            let etapas=constructEtapas(obj_proyect);
-            $("#tbl-etapa").html(etapas);
+            console.log("_______________________________");
+            let etapas = constructEtapasconstructEtapas(obj_proyect);
+            $("#timeLineEtapas").html(etapas);
 
         }
     });
 }
 
-
+/*----------------------------- CONSTRUCTORES DE DATOS DEL PROYECTO---------------------------------------*/
 function constuct_data_html(proyecto) {
     $("#nombreProyecto").html(proyecto.nombre_proyecto + " ("+proyecto.categoriaName+")");
     $("#empresaName").html(proyecto.empresaName);
@@ -128,7 +130,7 @@ function constuct_data_html(proyecto) {
             `;
 
         mjeAvance = `Este propyecto lleva un ${proyecto.porcent}% de avance`;
-        
+
     }
     else{
         templateLine = `
@@ -140,4 +142,70 @@ function constuct_data_html(proyecto) {
         </div>`;
     }
     $("#bar").html(templateLine);
+}
+
+
+// FUNCION PARA CREAR LAS TABLAS DE ETAPA DE EL PROYECTO SELECCIONADO
+/*----------------------------- CONSTRUCTORES DE ETAPAS DEL PROYECTO---------------------------------------*/
+function constructEtapasconstructEtapas(obj_proyect){
+    let template='';
+    let cont = 0;
+    obj_proyect.forEach(
+        objProyect=>{
+            cont++;
+            let subetapas = objProyect[0];
+            let anuncio =  objProyect[1][0].porc!= null ? `Sub etapas completadas: ${objProyect[1][0].terminado} de ${objProyect[1][0].suma}`: "";
+            let barraShow =  objProyect[1][0].porc!= null ? `   <div class="progress my-3">
+                                                                    <div class="progress-bar  progress-bar-striped bg-info" role="progressbar" style="width: ${objProyect[1][0].porc}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${parseInt(objProyect[1][0].porc)}%</div>
+                                                                </div>`
+                :`<h3>Aqui se vera el avance de la etapa</h3>`;
+            let iconState = objProyect[1][0].porc <100 ? `fas fa-hourglass-half` :`fas fa-check-circle`;
+            template += `
+            <!-- start  card lista etapa generate --->
+                    <div class="timeline">
+                        <span class="icon ${iconState}"></span>
+                        <a href="#" class="timeline-content">
+                            <h3 class="title"> <i class="${iconState}"></i> Etapa ${cont}  : ${objProyect.nombre_etapa}</h3>
+                            <h6>${anuncio}</h6>
+                            ${barraShow}
+`;
+            //REALIZAMOS UNA CONDICION DE QUE SI UN CONTEO ES MAYOR A 0, TRAIGA HE IMPRIMA LAS SUB ETAPAS DE LA ETAPA
+            if (subetapas.length>0){
+                template += construyeSubetapaPublica(subetapas);
+            }
+            else{
+                template +=`<div class="alert alert-warning" role="alert">
+                  <h4 class="alert-heading">Esta etapa no tiene subetapas que mostrar</h4>
+                </div>`;
+            }
+            template += `
+                                                       
+                        </a>
+                    </div>
+                <!-- fin lista etapa --->
+            `;
+        }
+    );
+    return template;
+}
+
+
+// FUNCION PARA CREAR LAS SUBETAPAS DE UNA ETAPA
+function construyeSubetapaPublica(etapasLista) {
+// console.log(subetapas);
+    let templateSubetapa = `<ul class="list-group text-dark">`;
+    etapasLista.forEach(
+        sub=>{
+            let textCustom = sub.estado === "1" ? `success`:`warning`;
+            let iconEstate = sub.estado === "0" ? `fas fa-hourglass-half`:`fas fa-check-circle`;
+            templateSubetapa += `
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    ${sub.nombre_subetapa}
+                                    <span class="badge  badge-pill text-${textCustom}"><i class="${iconEstate}"></i></span>
+                                </li>
+                                `;
+        }
+    );
+    templateSubetapa += `</ul>`;
+    return templateSubetapa;
 }
