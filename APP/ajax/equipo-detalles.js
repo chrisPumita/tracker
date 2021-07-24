@@ -16,7 +16,7 @@ function detallesGrupo(){
         success: function (response) {
              //COnvertimos el string a JSO
            let obj_gt = JSON.parse(response);
-           console.log(obj_gt);
+           $("#nombreGt").val(obj_gt[0].nombre_gt);
            template=`
         <h1 class="mt-4">
            <span>${obj_gt[0].nombre_gt}</span>
@@ -30,9 +30,9 @@ function detallesGrupo(){
 
              //let templateInput=construct_table_GTU();
            $("#infoGroup").html(template);
-
+           
         }
-
+        
     });
 }
 
@@ -42,12 +42,13 @@ function construct_table_GTU(){
         url: "./control/gtu-detalles.php",
         type: 'POST',
         data: {
-            idGt: $("#idGpo").val()
+            idGt: $("#idGpo").val(),
+            idEMpresa: $("#idEMpresaGeneral").val()
         },
         success: function (response) {
              //COnvertimos el string a JSO
+             console.log(response);
            let obj_gt = JSON.parse(response);
-           console.log(obj_gt);
            let contador=0;
            let template='';
            obj_gt.forEach(
@@ -77,11 +78,7 @@ function construct_table_GTU(){
                     `;
                    }
                 );
-                let templateInputUsers = construct_input_GTU(obj_gt);
                 $("#tbl_usuarios_gt").html(template);
-                $("#userGTU").html(templateInputUsers);
-
-           
             }
 
         });
@@ -114,17 +111,28 @@ function construct_table_GTU(){
         }
     }
 
-    function construct_input_GTU(obj_gt){
-        let template='';
-           obj_gt.forEach(
-               objGt=>{
-                 template+=`
-                
-                 <option value="${objGt.id_usuario_fk}">${objGt.nombre} ${objGt.apaterno} ${objGt.amaterno}</option>
 
-                
-                    `;
-               }
-           );
-           return template;
-    }
+$('#frm-add-user-gt').submit(function (e) {
+    //obtenemos los datos de los valores que se enviaran al servidor
+    const valoresCajas = {
+        idUser: $("#userGTU").val(),
+        idGt: $("#idGpo").val()
+    };
+     let url = "./control/gtu-add-user.php";
+    //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
+    $.post(url,valoresCajas,function (mje) {
+        //tratamos los datos y hacemos acciones
+        let mensaje = JSON.parse(mje);
+        let bgstyle = mensaje.mjeType === "0"? "danger" : "success";
+        let template = `<div class="alert alert-${bgstyle} alert-dismissible fade show" role="alert">
+                      ${mensaje.mensaje}
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+        $("#mjeAlertaAUAUGT").html(template);
+        $('#frm-add-user-gt').trigger('reset');
+        
+    });
+    construct_table_GTU();
+//Cancela las funciones basicas del boton submit y evita regrescar la pagina
+e.preventDefault();
+});

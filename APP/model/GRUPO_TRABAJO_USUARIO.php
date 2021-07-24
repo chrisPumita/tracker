@@ -109,7 +109,6 @@ class GRUPO_TRABAJO_USUARIO extends CONEXION
 
 
     function queryDetallesGTU($idGt){
-        $filter= if()
         $query="SELECT gtu.`id_usuario_fk`, gtu.`id_gt_fk`, gtu.`fecha_union`, gtu.`permisos`
         , gtu.`lider`, gtu.`estado`, u.nombre,u.apaterno,u.amaterno,u.correo ,u.user_name
         from usuario u,grupo_trabajo gt,grupotrabajo_usuario gtu
@@ -120,10 +119,14 @@ class GRUPO_TRABAJO_USUARIO extends CONEXION
         return $result;
     }
 
-    function queryAddUserToGroup($idGt,$idUser){
+    function queryAddUserToGroup(){
         $query="INSERT INTO `grupotrabajo_usuario` (`id_usuario_fk`, `id_gt_fk`, `fecha_union`
         , `permisos`, `lider`, `estado`) 
-        VALUES ('32', '8', '2021-07-13', '0', '1', '1')";
-
+        VALUES ('".$this->getIdUsuarioFk()."', '".$this->getIdGtFk()."', '".$this->getFechaUnion()."
+        ', '".$this->getPermisos()."', '".$this->getLider()."', '".$this->getEstado()."')";
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
     }
 }

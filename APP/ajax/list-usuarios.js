@@ -16,7 +16,6 @@ $(document).ready(function () {
                 success: function (response) {
                     //COnvertimos el string a JSON
                    let obj_users = JSON.parse(response);
-                    console.log(obj_users);
                     let template ='';
                     let contador = 0;
                     obj_users.forEach(
@@ -35,12 +34,24 @@ $(document).ready(function () {
                                         </tr>`;
                         }
                     );
+                    let templateInput = construct_input_GTU(obj_users);
                     $('#tbl-usuarios').html(template);
+                    $("#userGTU").html(templateInput);
                 }
             });
     }
 });
-
+function construct_input_GTU(obj_users){
+    template='';
+    obj_users.forEach(
+        objUser=>{
+                template +=`
+                <option value="${objUser.id_usuario}">${objUser.nombre} ${objUser.apaterno} ${objUser.amaterno} </option>
+                `;
+        }
+    );
+    return template;
+    }
 
 function getNivelAcceso($nivel) {
     switch ($nivel) {
@@ -56,88 +67,12 @@ function getNivelAcceso($nivel) {
        
     }
 }
-//-------------------seleccionando el elemento boton Eliminar subetapa  ----------//
+//-------------------seleccionando el elemento boton Eliminar usuario  ----------//
 $(document).on("click", ".btnDeleteUser", function () {
     if (confirm("¿Esta seguro de que desea eliminar esta subetapa? Esta acción no se podrá revertir")){
         let elementoUserSelect = $(this)[0].parentElement.parentElement.parentElement;
-        console.log(elementoUserSelect);
 /*        let idSubEtapa = $(elementoSubEtapaSelect).attr("idSubEtapa");
         eliminaSubEtapa(idSubEtapa);*/
     }
-
 });
-//btnDeleteUser
-/*
 
-
-
-
-                    //Utilizamos los objetos a y los tratamos en una plantilla en tbody
-                    let template ='';
-                    let template_page = '';
-                    let cont = 0;
-                    obj_users.forEach(
-                        obj_users => {
-                            cont ++;
-                            template += `
-                    <tr user_id="${obj_users.no_empleado}">
-                        <td>${cont}</td>
-                        <td>${obj_users.no_empleado}</td>
-                        <td>${obj_users.nombre + ' ' + obj_users.apaterno + ' ' + obj_users.amaterno}</td>
-                        <td>${obj_users.telefono}</td>
-                        <td>${obj_users.correo_user}</td>
-                        <td>${obj_users.puesto}</td>
-                        <td><div class="spinner-grow text-${obj_users.estatus == 1 ? "success":"secondary"}" role="status"><span class="sr-only"></span></div>${obj_users.estatus == 1 ? " Activa":" Inactiva"}</td>
-                        <td>
-                        <div class="dropdown" value_estatus="${obj_users.estatus}">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Opciones
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <a href="user-edit.php?id=${obj_users.no_empleado}"><button id="btn-edit${obj_users.no_empleado} "class="user-edit  dropdown-item" type="button">Editar</button></a>
-                                <button id="btn-reset${obj_users.no_empleado} "class="user-reset dropdown-item" type="button">Retablecer Contraseña</button>
-                                <button id="btn-block${obj_users.no_empleado} "class="user-dell dropdown-item" type="button btn btn-danger">${obj_users.estatus == 1 ? "Bloquear":"Activar"}</button>
-                                <button id="btn-delete${obj_users.no_empleado} "class="user-delete dropdown-item bg-alert" type="button">Eliminar</button>
-                            </div>
-                          </div>
-                        </td>
-                    </tr>
-                    `
-                        }
-                    );
-                    if (obj_users.length <10) {
-                        if (obj_users.length>0) {
-                            template_page += `
-                    <nav aria-label="Page navigation example">
-                    <ul  class="pagination justify-content-center">
-
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item disabled">
-                    <a class="page-link" href="#">Siguiente</a>
-                    </li>
-                  </ul>
-                  </nav>
-                    `;
-
-                        }
-                        else{
-                            template_page += `
-                    <div class="container py-3">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Oops! Sin usuarios</strong> Aun no hay Usuarios, agrega uno.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                  </div>
-                    `;
-                        }
-                        $('#paginator').html(template_page);
-                    }
-                    //Selecciono el elemento donde voy a pintar el template
-                    $('#contador-rows').html("Encontramos "+obj_users.length+" usuarios en el sistema");
-                    $('#users').html(template);
-**/

@@ -1,9 +1,11 @@
 <?php
-//IOncluir
 
+if(isset($_POST['idUser'])&& isset($_POST['idGt']))
+$idGt= $_POST['idGt'];
+$idUser =$_POST['idUser'];
+include_once "./control_grupo-trabajo-usuario.php";
 
-
-if(agregaUsuarioGt($idGt,$idUser))){
+if(queryAddUserToGroup($idGt,$idUser)){
     $mje = array(
         "mjeType" => "1",
         "mensaje" => "Se ha agregado con exito"

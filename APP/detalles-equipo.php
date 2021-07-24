@@ -38,9 +38,9 @@ $idGpo="";
                         <h6><i class="fas fa-info"></i> Información del grupo de trabajo</h6>
                     </div>
                     <div class="card-body" id="cardProyectos">
-                        <form id="frm-add-new-proyect">
+                        <form id="frm-update-ngt">
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="nombrep" name="nombre" type="text" placeholder="Enter your first name" required="">
+                                <input class="form-control" id="nombreGt" name="nombre" type="text" placeholder="Enter your first name" required="" value="Reckrea">
                                 <label for="nombre">Nombre del grupo de trabajo</label>
                             </div>
                             <!--Put a select Item this row like GT, Categoria -->
@@ -51,7 +51,7 @@ $idGpo="";
                                 </div>
                             </div>
                         </form>
-                        <span id="mjeAlertaAU">
+                        <span id="mjeAlertaUDNE">
                             <!-- Mje ajax-->
                         </span>
                     </div>
@@ -62,7 +62,7 @@ $idGpo="";
                         <h6><i class="fas fa-user-plus"></i> Agregar un integrante al equipo</h6>
                     </div>
                     <div class="card-body" id="cardProyectos">
-                        <form id="frm-add-new-proyect">
+                        <form id="frm-add-user-gt">
                             <div class="form-floating mb-3">
                                 <select class="form-select form-select-sm" id="userGTU" name="categoria" type="text" required="" aria-label=".form-select-sm example">
                                     
@@ -72,12 +72,12 @@ $idGpo="";
                             <!--Put a select Item this row like GT, Categoria -->
                             <!--Hacer select Menu -->
                             <div class="mt-4 mb-0">
-                                <div class="d-grid">
-                                    <input type="submit" id="btnAgregaIntegrante" name="btnAgregaIntegrante" value="Agregar" class="btn btn-primary btn-user btn-block">
+                                <div class ="d-grid">
+                                    <button class="btn btn-primary btn-user btn-block btnAgregaIntegrante"> Agregar</button>
                                 </div>
                             </div>
                         </form>
-                        <span id="mjeAlertaAU">
+                        <span id="mjeAlertaAUAUGT">
                             <!-- Mje ajax-->
                         </span>
                     </div>
@@ -134,3 +134,4 @@ $idGpo="";
 </body>
 </html>
 <script src="./ajax/equipo-detalles.js"></script>
+<script src="./ajax/list-usuarios.js"></script>
