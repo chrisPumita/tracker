@@ -113,3 +113,6 @@ $plantilla = "Bienvenido"; ?>
 </html>
 <script src="./ajax/list-proyectos.js"></script>
 <script src="./ajax/list-grupo-trabajo.js"></script>
+<script> 
+let showFiltroGt=true;
+</script>

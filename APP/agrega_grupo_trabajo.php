@@ -66,3 +66,6 @@ $plantilla = "Grupos de Trabajo"; ?>
 </html>
 <script src="./ajax/list-grupo-trabajo.js"></script>
 <script src="./ajax/add_grupo_trabajo.js"></script>
+<script> 
+let showFiltroGt=false;
+</script>

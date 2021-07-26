@@ -141,17 +141,26 @@ class GRUPO_TRABAJO extends CONEXION
         return $result;
     }
     
-    function queryListDetallesGrupo($idEmpresa){
+    function queryListDetallesGrupo($idEmpresa,$reqActivos){
+        $filter= $reqActivos ? " AND gt.status>0" : "";
         $query ="SELECT gt.id_gt, gt.*,
         (select count(*) 
         from usuario u, grupotrabajo_usuario gu 
         where u.id_usuario = gu.id_usuario_fk  
         and gu.id_gt_fk  = gt.id_gt) as contador 
-        from grupo_trabajo gt where gt.id_gt >0 and  gt.id_empresa_fk = ".$idEmpresa;
+        from grupo_trabajo gt where gt.id_gt >0 and  gt.id_empresa_fk = ".$idEmpresa. $filter;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
         return $result;
     }
 
+
+    function queryUpdateStatus($idgt){
+        $query="UPDATE `grupo_trabajo` SET `status`= ".$this->getStatus()."  WHERE id_gt= ".$idgt;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 }
