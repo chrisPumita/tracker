@@ -89,7 +89,7 @@ $plantilla = "Bienvenido"; ?>
                                 <th>No</th>
                                 <th>Nombre</th>
                                 <th>Fecha de Creacion</th>
-                                <th>Numero de trabajadores</th>
+                                <th>Numero de integrantes</th>
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>

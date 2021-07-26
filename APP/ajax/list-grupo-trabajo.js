@@ -35,7 +35,7 @@ function construc_table_gt(obj_gt) {
                     <td>${contador}</td>
                     <td>${objGt.nombre_gt} </td>
                     <td>${objGt.fecha_creacion} </td>
-                    <td>COUNT</td>
+                    <td>${objGt.contador}</td>
                     <td>${estado}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
