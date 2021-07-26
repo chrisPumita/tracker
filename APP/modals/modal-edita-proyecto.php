@@ -116,29 +116,30 @@
     </div>
 </div>
 
-
-
-
 <!-- Modal  ENVIAR EMAIL -->
 <div class="modal fade" id="modalSendMail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Enviar vista del proyecto</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Envia un link con quien quieras compartir el avance de <strong><span id="nameProyectModal"></span></strong> </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form id="frm-share">
+            <form id="frm-share">
+                <div class="modal-body">
                     <div class="mb-3">
                         <label for="email-share" class="form-label">Correo Electronico</label>
                         <input type="email" class="form-control" id="email-share" placeholder="name@example.com" required="">
+                        <input type="hidden" id="proyectoName"  required>
+                        <input type="hidden" id="noSeguimiento"  required>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
+                    <span id="mensaje"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <input type="submit" id="btnEnviar" name="btnEnviar"  value="Enviar Link" class="btn btn-primary btn-user btn-block">
+                </div>
+            </form>
+            <span id="mjeShare"></span>
         </div>
     </div>
 </div>

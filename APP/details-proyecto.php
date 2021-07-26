@@ -42,10 +42,9 @@ else{
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-info text-white mb-4">
-                            <div class="card-body">Vista Pública</div>
+                            <div class="card-body">Ver en accion</div>
                             <div class="card-footer d-flex align-items-center justify-content-between" id="btnVistaPublica">
                                 <span id="btnVistaPublica"></span>
-
                                 <div class="small text-white">
                                 </div>
                             </div>
@@ -65,7 +64,7 @@ else{
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-info text-white mb-4">
-                            <div class="card-body">Enviar invitación al cliente</div>
+                            <div class="card-body">Enviar seguimiento a tu asesor</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSendMail">
@@ -113,3 +112,4 @@ else{
 <script src="./ajax/list_agrega_proyecto.js"></script>
 <script src="./ajax/add-etapa.js"></script>
 <script src="./ajax/add-subetapa.js"></script>
+<script src="./ajax/mail-ajax.js"></script>

@@ -10,7 +10,7 @@
     <title>Bienvenidos a ProyectTraker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Built with Blueprints app">
+    <meta name="description" content="Es una aplicacion de seguimiento de proyectos, que tus asesores sepan en que etapas del proyecto vas, de una forma muy facil">
     <meta name="author" content="Bootstraptor.com">
     <link rel="icon" href="favicon.ico">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -19,8 +19,56 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <!-- Plugins -->
 
+    <style>
+        .header-bg{
+            height: 75vh;
+        }
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .header-bg{
+                height: 100vh !important;
+            }
+            .tittle-header{
+                font-size: xxx-large;
+            }
+            .icons-1{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .prices{
+                display: block !important;
+            }
+        }
+    </style>
+
+    <style>
+        df-messenger {
+            --df-messenger-bot-message: #878fac;
+            --df-messenger-button-titlebar-color: #174cb4;
+            --df-messenger-chat-background-color: #fafafa;
+            --df-messenger-font-color: white;
+            --df-messenger-send-icon: #878fac;
+            --df-messenger-user-message: #1d7f7f;
+        }
+    </style>
+
 </head>
 <body>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+        intent="WELCOME"
+        chat-title="ProjecTrackerBot"
+        agent-id="94b0c768-fcf0-4b8b-9cc6-9fe579d79076"
+        language-code="es"
+></df-messenger>
+
 <nav class="navbar navbar-light bg-white  navbar-expand-md">
     <div class="container-fluid">
         <a class="navbar-brand" href="./">
@@ -43,18 +91,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#registro">Registro<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="btn btn-info ml-md-3" href="APP/index.php">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-success ml-md-3" href="./consulta">Consultar</a>
+                </li>
             </ul>
-            <a class="btn btn-success ml-md-3" href="./consulta">Consultar</a>
-            <a class="btn btn-info ml-md-3" href="APP/index.php">Iniciar Sesión</a>
+
+
         </div>
     </div>
 </nav>
-<section class="pt-5 pb-5 bg-dark position-relative" style="min-height:75vh; background-image: url(./assets/image/fondo.jpg); background-size: cover;">
+<section class="pt-5 pb-5 bg-dark position-relative header-bg" style="background-image: url(./assets/image/fondo.jpg); background-size: cover;">
     <div class="bg-overlay">
         <div class="container pt-5 pb-5 position-relative">
             <div class="row d-flex justify-content-between pt-lg-5 align-items-center">
                 <div class="col-xl-5 col-lg-6 col-md-7 text-center text-lg-left mb-5 mb-lg-0">
-                    <h1 class="display-3 font-weight-bold text-white aos-init aos-animate" data-aos="fade-up">Feel the advance</h1>
+                    <h2 class="display-3 font-weight-bold text-white aos-init aos-animate tittle-header" data-aos="fade-up">Feel the advance</h2>
                     <div class="my-4 aos-init" data-aos="fade-up">
                         <p class="lead text-white">¡Que tus clientes sepan como va su proyecto!</p>
                     </div>
@@ -82,16 +136,12 @@
                                     <input name="course-email" id="course-email-1" type="email" class="form-control form-control-lg" placeholder="ejemplo@mail.com">
                                 </div>
                                 <div class="form-group">
-                                    <label class="text-white" for="course-password-1">Contraseña</label>
-                                    <input name="course-email" id="course-password-1" type="password" class="form-control form-control-lg" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group">
-                                    <label class="text-white" for="course-password-2">Confirmar contraseña</label>
-                                    <input name="course-email" id="course-password-2" type="password" class="form-control form-control-lg" placeholder="Confimar contraseña">
+                                    <label class="text-white" for="course-password-1">Telefono</label>
+                                    <input name="course-email" id="course-password-1" type="tel" class="form-control form-control-lg" placeholder="55 5555 5555">
                                 </div>
                                 <div class="form-group text-center">
-                                    <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Regístrate</button>
-                                    <small class="text-white">Recibiras un correo de verificación para acceder a tu nueva cuenta.</small>
+                                    <button class="btn btn-lg btn-success btn-block mb-2" type="submit">Envia</button>
+                                    <small class="text-white">Nos pondremos en contacto a la brevedad para apoyarte en todas tus dudas</small>
                                 </div>
                             </form>
                         </div>
@@ -107,7 +157,7 @@
             <div class="col-md-6">
                 <h3 class="display-4 font-weight-bold aos-init" data-aos="fade-up">Controla los avances de tus proyectos</h3>
                 <p class="lead mt-4 aos-init" data-aos="fade-up">Organizate de una mejor manera y avanza firme en todos tus proyectos.</p>
-                <div class="row row-grid">
+                <div class="row row-grid icons-1">
                     <div class="col-xs-4 col-md-4 my-1 aos-init" data-aos="fade-up">
                         <img src="./assets/image/calendario.png" alt="" class="img-fluid">
                     </div>
@@ -291,7 +341,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <h2 class="mb-5 display-5 font-weight-bold aos-init" data-aos="fade-up" id="Planes">Conoce nuestros planes</h2>
-            <div class="col-12 col-md-12 d-flex   mt-4 mt-md-0">
+            <div class="col-12 col-md-12 d-flex mt-4 mt-md-0 prices">
                 <!-- col // -->
                 <div class="col-md-4">
                     <figure class="card card-product">
@@ -649,7 +699,10 @@
             <div class="container">
                 <div class="row f-flex justify-content-center pb-4" style="">
                     <div class="col text-center  text-secondary my-1">
-                        <p class="mt-2  text-white"> © Copyright 2021 • All Rights Reserved ProyectTraker |
+                        <p class="mt-2  text-white"> © Copyright 2021 • All Rights Reserved ProyectTraker & ReCkreaStudios Dev
+
+                        </p>
+                        <p>
                             <a class=" " href="#" data-toggle="modal" data-target="#exampleModalLong">Aviso de Privacidad|
                                 <a class=" " href="#">Legales</a>
                         </p>
