@@ -30,8 +30,16 @@ $idGpo="";
             <!-- incuir los elementos del la vista para cada cosa-->
             <div class="container-fluid px-4">
                 <input type="hidden" id="idGpo" value="<?php echo $idGpo; ?>">
-                <div id="infoGroup">
-
+                <div>
+                    <h1 class="mt-4">
+                        <span id="nombreGTitulo"></span>
+                    </h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Este grupo se creó el día: <br> </li>
+                        <li>  
+                             <span id="fechagt"></span>
+                        </li>
+                    </ol>
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
@@ -40,7 +48,7 @@ $idGpo="";
                     <div class="card-body" id="cardProyectos">
                         <form id="frm-update-ngt">
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="nombreGt" name="nombre" type="text" placeholder="Enter your first name" required="" value="Reckrea">
+                                <input class="form-control" id="nombreGt" name="nombre" type="text" placeholder="Enter your first name" required="">
                                 <label for="nombre">Nombre del grupo de trabajo</label>
                             </div>
                             <!--Put a select Item this row like GT, Categoria -->
@@ -52,8 +60,8 @@ $idGpo="";
                             </div>
                         </form>
                         <span id="mjeAlertaUDNE">
-                            <!-- Mje ajax-->
-                        </span>
+                                <!-- Mje ajax-->
+                        </span>                    
                     </div>
                 </div>
 
@@ -83,9 +91,6 @@ $idGpo="";
                     </div>
                 </div>
                 <!-- incuir los elementos del la vista para cada cosa-->
-
-
-
                 <div class="card mb-4">
                     <div class="card-header">
                         <h6><i class="fas fa-users"></i> Usuarios del equipo</h6>

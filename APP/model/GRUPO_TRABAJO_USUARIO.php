@@ -129,4 +129,12 @@ class GRUPO_TRABAJO_USUARIO extends CONEXION
         $this->close();
         return $result;
     }
+
+    function queryDeleteUserGT($idUserFk,$idGpo){
+        $query="DELETE FROM `grupotrabajo_usuario` WHERE `id_usuario_fk`=".$idUserFk." AND `id_gt_fk`=".$idGpo;
+        $this->connect();
+        $result = $this->executeInstruction($query);
+        $this->close();
+        return $result;
+    }
 }

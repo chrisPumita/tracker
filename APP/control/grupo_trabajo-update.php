@@ -1,12 +1,14 @@
 <?php
 
-include_once "control_grupo_trabajo.php";
+if(isset($_POST['idGt']) && isset($_POST['nombreGt'])){
 
-$nombre= "Autos Torres";
-$status=0;
-$idGT =7;
-$result=updateGrupoTrabajo($idGT,$nombre,$status);
+    $nombre= $_POST['nombreGt'];
+    $idGT = $_POST['idGt'];
+    include_once "./control_grupo_trabajo.php";
 
-if($result){
-    echo "Actualizado con exito";
-}  else echo "Falló";
+    $result=updateGrupoTrabajo($idGT,$nombre);
+    
+    if($result){
+         echo "Actualizado con exito";
+    }  else   echo "Falló";
+} else  echo "Datos incompletos";
