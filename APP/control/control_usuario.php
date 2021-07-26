@@ -76,7 +76,7 @@ function verficaUsuario($correo, $pw){
 
 function addUser($nombre,$ap,$am,$username,$correo,$idEmpresa,$nivelAcesso){
     include_once "./tools/generar_clave.php";
-    $clave= generaClaveSesion();
+    $clave= genPwTmpInvitados(10);
     $obj_user= new USUARIO();
     $obj_user->setNombre($nombre);
     $obj_user->setApaterno($ap);
@@ -89,5 +89,16 @@ function addUser($nombre,$ap,$am,$username,$correo,$idEmpresa,$nivelAcesso){
     $obj_user->setEstado(1);
     $obj_user->setIdEmpresaFk($idEmpresa);
     $result = $obj_user->queryCreateUser();
-    return $result;
+    if ($result){
+        return sendMailAddBussiness($correo, $username,$clave,$nombre." ".$ap." ".$am);
+    }
+    return false;
+}
+
+function sendMailAddBussiness($correoSend, $user, $pwtmp, $nombre)
+{
+    include "./enviaMail.php";
+    session_start();
+    $empresaName = $_SESSION['empresaName'] ;
+    return enviaCorreoAddUser($correoSend, $user, $pwtmp, $nombre, $empresaName);
 }

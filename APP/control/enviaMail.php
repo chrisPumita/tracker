@@ -19,9 +19,10 @@ function enviaCorreoRegistro($nombre, $correo, $empresa)
     return objMailSend($correo,"Registro","Registro en ProyecTracker",$body);
 }
 
-function enviaCorreoInvitacion($nombre, $correo, $empresa)
+function enviaCorreoAddUser($correoSend, $user, $pwtmp, $nombre, $empresaName)
 {
-
+    $body = getHtmlBody_RegistroAdd($correoSend, $user, $pwtmp, $nombre, $empresaName);
+    return objMailSend($correoSend,"Te han creado una cuenta","Registro en ProyecTracker",$body);
 }
 
 function enviaCorreoInvitacionVistaPublica($nombreProyecto, $toCorreo, $empresa, $noSeguimiento)
@@ -40,13 +41,13 @@ function enviaCorreoContacto($nombre, $correo, $empresa, $telefono, $comentario)
 
 function getHtmlBody_InvitacionPublica($nombre, $empresa, $correo, $noSeguimiento)
 {
-    $body = 'HAY UN SEGIMIENTO DE UN PROYECTO';
+    $body = 'HAY UN SEGIMIENTO DE UN PROYECTO'. $nombre. " ". $empresa. " ". $correo."-NO seg.". $noSeguimiento;
     return $body;
 }
 
-function getHtmlBody_Registro($nombre, $empresa, $correo)
+function getHtmlBody_RegistroAdd($correoSend, $user, $pwtmp, $nombre, $empresaName)
 {
-    $body = 'REGTISTRO EXITOSO';
+    $body = 'CUENTA REGTISTRO EXITOSO'. $nombre. " ". $empresaName. "<br> Contraseña:  ". $pwtmp ."   <br>user ".$user. " ".$correoSend;
     return $body;
 }
 

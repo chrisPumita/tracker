@@ -33,9 +33,7 @@ $('#frm-consulta').submit(function (e)
         //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
         $.post(url,valoresCajas, function (response) {
             //tratamos los datos y hacemos acciones
-            console.log(response);
             let obj_mje = JSON.parse(response);
-            console.log(obj_mje);
             if (obj_mje.mjeType == "0")
             {
                 var template = `<div class="alert alert-danger" role="alert">${obj_mje.Mensaje}</div>`;

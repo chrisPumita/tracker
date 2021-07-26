@@ -116,9 +116,6 @@
     </div>
 </div>
 
-
-
-
 <!-- Modal  ENVIAR EMAIL -->
 <div class="modal fade" id="modalSendMail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -139,7 +136,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <input type="submit" id="btnEnviar" name="btnEnviar"  value="Registrar" class="btn btn-primary btn-user btn-block">
+                    <input type="submit" id="btnEnviar" name="btnEnviar"  value="Enviar Link" class="btn btn-primary btn-user btn-block">
                 </div>
             </form>
             <span id="mjeShare"></span>
