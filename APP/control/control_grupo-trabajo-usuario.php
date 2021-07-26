@@ -24,6 +24,12 @@ function queryAddUserToGroup($idGt,$idUser){
    
 }
 
+function eliminarUsuartioGT($idUserFk,$idGpo){
+    $obj_GTU = new GRUPO_TRABAJO_USUARIO();
+    $result = $obj_GTU->queryDeleteUserGT($idUserFk,$idGpo);
+    return $result;
+}
+
 
 /*try {
     $obj_GTU = new GRUPO_TRABAJO_USUARIO();

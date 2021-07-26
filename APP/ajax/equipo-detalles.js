@@ -16,22 +16,11 @@ function detallesGrupo(){
         success: function (response) {
              //COnvertimos el string a JSO
            let obj_gt = JSON.parse(response);
-           template=`
-        <h1 class="mt-4">
-           <span>${obj_gt[0].nombre_gt}</span>
-       </h1>
-       
-       <ol class="breadcrumb mb-4">
-           <li class="breadcrumb-item active">Este grupo se creó el día: <br> </li>
-           <li>${obj_gt[0].fecha_creacion}</li>
-       </ol>
-           `;
-
-             //let templateInput=construct_table_GTU();
-             
-           $("#nombreGt").val(obj_gt[0].nombre_gt);
-           $("#infoGroup").html(template);
            
+             //let templateInput=construct_table_GTU();
+           $("#nombreGt").val(obj_gt[0].nombre_gt);
+           $("#nombreGTitulo").html(obj_gt[0].nombre_gt);
+           $("#fechagt").html(obj_gt[0].fecha_creacion);           
         }
         
     });
@@ -48,7 +37,6 @@ function construct_table_GTU(){
         },
         success: function (response) {
              //COnvertimos el string a JSO
-             console.log(response);
            let obj_gt = JSON.parse(response);
            let contador=0;
            let template='';
@@ -68,8 +56,8 @@ function construct_table_GTU(){
                    <td>${estado}</td>
                    <td>
                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                           <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i>
-                               <button type="button" class="btn btn-danger">
+                           <button type="button" class="btn btn-warning "><i class="fas fa-pause-circle"></i>
+                               <button type="button" class="btn btn-danger btnDeleteUSerGt">
                                    <i class="fas fa-user-minus"></i>
                                </button>
 
@@ -131,20 +119,19 @@ $('#frm-add-user-gt').submit(function (e) {
                     </div>`;
         $("#mjeAlertaAUAUGT").html(template);
         $('#frm-add-user-gt').trigger('reset');
-        
+        construct_table_GTU();
     });
     construct_table_GTU();
-    detallesGrupo();
 //Cancela las funciones basicas del boton submit y evita regrescar la pagina
 e.preventDefault();
 });
 
 
 $('#frm-update-ngt').submit(function (e) {
-    alert("Ok");
     //obtenemos los datos de los valores que se enviaran al servidor
+    let nombregt= $("#nombreGt").val();
     const valoresCajas = {
-        nombreGt: $("#nombreGt").val(),
+        nombreGt: nombregt,
         idGt: $("#idGpo").val()
     };
      let url = "./control/grupo_trabajo-update.php";
@@ -157,9 +144,37 @@ $('#frm-update-ngt').submit(function (e) {
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>`;
         $("#mjeAlertaUDNE").html(template); 
+        $("#nombreGTitulo").html(nombregt);
     });
-    detallesGrupo();
     
 //Cancela las funciones basicas del boton submit y evita regrescar la pagina
 e.preventDefault();
 });
+
+
+//------------------- Eliminar Usuario de Grupo de trabajo ---------------------------//
+
+//-------------------seleccionando el elemento boton Eliminar Usuario GT  ----------//
+$(document).on("click", ".btnDeleteUSerGt", function () {
+    if (confirm("¿Esta seguro de que desea eliminar Usuario?")){
+        let elementUserSelect = $(this)[0].parentElement.parentElement.parentElement;
+        let idUserFk = $(elementUserSelect).attr("idusergtu");
+        eliminarUsuario(idUserFk);
+    }
+
+});
+
+function eliminarUsuario(idUserFk){
+    $.ajax({
+        url: "./control/gtu-deleteUser.php",
+        type: 'POST',
+        data: {
+            idUserFk: idUserFk,
+            idGpo: $("#idGpo").val()
+        },
+        success: function (mje) {
+            alert(mje);
+            construct_table_GTU();
+        }
+    });    
+}

@@ -30,8 +30,16 @@ $idGpo="";
             <!-- incuir los elementos del la vista para cada cosa-->
             <div class="container-fluid px-4">
                 <input type="hidden" id="idGpo" value="<?php echo $idGpo; ?>">
-                <div id="infoGroup">
-
+                <div>
+                    <h1 class="mt-4">
+                        <span id="nombreGTitulo"></span>
+                    </h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Este grupo se creó el día: <br> </li>
+                        <li>  
+                             <span id="fechagt"></span>
+                        </li>
+                    </ol>
                 </div>
                 <div class="card mb-4">
                     <div class="card-header">
