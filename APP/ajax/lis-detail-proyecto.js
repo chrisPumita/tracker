@@ -5,6 +5,7 @@ $(document).ready(function () {
     consultaDetailsProyecto();
     consultaEtapasProyecto();
 });
+
 //Contruye el Grid para el proyecto en especifico
 function consultaDetailsProyecto(){
     $.ajax({
@@ -23,7 +24,7 @@ function consultaDetailsProyecto(){
             console.log(obj_proyect);
             let proyecto = obj_proyect[0];
             let templateBoton =`
-                                <a href="../consulta/public-view-proyecto/?noSeguimiento=${proyecto.no_seguimiento}">
+                                <a href="../consulta/public-view-proyecto/?noSeguimiento=${proyecto.no_seguimiento}" target="_blank">
                                 <button type="button" class="btn btn-primary">
                                     Ver
                                 </button></a>`;
@@ -32,7 +33,6 @@ function consultaDetailsProyecto(){
             consultaDetailsProyectoPublico(proyecto);
             } else location.href="./proyectos.php";
         }
-
     });
 }
 //Construye la tabla con las etapas y subetapas de cada proyecto
@@ -49,8 +49,6 @@ function consultaEtapasProyecto(){
             console.log(obj_proyect);
                 let etapas=constructEtapas(obj_proyect);
                 $("#tbl-etapa").html(etapas);
-
-
         }
 
     });
@@ -59,7 +57,12 @@ function consultaEtapasProyecto(){
 
 // FUNCION PARA CREAR EL GRID DEL PROYECTO
 function constuct_grid_proyectos(obj_proyect) {
+
     $("#nombre_proyecto").html(obj_proyect.nombre_proyecto);
+    $("#proyectoName").val(obj_proyect.nombre_proyecto);
+    $("#nameProyectModal").html(obj_proyect.nombre_proyecto);
+    $("#noSeguimiento").val(obj_proyect.no_seguimiento);
+
     $("#idProyectoInsert").val(obj_proyect.id_proyecto);
     let template =
                 `<div class="col">
