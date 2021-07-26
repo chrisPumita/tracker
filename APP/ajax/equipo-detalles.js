@@ -16,7 +16,6 @@ function detallesGrupo(){
         success: function (response) {
              //COnvertimos el string a JSO
            let obj_gt = JSON.parse(response);
-           $("#nombreGt").val(obj_gt[0].nombre_gt);
            template=`
         <h1 class="mt-4">
            <span>${obj_gt[0].nombre_gt}</span>
@@ -29,6 +28,8 @@ function detallesGrupo(){
            `;
 
              //let templateInput=construct_table_GTU();
+             
+           $("#nombreGt").val(obj_gt[0].nombre_gt);
            $("#infoGroup").html(template);
            
         }
@@ -133,6 +134,32 @@ $('#frm-add-user-gt').submit(function (e) {
         
     });
     construct_table_GTU();
+    detallesGrupo();
+//Cancela las funciones basicas del boton submit y evita regrescar la pagina
+e.preventDefault();
+});
+
+
+$('#frm-update-ngt').submit(function (e) {
+    alert("Ok");
+    //obtenemos los datos de los valores que se enviaran al servidor
+    const valoresCajas = {
+        nombreGt: $("#nombreGt").val(),
+        idGt: $("#idGpo").val()
+    };
+     let url = "./control/grupo_trabajo-update.php";
+    //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
+    $.post(url,valoresCajas,function (mje) {
+        //tratamos los datos y hacemos acciones
+        let mensaje = mje;
+        let template = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                      ${mensaje}
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+        $("#mjeAlertaUDNE").html(template); 
+    });
+    detallesGrupo();
+    
 //Cancela las funciones basicas del boton submit y evita regrescar la pagina
 e.preventDefault();
 });

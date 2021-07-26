@@ -18,10 +18,9 @@ function createGrupoTrabajo($nombre,$idEmpresaFk){
     return $result;      
 }
 
-function updateGrupoTrabajo($idGt,$nombre,$status){
+function updateGrupoTrabajo($idGt,$nombre){
     $obj_gt = new GRUPO_TRABAJO;
     $obj_gt->setNombreGt($nombre);
-    $obj_gt->setStatus($status);
     $result = $obj_gt->queryUpdateGT($idGt);
     return $result;
 }

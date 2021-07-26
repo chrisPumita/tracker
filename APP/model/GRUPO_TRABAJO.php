@@ -127,8 +127,7 @@ class GRUPO_TRABAJO extends CONEXION
     }
 
     function  queryUpdateGT($idGt){
-        $query ="UPDATE `grupo_trabajo` SET `nombre_gt`='".$this->getNombreGt()."',`status`=".$this->getStatus().
-        "  WHERE `id_gt` =".$idGt;
+        $query ="UPDATE `grupo_trabajo` SET `nombre_gt`='".$this->getNombreGt()."' WHERE `id_gt` =".$idGt;
         $this->connect();
         $result = $this->executeInstruction($query); 
         $this->close();
