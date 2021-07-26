@@ -30,6 +30,14 @@ $(document).ready(function () {
                             </div>`;
                 $("#mjeAlerta").html(template);
                 $('#frm-add-user').trigger('reset');
+
+                var count = 2;
+                setInterval(function(){
+                    count--;
+                    if (count == 0) {
+                        window.location = './';
+                    }
+                },1000);
             });
         }
         else {

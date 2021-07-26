@@ -20,15 +20,14 @@ function registraCuenta($nombre,$ap,$am,$username,$correo,$password,$empresaName
     //ejecutto la funcion de crear empresa
     if($obj_Emp-> CrearEmpresa()){
         include_once "./control_usuario.php";
-        return createUser($nombre,$ap,$am,$username,$correo,$password,$id);
+
+        if (createUser($nombre,$ap,$am,$username,$correo,$password,$id)){
+            include_once "./enviaMail.php";
+            return enviaCorreoRegistro($correo,$nombre,$username,$correo, $empresaName);
+        }
+        return false;
     }
     else
         return false;
-
-/*
- *        $query = "INSERT INTO `empresa` (`id_empresa`, `nombre`, `razon_social`, `rfc`, `telefono`, `correo`, `tipo_cuenta`)
-        VALUES (NULL, '".$this->getNombre()."', '".$this->getRazonSocial()."', '".$this->getRfc()."',
-         '".$this->getTelefono()."', '".$this->getCorreo()."', '".$this->getTipoCuenta()."')";
- * */
 
 }

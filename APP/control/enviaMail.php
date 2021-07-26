@@ -13,9 +13,9 @@ setlocale(LC_TIME, 'es_MX.UTF-8');
  * Se envia solo cuando se ha registrado por el formulario inicial
  *
  * */
-function enviaCorreoRegistro($nombre, $correo, $empresa)
+function enviaCorreoRegistro($correo,$nombre,$username, $empresaName)
 {
-    $body = getHtmlBody_Registro($nombre, $empresa, $correo);
+    $body = getHtmlBody_Registro($nombre,$username,$empresaName);
     return objMailSend($correo,"Registro","Registro en ProyecTracker",$body);
 }
 
@@ -47,24 +47,15 @@ function getHtmlBody_InvitacionPublica($nombre, $empresa, $correo, $noSeguimient
 
 function getHtmlBody_RegistroAdd($correoSend, $user, $pwtmp, $nombre, $empresaName)
 {
-    $body = 'CUENTA REGTISTRO EXITOSO'. $nombre. " ". $empresaName. "<br> Contraseña:  ". $pwtmp ."   <br>user ".$user. " ".$correoSend;
+    $body = "CUENTA REGTISTRO EXITOSO". $nombre. " ". $empresaName. "<br> Contraseña:  ". $pwtmp ."   <br>user ".$user. " ".$correoSend;
     return $body;
 }
 
-function getHtmlBody_AddUser($nombre, $empresa, $correo)
+function getHtmlBody_Registro($nombre,$username,$empresaName)
 {
-    $body = 'Tienes una cuenta en ProyectTracker';
+    $body = 'Has creado una cuenta en Proyect Tracker'. $nombre ." ". $username." " . $empresaName;
     return $body;
 }
-
-
-function getHtmlBody_Contacto($nombre, $empresa, $correo)
-{
-    $body = 'Tienes una cuenta en ProyectTracker';
-    return $body;
-}
-
-
 
 
 /* General obj send mail*/
@@ -74,7 +65,7 @@ function objMailSend($toMail, $intencion, $asunto, $body)
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->CharSet = 'UTF-8';
-
+    $mail->SMTPDebug  = 1;
     //destinos
     /*
      * tracker@reckreastudios.com
@@ -92,7 +83,7 @@ function objMailSend($toMail, $intencion, $asunto, $body)
 
     //destino
     $mail->From     = $contacto;    // Correo Electronico para SMTP
-    $mail->FromName = 'ProyecTraacker | '.$intencion;
+    $mail->FromName = 'ProyecTracker | '.$intencion;
     $mail->AddAddress($para); // Dirección a la que llegaran los mensajes
 
     $mail->Port = PORT_SMTP;
@@ -100,4 +91,22 @@ function objMailSend($toMail, $intencion, $asunto, $body)
     $mail->Subject  = $asunto;
     $mail->Body = $body;
     return $mail->Send();
+
+    $Envio = $mail ->Send();
+    $Intentos = 1;
+
+    while((!$Envio) && ($Intentos < 5)){
+        sleep(5);
+        $Envio = $mail ->Send();
+        $Intentos += 1;
+    }
+
+    if($Envio == 'true'){
+        $Salida = true;
+    }
+    else{
+        $Salida = $mail->ErrorInfo;
+    }
+
+    return $Salida;
 }

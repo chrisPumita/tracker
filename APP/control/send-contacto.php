@@ -10,7 +10,7 @@ if (isset($_POST['name']) ||
     $telefono = $_POST['telefono'];
     $comentario = $_POST['comentario'];
     include_once "./enviaMail.php";
-    if(enviaCorreoRegistro($name,$email,$empresa,$telefono,$comentario))
+    if(enviaCorreoContacto($name,$email,$empresa,$telefono,$comentario))
         echo "Hemos recibido sus datos, en breve uno de nuestros agentes se pondrá en contacto con usted al correo ".$email;
     else
         echo "Ocurrio un error interno en el servidod.<br> Vuelva a intentarlo";

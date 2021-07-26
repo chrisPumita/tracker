@@ -2,3 +2,4 @@ APP/control/lib-mail/class.phpmailer.php
 APP/control/lib-mail/class.smtp.php
 APP/control/lib-mail/.DS_Store
 APP/control/enviarMail.php
+APP/config/SERVER.php
