@@ -91,4 +91,7 @@ $plantilla = "Agrega Proyecto";
 </html>
 <script src="./ajax/add_proyecto_ajax.js"></script>
 <script src="./ajax/list_agrega_proyecto.js"></script>
+<script> 
+    let showFiltroGt=true;
+</script>
 <!--<script src="./ajax/list-proyectos.js"></script>-->

@@ -30,7 +30,7 @@ function updateUser($idUser,$nombre,$ap,$am,$username,$correo){
 
 function detalleUser($idUser){
     $obj_user= new USUARIO();
-    $result = $obj_user->queryDetalleUser($idUser);
+    $result = $obj_user->detallePerfilUser($idUser);
     return json_encode($result);
 }
 
@@ -68,6 +68,7 @@ function verficaUsuario($correo, $pw){
         $_SESSION['id_empresa']    = $obj_user[0]['id_empresa'];
         $_SESSION['empresaName']    = $obj_user[0]['empresaName'];
         $_SESSION['tipo_cuenta']    = $obj_user[0]['tipo_cuenta'];
+        $_SESSION['correo']    = $obj_user[0]['correo'];
         $_SESSION['sessionSuccess']    = true;
         return true;
     }
@@ -101,4 +102,20 @@ function sendMailAddBussiness($correoSend, $user, $pwtmp, $nombre)
     session_start();
     $empresaName = $_SESSION['empresaName'] ;
     return enviaCorreoAddUser($correoSend, $user, $pwtmp, $nombre, $empresaName);
+}
+
+
+function verficaUsuarioPw($pwa,$pwn){
+    include_once "../model/USUARIO.php";
+    session_start();
+    $obj_empleado = new USUARIO();
+    $obj_empleado->setCorreo($_SESSION['correo']);
+    $obj_empleado->setIdUsuario($_SESSION['no_empleado']);
+    $obj_empleado->setPassword(md5($pwa));
+
+    if($obj_empleado->consultaCuentaUsuario()){
+        $obj_empleado->setPassword(md5($pwn));
+        return $obj_empleado->modifyPw();
+    }
+    return false;
 }

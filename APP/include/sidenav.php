@@ -49,12 +49,6 @@
                 </nav>
             </div>
             <div class="sb-sidenav-menu-heading">General</div>
-            <a class="nav-link" href="template/charts.html">
-                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                Configuración
-            </a>
-
-
             <a class="nav-link" href="./tipo_cuenta.php">
                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                 Cuenta

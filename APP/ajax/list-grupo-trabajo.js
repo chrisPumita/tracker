@@ -9,12 +9,13 @@ function consultaGruposTrabajo(){
         url: "./control/grupo_trabajo-detalles.php",
         type: 'POST',
         data: {
-            idEmpresa: $("#idEmpresaGeneral").val()
+            idEmpresa: $("#idEmpresaGeneral").val(),
+            reqActivos : showFiltroGt
         },
         success: function (response) {
             //COnvertimos el string a JSON
+            console.log(response);
            let obj_gt = JSON.parse(response);
-            console.log(obj_gt);
             let template = construc_table_gt(obj_gt);
             $('#tbl-grupo-trabajo').html(template);
         }
@@ -28,19 +29,21 @@ function construc_table_gt(obj_gt) {
     obj_gt.forEach(
         objGt=>{
             contador++;
-             
+            let textCustom = objGt.status === "1" ? `warning`:`info`;
+            let boton = objGt.status === "1" ? `<button type="button" class="btn btn-${textCustom} btnChangeStatus"><i class="fas fa-pause-circle"></i></button>`:
+            `<button type="button" class="btn btn-${textCustom} btnChangeStatus"><i class="far fa-play-circle"></i>`;
              let estado = getEstado(objGt.status);
             template += `
-                <tr idgt="${objGt.id_gt}">
+                <tr idgt="${objGt.id_gt}" idStatus=${objGt.status}>
                     <td>${contador}</td>
                     <td>${objGt.nombre_gt} </td>
                     <td>${objGt.fecha_creacion} </td>
-                    <td>COUNT</td>
-                    <td>${estado}</td>
+                    <td>${objGt.contador}</td>
+                    <td >${estado}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                             <a href="./detalles-equipo.php?idGpo=${objGt.id_gt}"><button type="button" class="btn btn-success"><i class="fas fa-eye"></i></button></a>
-                            <button type="button" class="btn btn-warning"><i class="fas fa-pause-circle"></i></button>
+                            ${boton}
                             <button type="button" class="btn btn-danger btnDeleteGt"><i class="fas fa-trash-alt"></i></button>    
                         </div>
                     </td>
@@ -73,6 +76,18 @@ $(document).on("click", ".btnDeleteGt", function () {
 
 });
 
+///-------------------- Escucha cambio de estado ----------------//
+
+$(document).on("click", ".btnChangeStatus", function () {
+    if (confirm("¿Esta seguro de que desea cambiar el estado de el grupo?")){
+        let elementoGt = $(this)[0].parentElement.parentElement.parentElement;
+        let idgt= $(elementoGt).attr("idgt");
+        let status= $(elementoGt).attr("idstatus");
+        changeStatusGT(idgt,status);
+    }
+
+});
+
 //------------------- FUNCION ELIMINA GRUPO TRABAJO ---------------------------//
 function eliminaGrupoTrabajo(idGt){
     $.ajax({
@@ -83,6 +98,26 @@ function eliminaGrupoTrabajo(idGt){
         },
         success: function (mje) {
             alert("Eliminado con exito");
+            consultaGruposTrabajo();
+        }
+    });
+
+}
+
+
+//----------------- Funcion cambiar estado de grupo ----------------//
+function changeStatusGT(idgt,status){
+    $.ajax({
+        url: "./control/grupo_trabajo-status.php",
+        type: 'POST',
+        data: {
+            idGt: idgt,
+            status: status
+
+        },
+        success: function (mje) {
+            console.log(mje);
+
             consultaGruposTrabajo();
         }
     });

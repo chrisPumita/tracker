@@ -23,7 +23,8 @@ function  cargaListGrupos(){
     $.ajax({
         type: 'POST',
         data: {
-            idEmpresa: $("#idEmpresaGeneral").val()
+            idEmpresa: $("#idEmpresaGeneral").val(),
+            reqActivos: showFiltroGt
         },
         url: "./control/list-grupo-trabajo.php",
         success: function (response) {

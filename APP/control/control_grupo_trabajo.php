@@ -31,8 +31,18 @@ function deleteGrupoTrabajo($idGt){
     return $result;
 }
 
-function listDetallesGt($idEmpresa){
+function listDetallesGt($idEmpresa,$reqActivos){
     $obj_gt = new GRUPO_TRABAJO();
-    $result = $obj_gt->queryListDetallesGrupo($idEmpresa);
+    $result = $obj_gt->queryListDetallesGrupo($idEmpresa,$reqActivos);
     return json_encode($result);
+}
+
+function updateStatus($idgt,$status){
+    $obj_gt = new GRUPO_TRABAJO();
+    if ($status == 1) { 
+        $obj_gt->setStatus(0);
+    } else  $obj_gt->setStatus(1);
+
+    $result= $obj_gt->queryUpdateStatus($idgt);
+    return $result;
 }

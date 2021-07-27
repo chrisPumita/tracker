@@ -213,7 +213,7 @@ class USUARIO extends CONEXION
 
     function queryDetalleUser($idUser, $idEmpresa){
         $filtro = $idUser > 0 ? " AND id_usuario= ".$idUser : "";
-        $query="select * from usuario u where u.id_usuario >0 AND id_empresa_fk = ". $idEmpresa  . "  ". $filtro;
+        $query="SELECT * from usuario u where u.id_usuario >0 AND id_empresa_fk = ". $idEmpresa  . "  ". $filtro;
         $this->connect();
         $result = $this->getData($query);
         $this->close();
@@ -230,13 +230,31 @@ class USUARIO extends CONEXION
 
 
     function consultaCuentaUsuario(){
-        $query="select u.`id_usuario`, u.`id_empresa_fk`, u.`nombre`, u.`apaterno`, u.`amaterno`, u.`user_name`, 
+        $query="SELECT u.`id_usuario`, u.`id_empresa_fk`, u.`nombre`, u.`apaterno`, u.`amaterno`, u.`user_name`, 
                 u.`correo`, u.`password`, u.`nivel_acceso`, u.`path_img`, u.`estado`, 
                  e.`id_empresa`, e.`nombre` as empresaName, e.`razon_social`, e.`rfc`, e.`telefono`, e.`correo`, e.`tipo_cuenta` 
                 from usuario u, empresa e 
                 where u.id_empresa_fk  = e.id_empresa and u.estado > 0 and u.correo = '".$this->getCorreo()."' and u.password = '".$this->getPassword()."'";
         $this->connect();
         $result = $this->getData($query);
+        $this->close();
+        return $result;
+    }
+
+    function detallePerfilUser($idUser){
+        $query="SELECT * from usuario WHERE id_usuario=".$idUser;
+        $this->connect();
+        $result = $this->getData($query);
+        $this->close();
+        return $result;
+
+    }
+
+    function modifyPw(){
+        $query="UPDATE `usuario` SET `password` = '".$this->getPassword()."' 
+        WHERE `usuario`.`id_usuario` = ".$this->getIdUsuario();
+        $this->connect();
+        $result=$this->executeInstruction($query);
         $this->close();
         return $result;
     }

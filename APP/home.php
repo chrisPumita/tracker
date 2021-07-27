@@ -89,7 +89,7 @@ $plantilla = "Bienvenido"; ?>
                                 <th>No</th>
                                 <th>Nombre</th>
                                 <th>Fecha de Creacion</th>
-                                <th>Numero de trabajadores</th>
+                                <th>Numero de integrantes</th>
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
@@ -113,3 +113,6 @@ $plantilla = "Bienvenido"; ?>
 </html>
 <script src="./ajax/list-proyectos.js"></script>
 <script src="./ajax/list-grupo-trabajo.js"></script>
+<script> 
+let showFiltroGt=true;
+</script>
