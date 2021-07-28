@@ -77,14 +77,15 @@ function verficaUsuario($correo, $pw){
 
 function addUser($nombre,$ap,$am,$username,$correo,$idEmpresa,$nivelAcesso){
     include_once "./tools/generar_clave.php";
-    $clave= genPwTmpInvitados(10);
+    $clave = genPwTmpInvitados(10);
+    $claveMD5 = md5($clave);
     $obj_user= new USUARIO();
     $obj_user->setNombre($nombre);
     $obj_user->setApaterno($ap);
     $obj_user->setAmaterno($am);
     $obj_user->setUserName($username);
     $obj_user->setCorreo($correo);
-    $obj_user->setPassword(md5($clave));
+    $obj_user->setPassword($claveMD5);
     $obj_user->setNivelAcceso($nivelAcesso);
     $obj_user->setPathImg("https://freepikpsd.com/media/2019/10/no-image-available-icon-png-8-Transparent-Images.png");
     $obj_user->setEstado(1);
@@ -111,10 +112,11 @@ function verficaUsuarioPw($pwa,$pwn){
     $obj_empleado = new USUARIO();
     $obj_empleado->setCorreo($_SESSION['correo']);
     $obj_empleado->setIdUsuario($_SESSION['no_empleado']);
-    $obj_empleado->setPassword(md5($pwa));
-
+    $md5PwActual = md5($pwa);
+    $obj_empleado->setPassword($md5PwActual);
     if($obj_empleado->consultaCuentaUsuario()){
-        $obj_empleado->setPassword(md5($pwn));
+        $md5PwNew = md5($pwn);
+        $obj_empleado->setPassword($md5PwNew);
         return $obj_empleado->modifyPw();
     }
     return false;

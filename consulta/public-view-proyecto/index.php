@@ -151,7 +151,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="media">
-                                <img class="mr-3 rounded-circle" src="https://pics.freeicons.io/uploads/icons/png/11547449341548234989-512.png" alt="Generic placeholder image" style="max-width:50px">
+                                <img class="mr-3 rounded-circle" src="https://reckreastudios.com/tracker/APP/assets/img/categorias/people.png" alt="Generic placeholder image" style="max-width:50px">
                                 <div class="media-body">
                                     <h6 class="my-0 text-white d-block"><span id="cardNameEmpresa"></span></h6>
                                     <small>Creado el: <span id="fCreate"></span></small>

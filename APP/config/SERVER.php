@@ -12,8 +12,8 @@ private $host = "localhost";
     private $db = "proyectracker";*/
 
 /* --------- MAILS ------------- */
-const USER_MAIL = "tracker@reckreastudios.com";
-const PW_COUNT = "PatitoFeo123";
+const USER_MAIL = "proyectracker@reckreastudios.com";
+const PW_COUNT = "7cnlME7dEa%lPhrzT0&";
 
 const HOST_SERVER_MAIL = "smtp.hostinger.com";
 const PORT_SMTP = 587;

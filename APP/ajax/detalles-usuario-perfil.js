@@ -52,6 +52,7 @@ $('#frm-pw').submit(function (e) {
                 //funcion propia de jQuery para POST (a doinde enviar, que enviar, resultado devuelto)
                 $.post(url,valoresCajas,function (mje) {
                     //tratamos los datos y hacemos acciones
+                    console.log(mje);
                     mensaje += mje;
                     let template = `<div class="alert alert-info alert-dismissible fade show" role="alert">
                     ${mensaje}

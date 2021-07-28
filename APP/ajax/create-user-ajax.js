@@ -31,7 +31,7 @@ $(document).ready(function () {
                 $("#mjeAlerta").html(template);
                 $('#frm-add-user').trigger('reset');
 
-                var count = 2;
+                var count = 3;
                 setInterval(function(){
                     count--;
                     if (count == 0) {

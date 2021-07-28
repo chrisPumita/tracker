@@ -23,7 +23,7 @@ function registraCuenta($nombre,$ap,$am,$username,$correo,$password,$empresaName
 
         if (createUser($nombre,$ap,$am,$username,$correo,$password,$id)){
             include_once "./enviaMail.php";
-            return enviaCorreoRegistro($correo,$nombre,$username,$correo, $empresaName);
+            return enviaCorreoRegistro($correo,$nombre,$username,$empresaName);
         }
         return false;
     }
